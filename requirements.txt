@@ -3,3 +3,10 @@ mkdocs-material
 mkdocs-material-extensions
 pymdown-extensions 
 mkdocs-pdf
+jupyter 
+notebook 
+ipython 
+matplotlib 
+pandas 
+numpy 
+seaborn 
