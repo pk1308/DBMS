@@ -1,0 +1,4 @@
+- [ ] Text Book
+- [ ] slides
+- [ ] weekly assigment
+- [ ] lecture

@@ -1,0 +1,1 @@
+![Alt text](<../arifacts/Abraham Silberschatz, Henry Korth, S. Sudarshan - Database System Concepts-McGraw-Hill Education (2019)-30-33.pdf>){ type=application/pdf style="min-height:100vh;width:100%" }
