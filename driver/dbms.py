@@ -1,42 +1,43 @@
-from git import Repo
-
 import os
-from pathlib import Path
-import yaml
 import sys
+import subprocess
+from pathlib import Path
+
+import yaml
+from git import Repo
 from loguru import logger
 
+logger.remove()
+logger.add(sys.stdout, colorize=True, format="{time} | {level} | {message}")
 
-logger.add(sys.stdout, colorize=True, format="<green>{time}</green> <level>{message}</level>")
 
-def get_git_status_files(repo_path):
-  """
+def get_git_status_files(repo_path_to_update):
+    """
   This function takes the path to a Git repository and returns a list of files 
   with their paths based on the git status.
 
   Args:
-      repo_path (str): Path to the Git repository.
+      repo_path_to_update (str): Path to the Git repository.
 
   Returns:
       list: List of strings representing file paths.
   """
-  
-  # Open the Git repository
-  repo = Repo(repo_path)
 
-  # Initialize an empty list to store file paths
-  files = []
+    # Open the Git repository
+    repo = Repo(repo_path_to_update)
 
-  # Get modified and staged files
-  for item in repo.index.diff(None):
-    files.append(item.a_path)
+    # Initialize an empty list to store file paths
+    files_to_commit = []
 
-  # Get untracked files
-  files.extend(repo.untracked_files)
+    # Get modified and staged files
+    for item in repo.index.diff(None):
+        files_to_commit.append(item.a_path)
 
-  # Return the list of files
-  return files
+    # Get untracked files
+    files_to_commit.extend(repo.untracked_files)
 
+    # Return the list of files
+    return files_to_commit
 
 
 def read_yaml_as_dict(path_to_yaml: Path):
@@ -81,7 +82,7 @@ def write_yaml(file_path: Path, data: dict = None):
         raise e
 
 
-def update_mydocs(folder_path="./docs"):
+def update_my_docs(folder_path="./docs"):
     """_summary_
 
     Args:
@@ -89,8 +90,8 @@ def update_mydocs(folder_path="./docs"):
     """
     yaml_file = read_yaml_as_dict(Path("mkdocs.yml"))
     markdown_files = []
-    for root, dirs, files in os.walk(folder_path):
-        for filename in files:
+    for root, _ , files_to_check in os.walk(folder_path):
+        for filename in files_to_check:
             if filename.endswith(".md"):
                 full_path = os.path.join(root, filename)
                 directory_name = "/".join(full_path.split("/")[2:])
@@ -107,54 +108,73 @@ def update_mydocs(folder_path="./docs"):
                 nav_value[key] = [file]
             else:
                 nav_value[key].append(file)
-                
-    yaml_file['nav'] = [{key:value}for key , value in nav_value.items()]
+
+    yaml_file['nav'] = [{key: value} for key, value in nav_value.items()]
 
     file_path = Path(os.path.join(os.getcwd(), "mkdocs.yml"))
     write_yaml(file_path, yaml_file)
-    
 
-def create_md(files):
-  """
+
+def create_md(files_to_create):
+    """
   This function attempts to create Markdown files with information about 
   provided PDF files.
 
   Args:
-      files (list): List of file paths.
+      files_to_create (list): List of file paths.
 
   Returns:
       bool: True if successful, False otherwise.
   """
-  success = True
-  for file_to in files:
-    if file_to.endswith(".pdf"):
-      new_filename = os.path.splitext(file_to)[0] + ".md"
-      try:
-        with open(new_filename, "w+") as f:
-          f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
-          path_= os.path.basename("docs/week2/Lecture 2.4 - Introduction to SQL2_annotated.pdf")
-          data = f"![Alt text](<./{path_}>)"+'{ type=application/pdf style="min-height:100vh;width:100%" }'
-          f.write(data)
-        
-      except Exception as e:
-        print(f"Error creating {new_filename}: {e}")
-        success = False
-    else:
-      print(f"{file_to} is not a PDF file.")
-  return success
+    success = True
+    for file_to in files_to_create:
+        if file_to.endswith(".pdf"):
+            new_filename = os.path.splitext(file_to)[0] + ".md"
+            try:
+                with open(new_filename, "w+") as f:
+                    f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
+                    path_ = os.path.basename("docs/week2/Lecture 2.4 - Introduction to SQL2_annotated.pdf")
+                    data = f"![Alt text](<./{path_}>)" + '{ type=application/pdf style="min-height:100vh;width:100%" }'
+                    f.write(data)
+
+            except Exception as e:
+                logger.info(f"Error creating {new_filename}: {e}")
+                success = False
+        else:
+            logger.info(f"{file_to} is not a PDF file.")
+    return success
+
+
+def deploy_mkdocs():
+    """
+  This function deploys the MkDocs site using mkdocs gh-deploy.
+
+  Raises:
+      CalledProcessError: If the subprocess call fails.
+  """
+    try:
+        subprocess.run(['mkdocs', 'gh-deploy', '-f', './mkdocs.yml'], check=True)
+        logger.info("MkDocs site deployed successfully!")
+    except subprocess.CalledProcessError as error:
+        logger.info(f"Error deploying MkDocs site: {error}")
 
 
 if __name__ == "__main__":
-    
-    repo_path = "."  # Replace with your actual Git repository path
 
+    repo_path = os.getcwd()
     files = get_git_status_files(repo_path)
-    
-    status = create_md(files=files)
+    logger.info(files)
+
+    status = create_md(files_to_create=files)
+    logger.info(status)
     if status:
         files = get_git_status_files(repo_path)
-        update_mydocs(files)
-    
+        update_my_docs()
+        logger.info("successful update")
+
     else:
-        raise "error"
-    
+        logger.error("cant update ")
+    logger.info("deploy mk docs ")
+
+    deploy_mkdocs()
+    logger.info("deployed mk docs ")
