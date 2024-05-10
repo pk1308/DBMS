@@ -1,6 +1,6 @@
-- [X] Text Book
-- [X] slides
+- [ ] Text Book
+- [ ] slides
 - [ ] weekly assigment
-- [X] lecture
+- [ ] lecture
 - [ ] live session
 - [ ] text book activity
