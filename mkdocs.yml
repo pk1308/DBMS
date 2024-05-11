@@ -35,8 +35,6 @@ nav:
   - week2/Lecture 2.3 - Introduction to SQL1_annotated.md
   - week2/check_list.md
   - week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md
-- pdf:
-  - pdf/embeding.md
 plugins:
 - search
 - mkdocs-pdf
