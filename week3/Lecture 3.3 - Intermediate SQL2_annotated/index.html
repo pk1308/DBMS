@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 3.3   Intermediate SQL2 annotated - DBMS</title>
+        <title>Lecture 3.3 - Intermediate SQL2_annotated.pdf (PDF file) - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -95,13 +95,37 @@
             </li>
             <li class="drac-box">
                 <a href="../.."
-                    class="
+                    class=" active 
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#week3-collapse" aria-expanded="false">
                     week3
                 </a>
                 <div class="collapse" id="week3-collapse">
                     <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../tutorial_3_5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tutorial 3 5
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../Lecture%203.5%20-%20Advanced%20SQL_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.5 - Advanced SQL_annotated.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.3 - Intermediate SQL2_annotated.pdf (PDF file)
+        </a>
+    </li>
                             
     <li class="drac-box-ternary">
         <a href="../Lecture%203.1%20-%20SQL%20Examples_annotated/"
@@ -116,6 +140,14 @@
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Lecture 3.2   Intermediate SQL1 annotated
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../Lecture%203.4%20-%20Intermediate%20SQL3_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.4 - Intermediate SQL3_annotated.pdf (PDF file)
         </a>
     </li>
                     </ul>
@@ -250,6 +282,22 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../Lecture%203.5%20-%20Advanced%20SQL_annotated/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../Lecture%203.1%20-%20SQL%20Examples_annotated/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
                     </li>
                     <!--  endblock -->
 
@@ -316,7 +364,69 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p>
+        <p><div><h1 id="lecture-33-intermediate-sql2_annotatedpdf-pdf-file">Lecture 3.3 - Intermediate SQL2_annotated.pdf (PDF file)</h1>
+<p><strong>Summary</strong>
+<strong>Module 13: Intermediate SQL</strong></p>
+<p><strong>Objectives:</strong></p>
+<ul>
+<li>Learn SQL expressions for joins</li>
+<li>Learn SQL expressions for views</li>
+</ul>
+<p><strong>Outline:</strong></p>
+<ul>
+<li>Join Expressions<ul>
+<li>Cross join</li>
+<li>Inner join</li>
+<li>Outer join<ul>
+<li>Left outer join</li>
+<li>Right outer join</li>
+<li>Full outer join</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Views<ul>
+<li>View definition</li>
+<li>View expansion</li>
+<li>View update</li>
+<li>Materialized views</li>
+</ul>
+</li>
+</ul>
+<p><strong>Join Expressions:</strong></p>
+<ul>
+<li>Join operations return a relation by combining two relations based on a matching condition.</li>
+<li>Types of joins:<ul>
+<li><strong>Cross join:</strong> Cartesian product of rows from both tables.</li>
+<li><strong>Inner join:</strong> Only returns rows that match in both tables.</li>
+<li><strong>Outer join:</strong> Preserves unmatched rows using null values.<ul>
+<li>Left outer join: Includes all rows from the left table and unmatched rows from the right table.</li>
+<li>Right outer join: Includes all rows from the right table and unmatched rows from the left table.</li>
+<li>Full outer join: Includes all rows from both tables, even if unmatched.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Views:</strong></p>
+<ul>
+<li>Virtual relations that provide a different perspective on the data.</li>
+<li>Defined using the <code>create view</code> statement as an SQL query.</li>
+<li>Can be used in queries and other views.</li>
+<li>Updates to views are translated into updates on the underlying relations.</li>
+</ul>
+<p><strong>Some Views Cannot Be Updated:</strong></p>
+<ul>
+<li>Updates to some views may not be translatable into valid updates on the underlying relations, such as views with multiple tables or complex expressions.</li>
+</ul>
+<p><strong>Materialized Views:</strong></p>
+<ul>
+<li>Physical tables that store the results of a view query.</li>
+<li>Provide faster query performance but need to be maintained when the underlying data changes.
+<strong>Lec file</strong></li>
+</ul>
+<h1 id="lecture-33-intermediate-sql2_annotatedpdf-pdf-file_1">Lecture 3.3 - Intermediate SQL2_annotated.pdf (PDF file)</h1>
+<p><embed alt="Alt text" src="../Lecture%203.3%20-%20Intermediate%20SQL2_annotated.pdf" style="min-height:100vh;width:100%" type="application/pdf"></embed></p></div></p>
     </article>
 </section>
             <!-- endblock -->
