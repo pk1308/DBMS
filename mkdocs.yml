@@ -23,7 +23,11 @@ markdown_extensions:
 - pymdownx.pathconverter
 nav:
 - Home:
+  - cheatsheet.md
   - index.md
+- week3:
+  - week3/Lecture 3.1 - SQL Examples_annotated.md
+  - week3/Lecture 3.2 - Intermediate SQL1_annotated.md
 - week1:
   - week1/textbook.md
   - week1/check_list.md
@@ -33,6 +37,7 @@ nav:
   - week2/Lecture 2.5 - Introduction to SQL3_annotated.md
   - week2/Lecture 2.4 - Introduction to SQL2_annotated.md
   - week2/Lecture 2.3 - Introduction to SQL1_annotated.md
+  - week2/tutorial_2.1.md
   - week2/check_list.md
   - week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md
 plugins:
