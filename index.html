@@ -181,26 +181,6 @@
                     </ul>
                 </div>
             </li>
-            <li class="drac-box">
-                <a href="."
-                    class="
-                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
-                    data-bs-toggle="collapse" data-bs-target="#pdf-collapse" aria-expanded="false">
-                    pdf
-                </a>
-                <div class="collapse" id="pdf-collapse">
-                    <ul class="mb-5 drac-list drac-list-none">
-                            
-    <li class="drac-box-ternary">
-        <a href="pdf/embeding/"
-            class="
-            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Embeding
-        </a>
-    </li>
-                    </ul>
-                </div>
-            </li>
         </ul>
         <!-- endblock -->
     </div>
@@ -333,7 +313,52 @@
     Section 18.8 (Snapshot Isolation), Section 18.9 (Weak Levels of Consistency) may be omitted.</li>
 <li>Chapter 19: Recovery System
     Section 19.8 (ARIES) may be omitted.</li>
-</ol></div></p>
+</ol>
+<h2 id="postgresql-cheatsheet-markdown">PostgreSQL Cheatsheet (Markdown)</h2>
+<p>This cheatsheet summarizes some essential PostgreSQL commands for managing databases, users, tables, and data.</p>
+<p><strong>Connection:</strong></p>
+<ul>
+<li><code>psql -h &lt;hostname&gt; -p &lt;port&gt; -d &lt;database&gt; -U &lt;username&gt;</code>: Connect to a PostgreSQL server (replace placeholders with actual values).</li>
+</ul>
+<p><strong>Databases:</strong></p>
+<ul>
+<li><code>CREATE DATABASE &lt;database_name&gt;</code>: Create a new database.</li>
+<li><code>DROP DATABASE &lt;database_name&gt;</code>: Delete an existing database (use with caution!).</li>
+<li><code>\l</code>: List all databases.</li>
+<li><code>\connect &lt;database_name&gt;</code>: Switch to a different database within the same session.</li>
+</ul>
+<p><strong>Users and Roles:</strong></p>
+<ul>
+<li><code>CREATE ROLE &lt;username&gt; [WITH PASSWORD '&lt;password&gt;']</code>: Create a new user.</li>
+<li><code>GRANT &lt;privilege&gt; ON &lt;object&gt; TO &lt;username&gt;</code>: Grant specific privileges (e.g., SELECT, INSERT, UPDATE, DELETE) on a database object (table, schema) to a user.</li>
+<li><code>REVOKE &lt;privilege&gt; ON &lt;object&gt; FROM &lt;username&gt;</code>: Revoke privileges from a user.</li>
+<li><code>\du</code>: List all roles (users).</li>
+</ul>
+<p><strong>Tables:</strong></p>
+<ul>
+<li><code>CREATE TABLE &lt;table_name&gt; ( &lt;column_name&gt; &lt;data_type&gt; [CONSTRAINT], ...);</code>: Create a new table with columns and constraints.</li>
+<li><code>DESCRIBE &lt;table_name&gt;</code>: Show the structure of a table.</li>
+<li><code>DROP TABLE &lt;table_name&gt;</code>: Delete a table (use with caution!).</li>
+<li><code>\dt</code>: List all tables in the current schema.</li>
+</ul>
+<p><strong>Data Manipulation:</strong></p>
+<ul>
+<li><code>INSERT INTO &lt;table_name&gt; (&lt;column1&gt;, &lt;column2&gt;, ...) VALUES (&lt;value1&gt;, &lt;value2&gt;, ...);</code>: Insert data into a table.</li>
+<li><code>SELECT * FROM &lt;table_name&gt; [WHERE &lt;condition&gt;];</code>: Retrieve data from a table (all columns by default, with optional filtering).</li>
+<li><code>UPDATE &lt;table_name&gt; SET &lt;column_name&gt; = &lt;new_value&gt; [WHERE &lt;condition&gt;];</code>: Update existing data in a table.</li>
+<li><code>DELETE FROM &lt;table_name&gt; [WHERE &lt;condition&gt;];</code>: Delete rows from a table.</li>
+</ul>
+<p><strong>Other Useful Commands:</strong></p>
+<ul>
+<li><code>\q</code>: Quit the psql client.</li>
+<li><code>\h</code>: Get help on a specific command (e.g.,<code>\h CREATE TABLE</code>).</li>
+<li><code>\conninfo</code>: Display connection information.</li>
+</ul>
+<p><strong>Additional Notes:</strong></p>
+<ul>
+<li>Remember to replace placeholders like <code>&lt;database_name&gt;</code>,<code>&lt;username&gt;</code>, etc. with actual values.</li>
+<li>This is a basic cheatsheet. PostgreSQL offers many more commands and functionalities. Refer to the official documentation for in-depth details:<a href="https://www.postgresql.org/docs/">https://www.postgresql.org/docs/</a></li>
+</ul></div></p>
     </article>
 </section>
             <!-- endblock -->
