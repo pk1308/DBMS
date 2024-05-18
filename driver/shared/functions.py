@@ -1,15 +1,17 @@
-from langchain_community.document_loaders import PyPDFium2Loader
-from langchain_google_genai import ChatGoogleGenerativeAI
-from .variables import DEFAULT_PDF_URL
-
 import os
-import sys
 import subprocess
+import sys
 from pathlib import Path
+import time
 
 import yaml
 from git import Repo
+from langchain_community.document_loaders import PyPDFium2Loader
+from langchain_google_genai import ChatGoogleGenerativeAI
 from loguru import logger
+
+from .variables import DEFAULT_PDF_URL
+from .compress_file import compress_pdf
 
 logger.remove()
 logger.add(sys.stdout, colorize=True, format="{time} | {level} | {message}")
@@ -90,7 +92,7 @@ def read_yaml_as_dict(path_to_yaml: Path):
         ConfigBox: ConfigBox type
     """
     try:
-        with open(path_to_yaml ) as yaml_file:
+        with open(path_to_yaml , encoding="utf-8") as yaml_file:
             content = yaml.safe_load(yaml_file)
             logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return content
@@ -111,9 +113,9 @@ def write_yaml(file_path: Path, data: dict = None):
 
     try:
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        with open(file_path, "w") as yaml_file:
+        with open(file_path, "w", encoding="utf-8") as yaml_file:
             if data is not None:
-                yaml.dump(data, yaml_file)
+                 yaml.dump(data, yaml_file , default_flow_style=False, sort_keys=False)
     except Exception as e:
         raise e
 
@@ -184,11 +186,17 @@ def create_md(files_to_create):
         if file_to.endswith(".pdf"):
             new_filename = os.path.splitext(file_to)[0] + ".md"
             try:
-                with open(new_filename, "w+") as f:
+                with open(new_filename, "w+", encoding="utf-8") as f:
                     data_to_write = summarize(file_to)
+                    # compress_pdf(file_to)
+                    f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
+                    f.write("**Summary**\n")
                     f.write(data_to_write)
+                    f.write("\n")
+                    f.write("**Lec file**\n")
                     f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
                     path_ = os.path.basename(file_to)
+                    time.sleep(60)
                     
                     data = f"![Alt text](<./{path_}>)" + '{ type=application/pdf style="min-height:100vh;width:100%" }'
                     f.write(data)

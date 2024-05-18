@@ -1,4 +1,52 @@
-copyright: '&copy; 2024 <a href="https://github.com/pk1308"  target="_blank" rel="noopener">PK</a>'
+site_name: DBMS
+nav:
+- Home:
+  - cheatsheet.md
+  - index.md
+- week3:
+  - week3/tutorial_3_5.md
+  - week3/Lecture 3.5 - Advanced SQL_annotated.md
+  - week3/Lecture 3.3 - Intermediate SQL2_annotated.md
+  - week3/Lecture 3.1 - SQL Examples_annotated.md
+  - week3/Lecture 3.2 - Intermediate SQL1_annotated.md
+  - week3/Lecture 3.4 - Intermediate SQL3_annotated.md
+- week1:
+  - week1/textbook.md
+  - week1/check_list.md
+  - week1/summary.md
+- week2:
+  - week2/Lecture 2.2 - Introduction to Relational Model2_annotated.md
+  - week2/Lecture 2.5 - Introduction to SQL3_annotated.md
+  - week2/Lecture 2.4 - Introduction to SQL2_annotated.md
+  - week2/Lecture 2.3 - Introduction to SQL1_annotated.md
+  - week2/tutorial_2.1.md
+  - week2/check_list.md
+  - week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md
+site_author: PK
+site_description: DESCRIPTION
+repo_name: pk1308/DBMS
+repo_url: https://github.com/pk1308/DBMS
+theme:
+  name: dracula
+  features:
+  - navigation.tabs
+  - navigation.sections
+  - toc.integrate
+  - navigation.top
+  language: en
+  palette:
+  - scheme: default
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: Switch to dark mode
+    primary: teal
+    accent: purple
+  - scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: Switch to light mode
+    primary: teal
+    accent: lime
 extra:
   social:
   - icon: fontawesome/brands/github-alt
@@ -21,51 +69,7 @@ markdown_extensions:
 - pymdownx.superfences
 - pymdownx.mark
 - pymdownx.pathconverter
-nav:
-- Home:
-  - cheatsheet.md
-  - index.md
-- week3:
-  - week3/Lecture 3.1 - SQL Examples_annotated.md
-  - week3/Lecture 3.2 - Intermediate SQL1_annotated.md
-- week1:
-  - week1/textbook.md
-  - week1/check_list.md
-  - week1/summary.md
-- week2:
-  - week2/Lecture 2.2 - Introduction to Relational Model2_annotated.md
-  - week2/Lecture 2.5 - Introduction to SQL3_annotated.md
-  - week2/Lecture 2.4 - Introduction to SQL2_annotated.md
-  - week2/Lecture 2.3 - Introduction to SQL1_annotated.md
-  - week2/tutorial_2.1.md
-  - week2/check_list.md
-  - week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md
 plugins:
 - search
 - mkdocs-pdf
-repo_name: pk1308/DBMS
-repo_url: https://github.com/pk1308/DBMS
-site_author: PK
-site_description: DESCRIPTION
-site_name: DBMS
-theme:
-  features:
-  - navigation.tabs
-  - navigation.sections
-  - toc.integrate
-  - navigation.top
-  language: en
-  name: dracula
-  palette:
-  - accent: purple
-    primary: teal
-    scheme: default
-    toggle:
-      icon: material/toggle-switch-off-outline
-      name: Switch to dark mode
-  - accent: lime
-    primary: teal
-    scheme: slate
-    toggle:
-      icon: material/toggle-switch
-      name: Switch to light mode
+copyright: '&copy; 2024 <a href="https://github.com/pk1308"  target="_blank" rel="noopener">PK</a>'
