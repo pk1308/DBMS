@@ -2,7 +2,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from functions import  load_pdf_from_file
 import os 
 
-def summarize(file_path , context_base = "summarize the following lec slide and transcript text" ):
+def summarize(file_path , context_base = "summarize the following not less than 2000 words lec slide and transcript text" ):
     """_summary_
 
     Args:
