@@ -1,6 +1,12 @@
 - [X] Text Book
 - [X] slides
-- [ ] weekly assigment
+- [X] weekly assigment
 - [X] lecture
 - [ ] live session
 - [ ] text book activity
+- [X] 1.2
+- [X] 1.3
+- [X] 1.4
+- [X] 1.5
+- [ ] PA
+- [ ] GA

@@ -14,7 +14,7 @@ def summarize(file_path , context_base = "summarize the following not less than 
     
     base_name = os.path.basename(file_path)
     pages = load_pdf_from_file(file_path=file_path)
-    trans_file = os.path.join("/home/pk/Desktop/dbms/Transcripts/Week 1", base_name)
+    trans_file = os.path.join("/home/pk/Desktop/dbms/Transcripts/Week 2", base_name)
     transcript = load_pdf_from_file(trans_file)
     # Setup the Google Generative AI model and invoke it using a human-friendly prompt
     llm = ChatGoogleGenerativeAI(model="gemini-pro")
