@@ -11,9 +11,14 @@ nav:
   - week3/Lecture 3.2 - Intermediate SQL1_annotated.md
   - week3/Lecture 3.4 - Intermediate SQL3_annotated.md
 - week1:
+  - week1/Lecture 1.1 - Course Overview.md
+  - week1/Lecture 1.3 - Why DBMS2.md
   - week1/textbook.md
+  - week1/Lecture 1.4 - Intro to DBMS1.md
   - week1/check_list.md
   - week1/summary.md
+  - week1/Lecture 1.2 - Why DBMS1.md
+  - week1/Lecture 1.5 - Intro to DBMS2.md
 - week2:
   - week2/Lecture 2.2 - Introduction to Relational Model2_annotated.md
   - week2/Lecture 2.5 - Introduction to SQL3_annotated.md
