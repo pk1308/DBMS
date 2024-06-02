@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 2.4 - Introduction to SQL2_annotated.pdf (PDF file) - DBMS</title>
+        <title>Lecture 2.5 - Introduction to SQL3.pdf (PDF file) - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -231,7 +231,7 @@
             </li>
             <li class="drac-box">
                 <a href="../.."
-                    class=" active 
+                    class="
                     drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
                     data-bs-toggle="collapse" data-bs-target="#week2-collapse" aria-expanded="false">
                     week2
@@ -240,34 +240,34 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../Lecture%202.2%20-%20Introduction%20to%20Relational%20Model2_annotated/"
+        <a href="../Lecture 2.2 - Introduction to Relational Model2_annotated.md"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.2 - Introduction to Relational Model2_annotated.pdf (PDF file)
+            None
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../Lecture%202.5%20-%20Introduction%20to%20SQL3_annotated/"
+        <a href="../Lecture 2.5 - Introduction to SQL3_annotated.md"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.5 - Introduction to SQL3_annotated.pdf (PDF file)
+            None
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./"
-            class=" active 
+        <a href="../Lecture 2.4 - Introduction to SQL2_annotated.md"
+            class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.4 - Introduction to SQL2_annotated.pdf (PDF file)
+            None
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../Lecture%202.3%20-%20Introduction%20to%20SQL1_annotated/"
+        <a href="../Lecture 2.3 - Introduction to SQL1_annotated.md"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.3 - Introduction to SQL1_annotated.pdf (PDF file)
+            None
         </a>
     </li>
                             
@@ -288,10 +288,10 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../Lecture%202.1%20-%20Introduction%20to%20Relational%20Model1_annotated/"
+        <a href="../Lecture 2.1 - Introduction to Relational Model1_annotated.md"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.1 - Introduction to Relational Model1_annotated.pdf (PDF file)
+            None
         </a>
     </li>
                     </ul>
@@ -374,22 +374,6 @@
                     <!-- block preview -->
                     <li class="nav-item">
                             
-        <div class="container">
-            <div class="row row-preview">
-                <div class="col">
-                    <a href="../Lecture%202.5%20-%20Introduction%20to%20SQL3_annotated/"
-                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
-                        <i class="fa fa-arrow-left"></i> Previous
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="../Lecture%202.3%20-%20Introduction%20to%20SQL1_annotated/"
-                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
-                        Next <i class="fa fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
                     </li>
                     <!--  endblock -->
 
@@ -456,8 +440,35 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-24-introduction-to-sql2_annotatedpdf-pdf-file">Lecture 2.4 - Introduction to SQL2_annotated.pdf (PDF file)</h1>
-<p><embed alt="Alt text" src="../../arifacts/Lecture%202.4%20-%20Introduction%20to%20SQL2_annotated.pdf" style="min-height:100vh;width:100%" type="application/pdf"></embed></p></div></p>
+        <p><div><h1 id="lecture-25-introduction-to-sql3pdf-pdf-file">Lecture 2.5 - Introduction to SQL3.pdf (PDF file)</h1>
+<p><strong>Summary</strong>
+Module 10 of Database Management Systems covers set operations, null values, three-valued logic, aggregate functions, and null values in aggregates.</p>
+<p><strong>Set Operations:</strong>
+* Union, intersect, and except operators combine sets of rows.
+* Multiset versions (e.g., union all) retain all duplicates.</p>
+<p><strong>Null Values:</strong>
+* Unknown or non-existent attribute values.
+* Arithmetic expressions involving nulls result in null.
+* Null values are represented as is null or is not null, not with comparison operators.</p>
+<p><strong>Three-Valued Logic:</strong>
+* Three values: true, false, unknown.
+* Comparison with nulls returns unknown.
+* Three-valued logic is applied to OR, AND, and NOT operators.</p>
+<p><strong>Aggregate Functions:</strong>
+* Operate on rows in a column to return a single value.
+* Functions include avg, min, max, sum, and count.
+* Null values are ignored in most aggregate functions.</p>
+<p><strong>Group By:</strong>
+* Groups rows by selected attributes and computes aggregate functions separately for each group.
+* Attributes in the select clause must appear in the group by list.</p>
+<p><strong>Having Clause:</strong>
+* Specifies conditions to filter groups based on aggregate function results.
+* Applied after group formation.</p>
+<p><strong>Null Values and Aggregates:</strong>
+* Aggregate functions ignore rows with null values in the aggregated attribute.
+* Count(<em>) returns 0 for empty collections and null for null-only collections.
+</em><em>Lec file</em>*</p>
+<h1 id="lecture-25-introduction-to-sql3pdf-pdf-file_1">Lecture 2.5 - Introduction to SQL3.pdf (PDF file)</h1></div></p>
     </article>
 </section>
             <!-- endblock -->
