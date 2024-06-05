@@ -221,25 +221,17 @@ def create_md(files_to_create):
             new_filename = os.path.splitext(file_to)[0] + ".md"
             try:
                 with open(new_filename, "w+", encoding="utf-8") as f:
+                    logger.info(f"summarizing {file_to}")
                     data_to_write = summarize(file_to)
                     # compress_pdf(file_to)
                     f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
                     f.write("**Summary**\n")
                     f.write(data_to_write)
                     f.write("\n")
-                    f.write("**Lec file**\n")
-                    f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
-                    # path_ = os.path.basename(file_to)
+                    logger.info(f"summarized {file_to}")
                     time.sleep(60)
-
-                    # data = (
-                    #     f"![Alt text](<./{path_}>)"
-                    #     + '{ type=application/pdf style="min-height:100vh;width:100%" }'
-                    # )
-                    # f.write(data)
-
             except Exception as e:
-                logger.info(f"Error creating {new_filename}: {e}")
+                logger.error(f"Error creating {new_filename}: {e}")
                 success = False
         else:
             logger.info(f"{file_to} is not a PDF file.")

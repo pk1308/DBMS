@@ -10,6 +10,12 @@ nav:
   - week3/Lecture 3.1 - SQL Examples_annotated.md
   - week3/Lecture 3.2 - Intermediate SQL1_annotated.md
   - week3/Lecture 3.4 - Intermediate SQL3_annotated.md
+- Week 5:
+  - Week 5/Lecture 5.4 - Relational Database Design4.md
+  - Week 5/Lecture 5.1 - Relational Database Design1.md
+  - Week 5/Lecture 5.2 - Relational Database Design2.md
+  - Week 5/Lecture 5.5 - Relational Database Design5.md
+  - Week 5/Lecture 5.3 - Relational Database Design3.md
 - week1:
   - week1/Lecture 1.1 - Course Overview.md
   - week1/Lecture 1.3 - Why DBMS2.md
@@ -19,14 +25,21 @@ nav:
   - week1/summary.md
   - week1/Lecture 1.2 - Why DBMS1.md
   - week1/Lecture 1.5 - Intro to DBMS2.md
+- arifacts:
+  - arifacts/Lecture 2.2 - Introduction to Relational Model2_annotated.md
+  - arifacts/Lecture 2.5 - Introduction to SQL3_annotated.md
+  - arifacts/Lecture 2.4 - Introduction to SQL2_annotated.md
+  - arifacts/Lecture 2.3 - Introduction to SQL1_annotated.md
+  - arifacts/Lecture 2.1 - Introduction to Relational Model1_annotated.md
+  - arifacts/Lecture 1.4 - Intro to DBMS1_annotated.md
 - week2:
-  - week2/Lecture 2.2 - Introduction to Relational Model2_annotated.md
-  - week2/Lecture 2.5 - Introduction to SQL3_annotated.md
-  - week2/Lecture 2.4 - Introduction to SQL2_annotated.md
-  - week2/Lecture 2.3 - Introduction to SQL1_annotated.md
+  - week2/Lecture 2.2 - Introduction to Relational Model2.md
   - week2/tutorial_2.1.md
+  - week2/Lecture 2.1 - Introduction to Relational Model1.md
   - week2/check_list.md
-  - week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md
+  - week2/Lecture 2.5 - Introduction to SQL3.md
+  - week2/Lecture 2.4 - Introduction to SQL2.md
+  - week2/Lecture 2.3 - Introduction to SQL1.md
 - week4:
   - week4/Lecture 4.5 - Entity-Relationship Model3_annotated.md
   - week4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md
