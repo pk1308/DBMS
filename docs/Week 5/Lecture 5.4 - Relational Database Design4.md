@@ -10,7 +10,7 @@ This module covers algorithms and properties related to functional dependencies 
 
 **Extraneous Attributes:**
 
-- Algorithms to identify and remove extraneous attributes, which are redundant in FDs.
+- **Algorithms to identify and remove extraneous attributes, which are redundant in FDs.**
 - Helps optimize the set of FDs by eliminating unnecessary dependencies.
 
 **Equivalence of FD Sets:**
