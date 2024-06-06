@@ -1,4 +1,4 @@
-# Lecture 5.3 - Relational Database Design3
+# Lecture 5.3 - Relational Database Design 3
 
 **Summary**
 This module discusses relational database design using functional dependencies (FDs).
