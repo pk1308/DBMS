@@ -9,14 +9,11 @@ import yaml
 from git import Repo
 from langchain_community.document_loaders import PyPDFium2Loader
 from langchain_google_genai import ChatGoogleGenerativeAI
-from loguru import logger
+from .app_log import logger
 
-from .compress_file import compress_pdf
+
 from .variables import DEFAULT_PDF_URL
 
-
-def custom_time_format(record):
-    return datetime.now().strftime("%Y-%m-%d")
 
 
 # Set up the logger with custom format
