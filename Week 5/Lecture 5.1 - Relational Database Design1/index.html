@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.1 - Relational Database Design1.pdf (PDF file) - DBMS</title>
+        <title>Lecture 5.1 - Relational Database Design1 - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -167,7 +167,7 @@
         <a href="../Lecture%205.4%20-%20Relational%20Database%20Design4/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.4 - Relational Database Design4.pdf (PDF file)
+            Lecture 5.4 - Relational Database Design
         </a>
     </li>
                             
@@ -175,7 +175,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.1 - Relational Database Design1.pdf (PDF file)
+            Lecture 5.1 - Relational Database Design1
         </a>
     </li>
                             
@@ -183,7 +183,15 @@
         <a href="../Lecture%205.2%20-%20Relational%20Database%20Design2/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.2 - Relational Database Design2.pdf (PDF file)
+            Lecture 5.2: Relational Database Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../closureofartibut/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Closureofartibut
         </a>
     </li>
                             
@@ -199,7 +207,7 @@
         <a href="../Lecture%205.3%20-%20Relational%20Database%20Design3/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.3 - Relational Database Design3.pdf (PDF file)
+            Lecture 5.3 - Relational Database Design 3
         </a>
     </li>
                     </ul>
@@ -568,7 +576,7 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-51-relational-database-design1pdf-pdf-file">Lecture 5.1 - Relational Database Design1.pdf (PDF file)</h1>
+        <p><div><h1 id="lecture-51-relational-database-design1">Lecture 5.1 - Relational Database Design1</h1>
 <p><strong>Summary</strong>
 This module focuses on principles of relational database design. It emphasizes:</p>
 <p><strong>Features of Good Design:</strong></p>
@@ -579,26 +587,128 @@ This module focuses on principles of relational database design. It emphasizes:<
 <li>Provides efficient data access</li>
 <li>Maintains data integrity</li>
 </ul>
+<hr>
+<p><img alt="1717563677565" src="../image/Lecture5.1-RelationalDatabaseDesign1/1717563677565.png"></p>
+<hr>
 <p><strong>Redundancy and Anomaly:</strong></p>
 <ul>
-<li>Redundancy (duplicate data) leads to anomalies:<ul>
+<li>Redundancy (duplicate data) leads to anomalies:</li>
 <li>Insertion: Can't add data if unknown data is required</li>
 <li>Deletion: Losing unrelated information when deleting records</li>
 <li>Update: Inaccurate changes due to multiple occurrences of data</li>
-</ul>
-</li>
 </ul>
 <p><strong>Decomposition:</strong></p>
 <ul>
 <li>Decomposing relations into smaller ones removes redundancy and minimizes dependencies among attributes.</li>
 <li>Good decomposition ensures data preservation and integrity.</li>
 </ul>
+<p><strong>functional dependency</strong> : dept name → building, budget
+In inst_dept, because dept_name is not a candidate key, the building and budget of a department may have to be repeated.
+◦ This indicates the need to decompose inst dept</p>
+<hr>
+<p><strong>Lossy Decomposition</strong></p>
+<p><img alt="1717567637165" src="../image/Lecture5.1-RelationalDatabaseDesign1/1717567637165.png"></p>
+<p>Lossless Join Decomposition is a decomposition of a relation R into relations R1 , R2 such that if we perform natural join of two smaller relations it will return the original relation</p>
 <p><strong>Atomic Domains and First Normal Form (1NF):</strong></p>
 <ul>
 <li>Atomic domains consist of indivisible elements.</li>
 <li>1NF requires relations with atomic domains and each attribute holding a single value.</li>
 <li>Non-atomic values complicate storage and encourage redundancy.</li>
-</ul></div></p>
+</ul>
+<p><strong>Atomic Domains</strong></p>
+<p>An atomic domain refers to the indivisibility of data within a domain. In the context of databases, it means that the value in a particular field is indivisible and represents the smallest unit of data. Each attribute in a table should contain atomic (indivisible) values.</p>
+<ul>
+<li><strong>Example of Atomic Values</strong>:</li>
+<li><code>123 Main St</code>, <code>John Doe</code>, <code>01/01/2020</code></li>
+<li><strong>Example of Non-Atomic Values</strong>:</li>
+<li><code>123 Main St, Apt 4</code> (multiple pieces of information in one field)</li>
+<li><code>John and Jane Doe</code> (multiple names in one field)</li>
+</ul>
+<h4 id="first-normal-form-1nf">First Normal Form (1NF)</h4>
+<p>A relation (table) is said to be in the First Normal Form (1NF) if it satisfies the following conditions:</p>
+<ol>
+<li><strong>Atomicity</strong>: All the values in the database are atomic (indivisible).</li>
+<li><strong>Uniqueness of Rows</strong>: Each row in the table must be unique, meaning no two rows can be identical.</li>
+<li><strong>Uniqueness of Column Names</strong>: Each column should have a unique name.</li>
+<li><strong>No Repeating Groups</strong>: Each table should contain only one value per cell (intersection of a row and a column), and columns should not contain sets or lists of values.</li>
+</ol>
+<h4 id="examples-of-1nf">Examples of 1NF</h4>
+<p><strong>Non-1NF Table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>Name</th>
+<th>Courses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John Doe</td>
+<td>Math, Science</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane Smith</td>
+<td>English, History, Math</td>
+</tr>
+</tbody>
+</table>
+<p>In the above table:</p>
+<ul>
+<li>The <code>Courses</code> column contains multiple values, which violates the atomicity rule.</li>
+</ul>
+<p><strong>1NF Table:</strong></p>
+<table>
+<thead>
+<tr>
+<th>StudentID</th>
+<th>Name</th>
+<th>Course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>John Doe</td>
+<td>Math</td>
+</tr>
+<tr>
+<td>1</td>
+<td>John Doe</td>
+<td>Science</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane Smith</td>
+<td>English</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane Smith</td>
+<td>History</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jane Smith</td>
+<td>Math</td>
+</tr>
+</tbody>
+</table>
+<p>In this 1NF table:</p>
+<ul>
+<li>Each cell contains only one value, adhering to the atomicity requirement.</li>
+<li>Each row is unique, and there are no repeating groups within any cell.</li>
+</ul>
+<h4 id="achieving-1nf">Achieving 1NF</h4>
+<p>To transform a table into 1NF:</p>
+<ol>
+<li><strong>Remove Repeating Groups</strong>: Ensure that each column contains only a single value.</li>
+<li><strong>Create Separate Tables for Multivalued Attributes</strong>: If necessary, split the multivalued attributes into separate rows or tables.</li>
+<li><strong>Ensure Primary Keys</strong>: Define primary keys to uniquely identify each row in the table.</li>
+</ol>
+<p>By adhering to these principles, a database can be designed to comply with the First Normal Form, thus ensuring data integrity and facilitating easier querying and maintenance.</p></div></p>
     </article>
 </section>
             <!-- endblock -->

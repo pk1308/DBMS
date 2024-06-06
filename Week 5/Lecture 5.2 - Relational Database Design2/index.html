@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.2 - Relational Database Design2.pdf (PDF file) - DBMS</title>
+        <title>Lecture 5.2: Relational Database Design - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -167,7 +167,7 @@
         <a href="../Lecture%205.4%20-%20Relational%20Database%20Design4/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.4 - Relational Database Design4.pdf (PDF file)
+            Lecture 5.4 - Relational Database Design
         </a>
     </li>
                             
@@ -175,7 +175,7 @@
         <a href="../Lecture%205.1%20-%20Relational%20Database%20Design1/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.1 - Relational Database Design1.pdf (PDF file)
+            Lecture 5.1 - Relational Database Design1
         </a>
     </li>
                             
@@ -183,7 +183,15 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.2 - Relational Database Design2.pdf (PDF file)
+            Lecture 5.2: Relational Database Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../closureofartibut/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Closureofartibut
         </a>
     </li>
                             
@@ -199,7 +207,7 @@
         <a href="../Lecture%205.3%20-%20Relational%20Database%20Design3/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.3 - Relational Database Design3.pdf (PDF file)
+            Lecture 5.3 - Relational Database Design 3
         </a>
     </li>
                     </ul>
@@ -495,7 +503,7 @@
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../Lecture%205.5%20-%20Relational%20Database%20Design5/"
+                    <a href="../closureofartibut/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -568,12 +576,68 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-52-relational-database-design2pdf-pdf-file">Lecture 5.2 - Relational Database Design2.pdf (PDF file)</h1>
-<p><strong>Summary</strong>
-Module 22 of Database Management Systems introduces the concept of Functional Dependencies (FDs), which are constraints on legal relations. FDs stipulate that values for a set of attributes (α) uniquely determine values for another set of attributes (β).</p>
-<p>Armstrong's Axioms form the basis for deducing new FDs from existing ones. These axioms include Reflexivity (α→α if α⊆β), Augmentation (if α→β, then γα→γβ), and Transitivity (if α→β and β→γ, then α→γ).</p>
-<p>The Closure of a set of FDs (F+) represents all FDs that can be logically inferred from the given FDs. Generating F+ involves applying Armstrong's Axioms until no new FDs can be derived. This process is both sound (generating only valid FDs) and complete (eventually deriving all valid FDs).</p>
-<p>By understanding FDs, database designers can determine if a relation is in a "good" form and decompose it into a set of relations that satisfy lossless-join decomposition. This ensures data integrity and efficient data processing.</p></div></p>
+        <p><div><h1 id="lecture-52-relational-database-design">Lecture 5.2: Relational Database Design</h1>
+<h2 id="functional-dependencies">Functional Dependencies</h2>
+<h3 id="definition">Definition</h3>
+<ul>
+<li>Constraints on the set of legal relations.</li>
+<li>Require that the value for a certain set of attributes determines uniquely the value for another set of attributes.</li>
+<li>A generalization of the notion of a key.</li>
+</ul>
+<h3 id="formal-definition">Formal Definition</h3>
+<ul>
+<li>For a relation schema <span class="arithmatex">\( R \)</span>, <span class="arithmatex">\( $\alpha \subseteq R$ \)</span> and <span class="arithmatex">\( $\beta \subseteq R $\)</span>.</li>
+<li>The functional dependency ( $\alpha \to \beta $) holds on <span class="arithmatex">\( R \)</span> if for any legal relations <span class="arithmatex">\( r(R) \)</span>, whenever any two tuples <span class="arithmatex">\( $t_1$ \)</span> and <span class="arithmatex">\( $t_2$ \)</span> of <span class="arithmatex">\( $r$ \)</span> agree on the attributes <span class="arithmatex">\( $ \alpha $ \)</span>, they also agree on the attributes <span class="arithmatex">\( $\beta$ \)</span>.</li>
+<li>Example: <span class="arithmatex">\( $A \to B$ \)</span> does not hold, but <span class="arithmatex">\( $B \to A$ \)</span> holds for a certain instance.</li>
+</ul>
+<h3 id="keys">Keys</h3>
+<ul>
+<li><strong>Superkey:</strong> <span class="arithmatex">\( $K$ \)</span> is a superkey for relation schema <span class="arithmatex">\( $R$ \)</span> if and only if ($ K \to R \ $).</li>
+<li><strong>Candidate Key:</strong> <span class="arithmatex">\( K \)</span> is a candidate key for <span class="arithmatex">\( R \)</span> if and only if <span class="arithmatex">\( $K \to R$ \)</span> and for no <span class="arithmatex">\($\alpha \subset K $\)</span>, <span class="arithmatex">\( $\alpha \to R $\)</span>.</li>
+</ul>
+<h3 id="practical-examples">Practical Examples</h3>
+<ul>
+<li><strong>Schema:</strong> <code>inst_dept(ID, name, salary, dept_name, building, budget)</code></li>
+<li>Expected FDs:</li>
+<li><code>dept_name → building</code></li>
+<li><code>dept_name → budget</code></li>
+<li><code>ID → budget</code></li>
+<li>Unexpected FD:</li>
+<li><code>dept_name → salary</code></li>
+</ul>
+<h3 id="trivial-functional-dependencies">Trivial Functional Dependencies</h3>
+<ul>
+<li>A functional dependency is trivial if it is satisfied by all instances of a relation.</li>
+<li>Example: <span class="arithmatex">\( $\text{ID, name} \to \text{ID} $\)</span> and <span class="arithmatex">\( $\text{name} \to \text{name} $\)</span>.</li>
+<li>Generally, <span class="arithmatex">\( $\alpha \to \beta $ \)</span> is trivial if <span class="arithmatex">\( $\beta \subseteq \alpha $\)</span>.</li>
+</ul>
+<hr>
+<h2 id="armstrongs-axioms">Armstrong’s Axioms</h2>
+<h3 id="definition_1">Definition</h3>
+<ul>
+<li>Given a set of FDs <span class="arithmatex">\( F \)</span>, infer new dependencies using:</li>
+<li><strong>Reflexivity:</strong> If <span class="arithmatex">\( $\beta \subseteq \alpha$ \)</span>, then <span class="arithmatex">\( \alpha \to \beta \)</span>.</li>
+<li><strong>Augmentation:</strong> If <span class="arithmatex">\( $\alpha \to \beta $ \)</span>, then <span class="arithmatex">\( $\gamma\alpha \to \gamma\beta $\)</span>.</li>
+<li><strong>Transitivity:</strong> If <span class="arithmatex">\( $\alpha \to \beta $\)</span> and <span class="arithmatex">\( $\beta \to \gamma $\)</span>, then <span class="arithmatex">\( $\alpha \to \gamma $\)</span>.</li>
+</ul>
+<h3 id="closure">Closure</h3>
+<ul>
+<li>The closure of a set of FDs <span class="arithmatex">\( $F$ \)</span> is the set <span class="arithmatex">\( $F^+ $\)</span> of all FDs logically implied by <span class="arithmatex">\( F \)</span>.</li>
+<li>Example:</li>
+<li><span class="arithmatex">\( $F = \{ A \to B, B \to C \}$ \)</span></li>
+<li><span class="arithmatex">\( $F^+ = \{ A \to B, B \to C, A \to C \} $\)</span></li>
+</ul>
+<h3 id="properties">Properties</h3>
+<ul>
+<li>Axioms are <strong>sound</strong> (generate only FDs that hold) and <strong>complete</strong> (generate all FDs that hold).</li>
+</ul>
+<hr>
+<h2 id="module-summary">Module Summary</h2>
+<ul>
+<li>Introduced the notion of Functional Dependencies.</li>
+<li>Explained Armstrong’s Axioms and their application to infer new FDs.</li>
+<li>Discussed the concept of the closure of a set of FDs.</li>
+</ul></div></p>
     </article>
 </section>
             <!-- endblock -->

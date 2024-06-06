@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.5 - Relational Database Design5.pdf (PDF file) - DBMS</title>
+        <title>Closureofartibut - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -188,16 +188,16 @@
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="../closureofartibut/"
-            class="
+        <a href="./"
+            class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Closureofartibut
         </a>
     </li>
                             
     <li class="drac-box-ternary">
-        <a href="./"
-            class=" active 
+        <a href="../Lecture%205.5%20-%20Relational%20Database%20Design5/"
+            class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Lecture 5.5 - Relational Database Design5.pdf (PDF file)
         </a>
@@ -497,13 +497,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../closureofartibut/"
+                    <a href="../Lecture%205.2%20-%20Relational%20Database%20Design2/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../Lecture%205.3%20-%20Relational%20Database%20Design3/"
+                    <a href="../Lecture%205.5%20-%20Relational%20Database%20Design5/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -576,53 +576,21 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-55-relational-database-design5pdf-pdf-file">Lecture 5.5 - Relational Database Design5.pdf (PDF file)</h1>
-<p><strong>Summary</strong>
-<strong>Relational Database Design</strong></p>
-<p><strong>Lossless Join Decomposition</strong></p>
-<ul>
-<li>A decomposition of a relation R into R1 and R2 is lossless if either R1 ∩ R2 → R1 or R1 ∩ R2 → R2 is in the set of functional dependencies (FDs) for R.</li>
-<li>This condition ensures that the original relation can be reconstructed by joining R1 and R2.</li>
-</ul>
-<p><strong>Dependency Preservation</strong></p>
-<ul>
-<li>A decomposition of R into D = {R1, R2, ..., Rn} is dependency preserving if (F1 ∪ F2 ∪ ... ∪ Fn) = F, where:<ul>
-<li>Fi is the set of FDs including attributes only in Ri</li>
-</ul>
-</li>
-<li>This ensures that all FDs in F are preserved in the decomposition.</li>
-</ul>
-<p><strong>Testing Dependency Preservation</strong></p>
-<ul>
-<li>Test if a dependency α → β is preserved by:<ul>
-<li>Computing F0 = F1 ∪ F2 ∪ ... ∪ Fn</li>
-<li>Check if β is in the attribute closure of α with respect to F0</li>
-</ul>
-</li>
-</ul>
-<p><strong>Practice Problems</strong></p>
-<p><strong>Lossless Join Decomposition</strong></p>
-<ul>
-<li>Determine if the following decompositions are lossless:<ul>
-<li>R(ABC) : F = {A → B, A → C} → {R1(AB), R2(BC)}</li>
-<li>R(ABCDEF) : F = {A → B, B → C, C → D, E → F} → {R1(AB), R2(BCD), R3(DEF)}</li>
-<li>R(ABCDEF) : F = {A → B, C → DE, AC → F} → {R1(BE), R2(ACDEF)}</li>
-<li>R(ABCDEG) : F = {AB → C, AC → B, AD → E, B → D, BC → A, E → G} → {R1(AB), R2(BC), R3(ABDE), R4(EG)}</li>
-<li>R(ABCDEFGHIJ) : F = {AB → C, B → F, D → IJ, A → DE, F → GH} → {R1(ABC), R2(ADE), R3(BF), R4(FGH), R5(DIJ)}</li>
-</ul>
-</li>
-</ul>
-<p><strong>Dependency Preservation</strong></p>
-<ul>
-<li>Verify if the following decompositions preserve dependencies:<ul>
-<li>R(ABCD) : F = {A → B, B → C, C → D, D → A} → {AB, BC, CD}</li>
-<li>R(ABCDEF) : F = {AB → CD, C → D, D → E, E → F} → {AB, CDE, EF}</li>
-<li>R(ABCDEG) : F = {AB → C, AC → B, BC → A, AD → E, B → D, E → G} → {ABC, ACDE, ADG}</li>
-<li>R(ABCD) : F = {A → B, B → C, C → D, D → B} → {AB, BC, BD}</li>
-<li>R(ABCDE) : F = {A → BC, CD → E, B → D, E → A} → {ABCE, BD}</li>
-</ul>
-</li>
-</ul></div></p>
+        <p><div><p><img alt="img.png" src="../image/img.png"></p>
+<hr>
+<p><img alt="img_1.png" src="../image/img_1.png"></p>
+<hr>
+<p><img alt="img_2.png" src="../image/img_2.png"></p>
+<p>(AC)^plus = 
+1. as A-&gt; B (AC)^+ = ACB
+2. as BC -&gt; DE (AC)^+ = ACBDE
+3. AEF -&gt; G and F not in (AC)^+ 
+4. (AC)^+ = <strong>"ACBDE"</strong></p>
+<hr>
+<p><img alt="img_3.png" src="../image/img_3.png">
+1. closure if ACF as A -&gt; B ACF + =  ACFB 
+2. BC -&gt; DE  ACF + =  ACFBDE
+3. AEF -&gt; G  ACF + =  <strong>ACFBDEG</strong></p></div></p>
     </article>
 </section>
             <!-- endblock -->
