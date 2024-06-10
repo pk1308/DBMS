@@ -383,7 +383,7 @@
         <a href="../Lecture%202.3%20-%20Introduction%20to%20SQL1/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.3 - Introduction to SQL1.pdf (PDF file)
+            Lecture 2.3 - Introduction to SQL1
         </a>
     </li>
                     </ul>
@@ -558,33 +558,68 @@
     <article>
         <p><div><h1 id="lecture-25-introduction-to-sql3pdf-pdf-file">Lecture 2.5 - Introduction to SQL3.pdf (PDF file)</h1>
 <p><strong>Summary</strong>
-Module 10 of Database Management Systems covers set operations, null values, three-valued logic, aggregate functions, and null values in aggregates.</p>
-<p><strong>Set Operations:</strong>
-* Union, intersect, and except operators combine sets of rows.
-* Multiset versions (e.g., union all) retain all duplicates.</p>
-<p><strong>Null Values:</strong>
-* Unknown or non-existent attribute values.
-* Arithmetic expressions involving nulls result in null.
-* Null values are represented as is null or is not null, not with comparison operators.</p>
-<p><strong>Three-Valued Logic:</strong>
-* Three values: true, false, unknown.
-* Comparison with nulls returns unknown.
-* Three-valued logic is applied to OR, AND, and NOT operators.</p>
-<p><strong>Aggregate Functions:</strong>
-* Operate on rows in a column to return a single value.
-* Functions include avg, min, max, sum, and count.
-* Null values are ignored in most aggregate functions.</p>
-<p><strong>Group By:</strong>
-* Groups rows by selected attributes and computes aggregate functions separately for each group.
-* Attributes in the select clause must appear in the group by list.</p>
-<p><strong>Having Clause:</strong>
-* Specifies conditions to filter groups based on aggregate function results.
-* Applied after group formation.</p>
-<p><strong>Null Values and Aggregates:</strong>
-* Aggregate functions ignore rows with null values in the aggregated attribute.
-* Count(<em>) returns 0 for empty collections and null for null-only collections.
-</em><em>Lec file</em>*</p>
-<h1 id="lecture-25-introduction-to-sql3pdf-pdf-file_1">Lecture 2.5 - Introduction to SQL3.pdf (PDF file)</h1></div></p>
+<strong>Introduction</strong></p>
+<p>This module provides an overview of set operations, null values, and aggregation in SQL/3. It introduces the concepts of set union, intersection, and exception, as well as the handling of null values and aggregate functions. The module concludes with a summary of the key points covered.</p>
+<p><strong>Objectives</strong></p>
+<p>Upon completion of this module, students will be able to:</p>
+<ul>
+<li>Understand and apply set operations (union, intersection, except)</li>
+<li>Handle null values in SQL queries</li>
+<li>Use aggregate functions (avg, min, max, sum, count)</li>
+<li>Group data using the GROUP BY clause</li>
+<li>Filter grouped data using the HAVING clause</li>
+</ul>
+<p><strong>Outline</strong></p>
+<ol>
+<li>Set Operations</li>
+<li>Null Values</li>
+<li>Three-Valued Logic</li>
+<li>Aggregate Functions</li>
+<li>GROUP BY</li>
+<li>HAVING</li>
+<li>Null Values with Aggregates</li>
+</ol>
+<p><strong>Set Operations</strong></p>
+<p>Set operations in SQL/3 allow you to combine or compare the results of two or more queries. The three most common set operations are union, intersection, and except.</p>
+<ul>
+<li><strong>Union:</strong> Returns all unique rows from both input queries.</li>
+<li><strong>Intersection:</strong> Returns only the rows that are common to both input queries.</li>
+<li><strong>Except:</strong> Returns all rows from the first input query that are not present in the second input query.</li>
+</ul>
+<p><strong>Null Values</strong></p>
+<p>Null values represent the absence of a value or an unknown value in SQL/3. They are distinct from zero or empty strings.</p>
+<p><strong>Three-Valued Logic</strong></p>
+<p>Due to the inclusion of null values, SQL/3 uses a three-valued logic system, where a predicate can be evaluated as true, false, or unknown.</p>
+<ul>
+<li>True: If the predicate is satisfied without any null values.</li>
+<li>False: If the predicate is not satisfied, or if it involves null values.</li>
+<li>Unknown: If the predicate involves a comparison with a null value.</li>
+</ul>
+<p><strong>Aggregate Functions</strong></p>
+<p>Aggregate functions operate on a group of values and return a single result. Some common aggregate functions include:</p>
+<ul>
+<li><strong>AVG:</strong> Average value</li>
+<li><strong>MIN:</strong> Minimum value</li>
+<li><strong>MAX:</strong> Maximum value</li>
+<li><strong>SUM:</strong> Sum of values</li>
+<li><strong>COUNT:</strong> Number of values</li>
+</ul>
+<p><strong>GROUP BY</strong></p>
+<p>The GROUP BY clause is used to group the results of a query based on one or more attributes. It allows for aggregation and filtering of data within each group.</p>
+<p><strong>HAVING</strong></p>
+<p>The HAVING clause is similar to the WHERE clause, but it is used to filter grouped data. It applies predicates to the aggregate values rather than the individual rows.</p>
+<p><strong>Null Values with Aggregates</strong></p>
+<p>Aggregate functions ignore null values unless the COUNT(<em>) function is used. COUNT(</em>) counts all rows, regardless of whether they contain null values.</p>
+<p><strong>Module Summary</strong></p>
+<p>This module has covered the following key concepts:</p>
+<ul>
+<li>Set operations (union, intersection, except)</li>
+<li>Null values and three-valued logic</li>
+<li>Aggregate functions (avg, min, max, sum, count)</li>
+<li>GROUP BY and HAVING clauses</li>
+<li>Handling null values with aggregates</li>
+</ul>
+<p>These concepts are essential for working with data in SQL/3. Understanding these concepts will enable you to perform complex data analysis and manipulation tasks efficiently.</p></div></p>
     </article>
 </section>
             <!-- endblock -->
