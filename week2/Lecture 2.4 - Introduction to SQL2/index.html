@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 2.4 - Introduction to SQL2.pdf (PDF file) - DBMS</title>
+        <title>Lecture 2.4 - Introduction to SQL2 - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -375,7 +375,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.4 - Introduction to SQL2.pdf (PDF file)
+            Lecture 2.4 - Introduction to SQL2
         </a>
     </li>
                             
@@ -556,89 +556,111 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-24-introduction-to-sql2pdf-pdf-file">Lecture 2.4 - Introduction to SQL2.pdf (PDF file)</h1>
+        <p><div><h1 id="lecture-24-introduction-to-sql2">Lecture 2.4 - Introduction to SQL2</h1>
 <p><strong>Summary</strong></p>
 <h2 id="additional-basic-operations">Additional Basic Operations</h2>
 <h3 id="cartesian-product">Cartesian Product</h3>
 <ul>
 <li>Finds all possible combinations of tuples from two or more relations.</li>
 <li>Useful when selecting data based on relationships between tables.</li>
-<li>Example: Select all possible instructor-course pairs using Cartesian product:
+<li>Example: Select all possible instructor-course pairs using Cartesian product:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">select</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span><span class="p">,</span><span class="w"> </span><span class="n">teaches</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
+<p><img alt="1718028910048" src="../image/Lecture2.4-IntroductiontoSQL2/1718028910048.png"></p>
+<p><img alt="1718028941392" src="../image/Lecture2.4-IntroductiontoSQL2/1718028941392.png"></p>
 <h3 id="rename-as-operation">Rename AS Operation</h3>
 <ul>
-<li>Allows renaming of relations and attributes using the <code>as</code> clause:
+<li>Allows renaming of relations and attributes using the <code>as</code> clause:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">old</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">name</span>
-</code></pre></div></li>
+</code></pre></div>
+<ul>
 <li>Optional keyword <code>as</code> may be omitted.</li>
 </ul>
+<p><img alt="1718029176176" src="../image/Lecture2.4-IntroductiontoSQL2/1718029176176.png"></p>
 <h3 id="string-values">String Values</h3>
 <ul>
 <li>SQL includes a string-matching operator (<code>like</code>) for character string comparisons.</li>
-<li>Uses special characters:<ul>
+<li>Uses special characters:</li>
 <li>Percent (%) matches any substring</li>
 <li>Underscore (_) matches any character</li>
+<li>Example: Find instructors with "dar" in their name:</li>
 </ul>
-</li>
-<li>Example: Find instructors with "dar" in their name:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">like</span><span class="w"> </span><span class="s1">'%dar%'</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
+<p><img alt="1718030860860" src="../image/Lecture2.4-IntroductiontoSQL2/1718030860860.png"></p>
+<p><img alt="1718030934760" src="../image/Lecture2.4-IntroductiontoSQL2/1718030934760.png"> </p>
+<p>• Patterns are case sensitive
+• Pattern matching examples:
+◦ ’Intro%’ matches any string beginning with “Intro”
+◦ ’%Comp%’ matches any string containing “Comp” as a substring
+◦ ’- - -<em>’ matches any string of exactly three characters
+◦ ’</em> _ _%’ matches any string of at least two characters
+• SQL supports a variety of string operations such as
+◦ concatenation (using “||”)
+◦ converting from upper to lower case (and vice versa)
+◦ finding string length, extracting substrings, et</p>
 <h3 id="order-by-clause">Order By Clause</h3>
 <ul>
 <li>Orders the display of tuples in ascending or descending order.</li>
 <li>By default, it is in ascending order.</li>
 <li>Can order by multiple attributes.</li>
-<li>Example: Order by name in descending order:
+<li>Example: Order by name in descending order:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">select</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">name</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">desc</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
+<p><img alt="1718031230502" src="../image/Lecture2.4-IntroductiontoSQL2/1718031230502.png"></p>
 <h3 id="select-top-fetch-clause">Select Top / Fetch Clause</h3>
 <ul>
 <li>Limits the number of records returned in the output.</li>
 <li>Useful for large tables to avoid performance impact.</li>
-<li>Example: Select the top 10 distinct names from the instructor table:
+<li>Example: Select the top 10 distinct names from the instructor table:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">select</span><span class="w"> </span><span class="n">top</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">distinct</span><span class="w"> </span><span class="n">name</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 <h3 id="where-clause-predicates">Where Clause Predicates</h3>
 <ul>
 <li>Allows selecting tuples that meet specified conditions.</li>
 <li>Uses comparison operators, logical operators, and functions.</li>
 <li>Between operator allows specifying a range of values.</li>
-<li>Example: Find instructors with salaries between $90,000 and $100,000:
+<li>Example: Find instructors with salaries between $90,000 and $100,000:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">where</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="k">between</span><span class="w"> </span><span class="mi">90000</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="mi">100000</span>
-</code></pre></div></li>
-</ul>
+</code></pre></div>
 <h3 id="in-operator">In Operator</h3>
 <ul>
 <li>Allows specifying multiple values in a where clause.</li>
 <li>Shorthand for multiple <code>or</code> conditions.</li>
-<li>Example: Find instructors in the 'Comp. Sci.' or 'Biology' departments:
+<li>Example: Find instructors in the 'Comp. Sci.' or 'Biology' departments:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">select</span><span class="w"> </span><span class="n">name</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">from</span><span class="w"> </span><span class="n">instructor</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">where</span><span class="w"> </span><span class="n">dept</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">'Comp. Sci.'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Biology'</span><span class="p">)</span>
-</code></pre></div></li>
-</ul>
-<h3 id="duplicates">Duplicates</h3>
+</code></pre></div>
+<p>Tuple comparison</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>select name, course_id
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>from instructor , teaches
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>where (instructor.ID, dept name) = (teaches.ID, ’Biology’);
+</code></pre></div>
+<h3 id="duplicates">Duplicates ????</h3>
 <ul>
 <li>SQL handles duplicates based on multiset semantics.</li>
 <li>Number of copies of tuples in the result depends on the number of copies in the input relations.</li>
-<li>For example, if there are two copies of tuple (1, a) in r1 and three copies of tuple (2) in r2, then the expression:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">Π</span><span class="n">B</span><span class="w"> </span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">r2</span>
+<li>For example, if there are two copies of tuple (1, a) in r1 and three copies of tuple (2) in r2, then the expression:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">Π</span><span class="n">B</span><span class="w"> </span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">r2</span>
 </code></pre></div>
-would result in six copies of tuple (a, 2).</li>
-</ul></div></p>
+<p><img alt="1718033002642" src="../image/Lecture2.4-IntroductiontoSQL2/1718033002642.png"></p>
+<p>would result in six copies of tuple (a, 2).</p></div></p>
     </article>
 </section>
             <!-- endblock -->
