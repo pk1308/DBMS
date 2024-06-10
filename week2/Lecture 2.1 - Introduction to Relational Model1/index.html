@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 2.1 - Introduction to Relational Model1.pdf (PDF file) - DBMS</title>
+        <title>Lecture 2.1 - Introduction to Relational Model1 - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -327,7 +327,7 @@
         <a href="../Lecture%202.2%20-%20Introduction%20to%20Relational%20Model2/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.2 - Introduction to Relational Model2.pdf (PDF file)
+            Lecture 2.2 - Introduction to Relational Model2
         </a>
     </li>
                             
@@ -351,7 +351,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.1 - Introduction to Relational Model1.pdf (PDF file)
+            Lecture 2.1 - Introduction to Relational Model1
         </a>
     </li>
                             
@@ -556,23 +556,72 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-21-introduction-to-relational-model1pdf-pdf-file">Lecture 2.1 - Introduction to Relational Model1.pdf (PDF file)</h1>
+        <p><div><h1 id="lecture-21-introduction-to-relational-model1">Lecture 2.1 - Introduction to Relational Model1</h1>
 <p><strong>Summary</strong>
 This module introduces the relational model for database management systems. It covers:</p>
-<p><strong>Attributes and Types:</strong>
-* Attributes represent data characteristics and have specific types, such as alphanumeric strings, dates, or numbers.</p>
-<p><strong>Schema and Instance:</strong>
-* Schema defines the structure of a relation (table) specifying attributes and their types.
-* Instance is the current state of a relation, represented as a table with rows (tuples).</p>
-<p><strong>Keys:</strong>
-* A superkey uniquely identifies tuples in a relation.
-* A candidate key is a minimal superkey.
-* A primary key is the selected candidate key used for unique identification.</p>
-<p><strong>Relational Query Languages:</strong>
-* Relational algebra, a procedural language, is introduced as a tool for manipulating relations using basic operations.
-* Other "pure" languages exist but are not covered here.
-<strong>Lec file</strong></p>
-<h1 id="lecture-21-introduction-to-relational-model1pdf-pdf-file_1">Lecture 2.1 - Introduction to Relational Model1.pdf (PDF file)</h1></div></p>
+<p><strong>Attributes and Types:</strong></p>
+<ul>
+<li>
+<p>Attributes represent data characteristics and have specific types, such as</p>
+</li>
+<li>
+<p>alphanumeric strings</p>
+</li>
+<li>alpha strings</li>
+<li>dates</li>
+<li>numbers</li>
+<li>alpha strings</li>
+<li>each attributes has to atomic - same datatype that is indivisble</li>
+<li>null - spl value for every domain indicates that value is unknown</li>
+</ul>
+<p><strong>domain is the allowed value for each attribute</strong></p>
+<p><img alt="1718006752566" src="../image/Lecture2.1-IntroductiontoRelationalModel1/1718006752566.png"></p>
+<p><strong>Schema and Instance:</strong></p>
+<ul>
+<li>Schema defines the structure of a relation (table) specifying attributes and their types.</li>
+<li>Instance is the current state of a relation, represented as a table with rows (tuples).</li>
+<li>A1 , A2 , · · · , An are attributes</li>
+<li>R = (A1 , A2 , · · · , An ) is a relation schema</li>
+<li>Example: instructor = (ID, name, dept name, salary )</li>
+<li>Formally, given sets D1 , D2 , · · · , Dn a relation r is a subset of
+  D 1 × D2 × · · · × Dn</li>
+<li>instructor ≡ (String (5) × String × String × Number +), where D ∈ String (5),
+  name ∈ String , dept name ∈ String , and salary ∈ Number +</li>
+</ul>
+<p>imp thing to note :</p>
+<ul>
+<li>Order of tuples / rows is irrelevant (tuples may be stored in an arbitrary order)</li>
+<li>No two tuples / rows may be identical</li>
+</ul>
+<p><strong>Keys:</strong></p>
+<ul>
+<li>A superkey uniquely identifies tuples in a relation.</li>
+<li>Example: {ID} and {ID, name} are both superkeys of instructor</li>
+<li>A candidate key is a minimal superkey.</li>
+<li>Example: {ID} is a candidate key for instructor</li>
+<li>A primary key is the selected candidate key used for unique identification.</li>
+<li>A surrogate key (or synthetic key) in a database is a unique identifier for either an
+  entity in the modeled world or an object in the database
+  eg : transaction id of amazon the transaction id is only valid in the order life time .</li>
+</ul>
+<p><img alt="1718007563411" src="../image/Lecture2.1-IntroductiontoRelationalModel1/1718007563411.png"></p>
+<ul>
+<li>Secondary / Alternate Key: {First Name, Last Name}, Aadhaar #</li>
+<li>Simple Key: Consists of a single attribute</li>
+<li>
+<p>Composite Key: {First Name, Last Name}</p>
+</li>
+<li>
+<p>Consists of more than one attribute to uniquely identify an entity occurrence</p>
+</li>
+<li>One or more of the attributes, which make up the key, are not simple keys in their own right</li>
+</ul>
+<p><img alt="1718007940002" src="../image/Lecture2.1-IntroductiontoRelationalModel1/1718007940002.png"></p>
+<p><strong>Relational Query Languages:</strong></p>
+<ul>
+<li>Relational algebra, a procedural language, is introduced as a tool for manipulating relations using basic operations.</li>
+<li>Other "pure" languages exist but are not covered here.</li>
+</ul></div></p>
     </article>
 </section>
             <!-- endblock -->
