@@ -200,7 +200,7 @@ def summarize(file_path , context_base = "summarize the following not less than 
     # Assuming the folder name is the second-to-last element (one level before the filename)
     folder_name = parts[-2]
     trans_file = os.path.join("/home/pk/Desktop/dbms/Transcripts/Week 2", base_name)
-    transcript = load_pdf_from_file(trans_file)
+    transcript = load_pdf_from_file("/home/pk/Desktop/dbms/PPT/Week 2/Lecture 2.2 - Introduction to Relational Model2.pdf")
     logger.info(f"loaded {trans_file}")
     # Setup the Google Generative AI model and invoke it using a human-friendly prompt
     llm = ChatGoogleGenerativeAI(model="gemini-pro")
