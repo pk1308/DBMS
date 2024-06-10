@@ -582,13 +582,16 @@
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>• Relation r
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>• σA=B∧D&gt;5(r)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>∧ means and 
 </code></pre></div>
+<p><img alt="1718011710950" src="../image/Lecture2.2-IntroductiontoRelationalModel2/1718011710950.png"></p>
 <ul>
 <li><strong>Project Operation:</strong> Selects columns (Attributes) of a relation.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>• Relation r
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>• πA,C (r)
 </code></pre></div>
+<p><img alt="1718011678884" src="../image/Lecture2.2-IntroductiontoRelationalModel2/1718011678884.png"></p>
 <ul>
 <li><strong>Union of two relations:</strong> Combines the rows of two relations, eliminating duplicates.</li>
 </ul>
@@ -613,18 +616,19 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>• Relation r,s
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>• r × s
 </code></pre></div>
+<p><img alt="1718011977303" src="../image/Lecture2.2-IntroductiontoRelationalModel2/1718011977303.png"></p>
+<p><strong>when you have two atrributes with same name we remane the atrributes in cartseian product</strong></p>
 <ul>
 <li><strong>Natural Join:</strong> Joins two relations on the common attributes, eliminating duplicate columns.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>• Let r and s be relations on schemas R and S respectively. Then, the “natural join” of
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>relations R and S is a relation on schema R ∪ S obtained as follows:
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>◦ Consider each pair of tuples tr from r and ts from s.
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>◦ If tr and ts have the same value on each of the attributes in R ∩ S, add a tuple t to
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>the result, where
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>. t has the same value as tr on r
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>. t has the same value as ts on s
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>• Let r and s be relations on schemas R and S respectively. Then, the “natural join” of relations R and S is a relation on schema R ∪ S obtained as follows:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>◦ Consider each pair of tuples tr from r and ts from s.
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>◦ If tr and ts have the same value on each of the attributes in R ∩ S, add a tuple t to the result, where
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>. t has the same value as tr on r
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>. t has the same value as ts on s
 </code></pre></div>
-<p><strong>Aggregation Operators</strong></p>
+<p><img alt="1718017218568" src="../image/Lecture2.2-IntroductiontoRelationalModel2/1718017218568.png">
+<strong>Aggregation Operators</strong></p>
 <ul>
 <li><strong>Aggregate Operators:</strong> Perform calculations on groups of rows.</li>
 <li><strong>SUM:</strong> Computes the sum of a specified column.</li>
@@ -673,7 +677,7 @@
 <td>Cartesian Product</td>
 </tr>
 <tr>
-<td>./</td>
+<td><span class="arithmatex">\(\bowtie\)</span></td>
 <td>Natural Join</td>
 </tr>
 <tr>
