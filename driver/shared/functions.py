@@ -182,7 +182,7 @@ def update_my_docs(folder_path="./docs"):
     write_yaml(file_path, yaml_file)
 
 
-def summarize(file_path , context_base = "summarize the following not less than 2000 words lec slide and transcript text" ):
+def summarize(file_path , context_base = "summarize the following not less than 2000 words lec slide" ):
     """_summary_
 
     Args:
@@ -191,20 +191,11 @@ def summarize(file_path , context_base = "summarize the following not less than 
     Returns:
         _type_: _description_
     """
-    
-    base_name = os.path.basename(file_path)
     pages = load_pdf_from_file(file_path=file_path)
     logger.info(f"loaded {file_path}")
-    parts = file_path.split("/")
-
-    # Assuming the folder name is the second-to-last element (one level before the filename)
-    # folder_name = parts[-2]
-    trans_file = os.path.join("/home/pk/Desktop/dbms/Transcripts/Week 2", base_name)
-    transcript = load_pdf_from_file("/home/pk/Desktop/dbms/Transcripts/Week 2/Lecture 2.3 - Introduction to SQL-1.pdf")
-    logger.info(f"loaded {trans_file}")
     # Setup the Google Generative AI model and invoke it using a human-friendly prompt
     llm = ChatGoogleGenerativeAI(model="gemini-pro")
-    result = llm.invoke(f"{context_base}: \n {pages}: \n {transcript}")
+    result = llm.invoke(f"{context_base}: \n {pages}")
 
     return result.content
 
