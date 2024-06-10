@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 2.5 - Introduction to SQL3.pdf (PDF file) - DBMS</title>
+        <title>Lecture 2.5 - Introduction to SQL3 - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -367,7 +367,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 2.5 - Introduction to SQL3.pdf (PDF file)
+            Lecture 2.5 - Introduction to SQL3
         </a>
     </li>
                             
@@ -556,7 +556,7 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-25-introduction-to-sql3pdf-pdf-file">Lecture 2.5 - Introduction to SQL3.pdf (PDF file)</h1>
+        <p><div><h1 id="lecture-25-introduction-to-sql3">Lecture 2.5 - Introduction to SQL3</h1>
 <p><strong>Summary</strong>
 <strong>Introduction</strong></p>
 <p>This module provides an overview of set operations, null values, and aggregation in SQL/3. It introduces the concepts of set union, intersection, and exception, as well as the handling of null values and aggregate functions. The module concludes with a summary of the key points covered.</p>
@@ -586,15 +586,18 @@
 <li><strong>Intersection:</strong> Returns only the rows that are common to both input queries.</li>
 <li><strong>Except:</strong> Returns all rows from the first input query that are not present in the second input query.</li>
 </ul>
+<p><img alt="1718038377522" src="../image/Lecture2.5-IntroductiontoSQL3/1718038377522.png"></p>
 <p><strong>Null Values</strong></p>
 <p>Null values represent the absence of a value or an unknown value in SQL/3. They are distinct from zero or empty strings.</p>
+<p><strong>usage : is null or is not null</strong> </p>
 <p><strong>Three-Valued Logic</strong></p>
 <p>Due to the inclusion of null values, SQL/3 uses a three-valued logic system, where a predicate can be evaluated as true, false, or unknown.</p>
 <ul>
-<li>True: If the predicate is satisfied without any null values.</li>
-<li>False: If the predicate is not satisfied, or if it involves null values.</li>
-<li>Unknown: If the predicate involves a comparison with a null value.</li>
+<li><strong>True: If the predicate is satisfied without any null values.</strong></li>
+<li><strong>False: If the predicate is not satisfied, or if it involves null values.</strong></li>
+<li><strong>Unknown: If the predicate involves a comparison with a null value.</strong></li>
 </ul>
+<p><img alt="1718039267634" src="../image/Lecture2.5-IntroductiontoSQL3/1718039267634.png"></p>
 <p><strong>Aggregate Functions</strong></p>
 <p>Aggregate functions operate on a group of values and return a single result. Some common aggregate functions include:</p>
 <ul>
@@ -606,8 +609,10 @@
 </ul>
 <p><strong>GROUP BY</strong></p>
 <p>The GROUP BY clause is used to group the results of a query based on one or more attributes. It allows for aggregation and filtering of data within each group.</p>
+<p><img alt="1718039497023" src="../image/Lecture2.5-IntroductiontoSQL3/1718039497023.png"></p>
 <p><strong>HAVING</strong></p>
 <p>The HAVING clause is similar to the WHERE clause, but it is used to filter grouped data. It applies predicates to the aggregate values rather than the individual rows.</p>
+<p><img alt="1718039542918" src="../image/Lecture2.5-IntroductiontoSQL3/1718039542918.png"></p>
 <p><strong>Null Values with Aggregates</strong></p>
 <p>Aggregate functions ignore null values unless the COUNT(<em>) function is used. COUNT(</em>) counts all rows, regardless of whether they contain null values.</p>
 <p><strong>Module Summary</strong></p>
