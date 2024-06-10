@@ -1,4 +1,5 @@
-# Lecture 2.5 - Introduction to SQL3.pdf (PDF file)
+# Lecture 2.5 - Introduction to SQL3
+
 **Summary**
 **Introduction**
 
@@ -24,6 +25,7 @@ Upon completion of this module, students will be able to:
 6. HAVING
 7. Null Values with Aggregates
 
+
 **Set Operations**
 
 Set operations in SQL/3 allow you to combine or compare the results of two or more queries. The three most common set operations are union, intersection, and except.
@@ -32,17 +34,23 @@ Set operations in SQL/3 allow you to combine or compare the results of two or mo
 * **Intersection:** Returns only the rows that are common to both input queries.
 * **Except:** Returns all rows from the first input query that are not present in the second input query.
 
+![1718038377522](image/Lecture2.5-IntroductiontoSQL3/1718038377522.png)
+
 **Null Values**
 
 Null values represent the absence of a value or an unknown value in SQL/3. They are distinct from zero or empty strings.
+
+**usage : is null or is not null** 
 
 **Three-Valued Logic**
 
 Due to the inclusion of null values, SQL/3 uses a three-valued logic system, where a predicate can be evaluated as true, false, or unknown.
 
-* True: If the predicate is satisfied without any null values.
-* False: If the predicate is not satisfied, or if it involves null values.
-* Unknown: If the predicate involves a comparison with a null value.
+* **True: If the predicate is satisfied without any null values.**
+* **False: If the predicate is not satisfied, or if it involves null values.**
+* **Unknown: If the predicate involves a comparison with a null value.**
+
+![1718039267634](image/Lecture2.5-IntroductiontoSQL3/1718039267634.png)
 
 **Aggregate Functions**
 
@@ -58,9 +66,14 @@ Aggregate functions operate on a group of values and return a single result. Som
 
 The GROUP BY clause is used to group the results of a query based on one or more attributes. It allows for aggregation and filtering of data within each group.
 
+![1718039497023](image/Lecture2.5-IntroductiontoSQL3/1718039497023.png)
+
 **HAVING**
 
 The HAVING clause is similar to the WHERE clause, but it is used to filter grouped data. It applies predicates to the aggregate values rather than the individual rows.
+
+
+![1718039542918](image/Lecture2.5-IntroductiontoSQL3/1718039542918.png)
 
 **Null Values with Aggregates**
 
