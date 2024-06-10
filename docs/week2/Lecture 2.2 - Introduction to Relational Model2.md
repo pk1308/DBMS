@@ -1,14 +1,8 @@
-# Lecture 2.2 - Introduction to Relational Model2.pdf (PDF file)
+# Lecture 2.2 - Introduction to Relational Model2
+
 **Summary**
 **Introduction to Relational Model**
 
-**Module Recap**
-
-* Basic notions of modeling introduced
-    * Attributes and their Types
-    * Schema and Instance
-    * Keys and their Categorization
-* Languages for Relation Model introduced
 
 **Module Objectives**
 
@@ -18,13 +12,13 @@
 **Module Outline**
 
 * Operations
-    * Select
-    * Project
-    * Union
-    * Difference
-    * Intersection
-    * Cartesian Product
-    * Natural Join
+  * Select
+  * Project
+  * Union
+  * Difference
+  * Intersection
+  * Cartesian Product
+  * Natural Join
 * Aggregate Operations
 
 **Relational Operators**
@@ -86,7 +80,6 @@ the result, where
 **Aggregation Operators**
 
 * **Aggregate Operators:** Perform calculations on groups of rows.
-
 * **SUM:** Computes the sum of a specified column.
 * **AVG:** Computes the average of a specified column.
 * **MAX:** Computes the maximum value of a specified column.
@@ -101,19 +94,19 @@ the result, where
 
 **Summary of Relational Algebra Operators**
 
-| Operator | Description |
-|---|---|
-| σ | Select |
-| π | Project |
-| ∪ | Union |
-| − | Difference |
-| ∩ | Intersection |
-| × | Cartesian Product |
-| ./ | Natural Join |
-| SUM | Computes the sum of a specified column |
-| AVG | Computes the average of a specified column |
-| MAX | Computes the maximum value of a specified column |
-| MIN | Computes the minimum value of a specified column |
+| Operator | Description                                      |
+| -------- | ------------------------------------------------ |
+| σ       | Select                                           |
+| π       | Project                                          |
+| ∪       | Union                                            |
+| −       | Difference                                       |
+| ∩       | Intersection                                     |
+| ×       | Cartesian Product                                |
+| ./       | Natural Join                                     |
+| SUM      | Computes the sum of a specified column           |
+| AVG      | Computes the average of a specified column       |
+| MAX      | Computes the maximum value of a specified column |
+| MIN      | Computes the minimum value of a specified column |
 
 **Module Summary**
 
