@@ -31,8 +31,10 @@ nav:
   - week1/Lecture 1.5 - Intro to DBMS2.md
 - week2:
   - week2/Lecture 2.2 - Introduction to Relational Model2.md
+  - week2/inst_sec.md
   - week2/tutorial_2.1.md
   - week2/week2.md
+  - week2/test.md
   - week2/Lecture 2.1 - Introduction to Relational Model1.md
   - week2/check_list.md
   - week2/Lecture 2.5 - Introduction to SQL3.md
