@@ -5,12 +5,10 @@ nav:
   - index.md
 - week3:
   - week3/tutorial_3_5.md
-  - week3/Lecture 3.5 - Advanced SQL_annotated.md
-  - week3/Lecture 3.3 - Intermediate SQL2_annotated.md
-  - week3/Lecture 3.1 - SQL Examples_annotated.md
-  - week3/Lecture 3.2 - Intermediate SQL1_annotated.md
-  - week3/Lecture 3.4 - Intermediate SQL3_annotated.md
+  - week3/Lecture 3.1 - SQL Examples.md
+  - week3/Lecture 3.2 - Intermediate SQL1.md
   - week3/week3.md
+  - week3/image/Lecture 3.3 - Intermediate SQL2.md
 - Week 5:
   - Week 5/Lecture 5.4 - Relational Database Design4.md
   - Week 5/Lecture 5.1 - Relational Database Design1.md
@@ -33,8 +31,8 @@ nav:
   - week2/Lecture 2.2 - Introduction to Relational Model2.md
   - week2/inst_sec.md
   - week2/tutorial_2.1.md
+  - week2/live session_sat.md
   - week2/week2.md
-  - week2/test.md
   - week2/Lecture 2.1 - Introduction to Relational Model1.md
   - week2/check_list.md
   - week2/Lecture 2.5 - Introduction to SQL3.md
