@@ -1,4 +1,6 @@
 import psycopg2
+
+
 def updaterecord(num,dept):
     conn=None
     try:

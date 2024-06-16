@@ -27,7 +27,3 @@ logger.add(
     colorize=True,
     format="<green>{time}</green> | <blue>{level}</blue> | {message}",
 )
-
-
-# Example usage
-logger.debug("This is a debug message with custom time format.")

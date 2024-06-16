@@ -1,4 +1,6 @@
 import psycopg2
+
+
 def insertrecord(num,name,dept):
     try:
         conn=None

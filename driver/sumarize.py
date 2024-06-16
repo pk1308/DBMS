@@ -1,13 +1,10 @@
 import os
 import sys
-from shared.functions import ( create_ipynb,create_md, deploy_mkdocs, get_git_status_files,
-                              git_add_and_commit, update_my_docs,)
+
 from shared.app_log import logger
-
-
-
-
-
+from shared.functions import (create_ipynb, create_md, deploy_mkdocs,
+                              get_git_status_files, git_add_and_commit,
+                              update_my_docs)
 
 if __name__ == "__main__":
 

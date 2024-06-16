@@ -1,4 +1,5 @@
 # Lecture 3.3 - Intermediate SQL2.pdf (PDF file)
+
 **Summary**
 **Module 13: Intermediate SQL/2**
 
@@ -26,7 +27,53 @@
 * **Right outer join:** Returns all rows from the right relation and rows from the left relation that match on the specified condition.
 * **Full outer join:** Returns all rows from both relations, regardless of whether they match on the specified condition.
 
-**Views**
+#### Cross JOIN
+
+- **Cross join:** Returns the Cartesian product of rows from tables in the join.
+
+```pgsql
+select * from employee cross join department; 
+```
+
+**is  same** 
+
+```pgsql
+select * from employee , department;
+```
+
+
+![1718537363083](image/Lecture3.3-IntermediateSQL2/1718537363083.png)
+
+##### INNER JOIN
+
+Inner join is the intersection of the two table 
+
+![1718537597126](image/Lecture3.3-IntermediateSQL2/1718537597126.png)
+
+
+if we add natural then the result will ignore the the common attribute in the second table 
+
+![1718537681263](image/Lecture3.3-IntermediateSQL2/1718537681263.png)
+
+##### Outer Join
+
+###### Left Outer join
+
+![1718537827555](image/Lecture3.3-IntermediateSQL2/1718537827555.png)
+
+
+###### Right outer Join
+
+![1718537879249](image/Lecture3.3-IntermediateSQL2/1718537879249.png)
+
+
+###### Natural Full outer Join
+
+![1718537967007](image/Lecture3.3-IntermediateSQL2/1718537967007.png)
+
+
+
+##### **Views**
 
 * **Definition:** A view is a virtual relation that is defined by a query expression.
 * **Purpose:** Views provide a mechanism to hide certain data from users or to create a new relation that is derived from existing relations.
@@ -41,6 +88,9 @@ create view v as < query expression >
 
 * The view name is represented by `v`.
 * The query expression specifies the rows and columns that are included in the view.
+
+![1718538819775](image/Lecture3.3-IntermediateSQL2/1718538819775.png)
+
 
 **View Expansion**
 

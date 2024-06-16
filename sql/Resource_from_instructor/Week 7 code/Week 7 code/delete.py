@@ -1,4 +1,6 @@
 import psycopg2
+
+
 def deleterecord(num):
     conn=None
     try:

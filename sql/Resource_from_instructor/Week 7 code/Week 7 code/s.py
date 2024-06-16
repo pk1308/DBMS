@@ -1,4 +1,6 @@
 import psycopg2
+
+
 def selectall():
     conn=None
     try:

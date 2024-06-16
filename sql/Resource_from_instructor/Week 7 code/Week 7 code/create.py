@@ -1,4 +1,6 @@
 import psycopg2
+
+
 def createtable():
     conn=None
     try:

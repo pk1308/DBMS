@@ -9,12 +9,9 @@ import yaml
 from git import Repo
 from langchain_community.document_loaders import PyPDFium2Loader
 from langchain_google_genai import ChatGoogleGenerativeAI
+
 from .app_log import logger
-
-
 from .variables import DEFAULT_PDF_URL
-
-
 
 # Set up the logger with custom format
 logger.remove()  # Remove the default logger
