@@ -1,4 +1,4 @@
-* [ ] lec class
+* [X] lec class
 * [ ] PPA
 * [ ] GRPA
 * [ ] GA

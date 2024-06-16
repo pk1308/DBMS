@@ -1,7 +1,7 @@
 import os
 
 from shared.app_log import logger
-from shared.functions import (create_ipynb, create_md, deploy_mkdocs,
+from shared.functions import (create_ipynb,deploy_mkdocs,
                               get_git_status_files, git_add_and_commit,
                               update_my_docs)
 

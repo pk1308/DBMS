@@ -1,4 +1,4 @@
-##### Intermediate SQL3
+##### Lecture 3.4- Intermediate SQL3
 
 ### Transactions
 
@@ -87,7 +87,7 @@
   - `TIMESTAMP '2005-07-27 09:00:30.75'`
   - `INTERVAL '1' DAY`
 
-### Index Creation 
+### Index Creation
 
 ![1718543934786](image/Lecture3.4-IntermediateSQL3/1718543934786.png)
 
@@ -98,7 +98,6 @@
 ### Domains
 
 ![1718544112632](image/Lecture3.4-IntermediateSQL3/1718544112632.png)
-
 
 ### BLOB and Clob
 
@@ -140,9 +139,7 @@
 
 ![1718544509419](image/Lecture3.4-IntermediateSQL3/1718544509419.png)
 
-
 ### Role
-
 
 ![1718544657820](image/Lecture3.4-IntermediateSQL3/1718544657820.png)
 

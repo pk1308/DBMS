@@ -1,4 +1,5 @@
-# Lecture 3.5 - Advanced SQL.pdf (PDF file)
+# Lecture 3.5 - Advanced SQL
+
 **Summary**
 **Functions and Procedural Constructs**
 
@@ -10,25 +11,22 @@ SQL:1999 also supports a rich set of imperative constructs, including loops, if-
 
 Functions are used to perform calculations or retrieve data from the database. They can be defined using the `CREATE FUNCTION` statement. The following example creates a function that returns the count of the number of instructors in a given department:
 
-```sql
+```pgsql
 CREATE FUNCTION dept_count(dept_name VARCHAR(20))
 RETURNS INTEGER
 BEGIN
   DECLARE d_count INTEGER;
-  SELECT COUNT(*) INTO d_count
-  FROM instructor
-  WHERE instructor.dept_name = dept_name;
-  RETURN d_count;
-END;
 ```
 
 This function can then be used to find the department names and budgets of all departments with more than 12 instructors:
 
-```sql
+```pgsql
 SELECT dept_name, budget
 FROM department
 WHERE dept_count(dept_name) > 12;
 ```
+
+![1718552459048](image/Lecture3.5-AdvancedSQL/1718552459048.png)
 
 **Procedures**
 
@@ -49,24 +47,31 @@ This procedure can then be called to update the salary of an employee:
 CALL update_salary(1000, 50000);
 ```
 
+![1718553466202](image/Lecture3.5-AdvancedSQL/1718553466202.png)
+
+
 **Language Constructs**
 
 SQL:1999 supports a rich set of imperative constructs, including loops, if-then-else statements, and assignment. These constructs can be used to create complex procedures and functions.
 
 The following table summarizes the most common language constructs:
 
-| Construct | Description |
-|---|---|
-| `BEGIN ... END` | Compound statement |
-| `DECLARE` | Declare a local variable |
-| `SET` | Assign a value to a local variable |
-| `IF ... THEN ... ELSE` | Conditional statement |
-| `WHILE` | Loop while a condition is true |
-| `REPEAT` | Loop until a condition is true |
-| `FOR` | Loop through a set of values |
-| `CASE` | Conditional statement with multiple branches |
-| `SIGNAL` | Signal an exception |
-| `DECLARE HANDLER FOR` | Declare a handler for an exception |
+| Construct                | Description                                  |
+| ------------------------ | -------------------------------------------- |
+| `BEGIN ... END`        | Compound statement                           |
+| `DECLARE`              | Declare a local variable                     |
+| `SET`                  | Assign a value to a local variable           |
+| `IF ... THEN ... ELSE` | Conditional statement                        |
+| `WHILE`                | Loop while a condition is true               |
+| `REPEAT`               | Loop until a condition is true               |
+| `FOR`                  | Loop through a set of values                 |
+| `CASE`                 | Conditional statement with multiple branches |
+| `SIGNAL`               | Signal an exception                          |
+| `DECLARE HANDLER FOR`  | Declare a handler for an exception           |
+
+![1718553589645](image/Lecture3.5-AdvancedSQL/1718553589645.png)
+
+![1718553652212](image/Lecture3.5-AdvancedSQL/1718553652212.png)
 
 **External Language Routines**
 

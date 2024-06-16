@@ -217,12 +217,12 @@ def create_md(files_to_create):
                     logger.info(f"summarizing {file_to}")
                     data_to_write = summarize(file_to)
                     # compress_pdf(file_to)
-                    f.write(f"# {os.path.basename(file_to)} (PDF file)\n")
+                    f.write(f"#  Summary of {os.path.basename(file_to)} \n")
                     f.write("**Summary**\n")
                     f.write(data_to_write)
                     f.write("\n")
                     logger.info(f"summarized {file_to}")
-                    time.sleep(60)
+                    # time.sleep(60)
             except Exception as e:
                 logger.error(f"Error creating {new_filename}: {e}")
                 success = False
