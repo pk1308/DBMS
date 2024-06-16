@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf (PDF file) - DBMS</title>
+        <title>Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,10 +104,10 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../week3/tutorial_3_5/"
+        <a href="../../week3/Lecture%203.5%20-%20Advanced%20SQL/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Tutorial 3 5
+            Lecture 3.5 - Advanced SQL
         </a>
     </li>
                             
@@ -123,7 +123,15 @@
         <a href="../../week3/Lecture%203.2%20-%20Intermediate%20SQL1/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 3.2   Intermediate SQL1
+            Lecture 3.2 - Intermediate SQL1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture%203.4%20-%20Intermediate%20SQL3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.4   Intermediate SQL3
         </a>
     </li>
                             
@@ -419,7 +427,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf (PDF file)
+            Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf
         </a>
     </li>
                             
@@ -556,37 +564,42 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-42-formal-relational-query-languages2_annotatedpdf-pdf-file">Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf (PDF file)</h1>
+        <p><div><h1 id="summary-of-lecture-42-formal-relational-query-languages2_annotatedpdf">Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf</h1>
 <p><strong>Summary</strong>
-This module covers formal calculus-based query languages, including the study of relational algebra, tuple relational calculus, and domain relational calculus. Predicate logic is introduced as the foundation for these calculus-based query languages.</p>
-<p>Key concepts include:</p>
+<strong>Predicate Logic</strong></p>
+<p>Predicate logic, also known as predicate calculus, extends propositional logic or Boolean algebra. It introduces the concepts of predicates and quantifiers to better capture the meaning of statements that cannot be adequately expressed by propositional logic. Tuple Relational Calculus and Domain Relational Calculus are based on Predicate Calculus.</p>
+<p><strong>Predicates</strong></p>
+<p>A predicate is a property that a subject of a statement can have. It is a function that tells the truth value of the statement at the subject.</p>
+<p><strong>Quantifiers</strong></p>
+<p>Quantifiers are used in predicate logic to express the extent to which a predicate is true over a range of elements. There are two types of quantifiers:</p>
 <ul>
-<li>
-<p><strong>Predicate Logic:</strong></p>
+<li>Universal Quantifier (∀): Asserts that a property is true for all values of a variable in a particular domain.</li>
+<li>Existential Quantifier (∃): Asserts that there is at least one element with a certain property.</li>
+</ul>
+<p><strong>Tuple Relational Calculus (TRC)</strong></p>
+<p>TRC is a non-procedural query language where each query is in the form:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{t | P(t)}
+</code></pre></div>
+<p>where:</p>
 <ul>
-<li>A way of expressing statements that cannot be adequately represented by propositional logic.</li>
-<li>Uses predicates and quantifiers to describe properties and relationships between objects.</li>
+<li>t = resulting tuples</li>
+<li>P(t) = predicate that specifies the conditions used to fetch t.</li>
 </ul>
-</li>
-<li>
-<p><strong>Tuple Relational Calculus (TRC):</strong></p>
+<p><strong>TRC Example</strong></p>
+<p>Find the first names of students whose age is greater than 21:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{t.Fname | Student(t) ∧ t.age &gt; 21}
+</code></pre></div>
+<p><strong>Domain Relational Calculus (DRC)</strong></p>
+<p>DRC is a non-procedural query language equivalent to TRC. Each query is expressed as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{&lt; x1, x2, . . . , xn &gt; |P(x1, x2, . . . , xn)}
+</code></pre></div>
+<p>where:</p>
 <ul>
-<li>A non-procedural query language where queries are expressed as sets of tuples satisfying certain conditions.</li>
-<li>Uses quantifiers and predicates to define the desired tuples.</li>
+<li>x1, x2, . . . , xn are domain variables</li>
+<li>P is a formula similar to the predicate calculus</li>
 </ul>
-</li>
-<li>
-<p><strong>Domain Relational Calculus (DRC):</strong></p>
-<ul>
-<li>Equivalent in power to TRC, but uses domain variables instead of tuples.</li>
-<li>Formulas in DRC resemble predicate calculus formulas.</li>
-</ul>
-</li>
-</ul>
-<p>The text also establishes the equivalence of relational algebra, TRC, and DRC, highlighting their equal expressive power. The concept of safe expressions is introduced to prevent infinite relations from being generated in TRC and DRC expressions.
-<strong>Lec file</strong></p>
-<h1 id="lecture-42-formal-relational-query-languages2_annotatedpdf-pdf-file_1">Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf (PDF file)</h1>
-<p><embed alt="Alt text" src="../Lecture%204.2%20-%20Formal%20Relational%20Query%20Languages2_annotated.pdf" style="min-height:100vh;width:100%" type="application/pdf"></embed></p></div></p>
+<p><strong>Equivalence of Relational Algebra (RA), TRC, and DRC</strong></p>
+<p>The expressive power of RA, TRC, and DRC is equivalent. This equivalence means that any query that can be expressed in one language can be expressed in the other two languages. This equivalence is important for database theory and for understanding the different ways to query data.</p></div></p>
     </article>
 </section>
             <!-- endblock -->

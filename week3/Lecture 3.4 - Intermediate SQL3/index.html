@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Tutorial 3 5 - DBMS</title>
+        <title>Lecture 3.4   Intermediate SQL3 - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,10 +104,10 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="./"
-            class=" active 
+        <a href="../Lecture%203.5%20-%20Advanced%20SQL/"
+            class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Tutorial 3 5
+            Lecture 3.5 - Advanced SQL
         </a>
     </li>
                             
@@ -123,7 +123,15 @@
         <a href="../Lecture%203.2%20-%20Intermediate%20SQL1/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 3.2   Intermediate SQL1
+            Lecture 3.2 - Intermediate SQL1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.4   Intermediate SQL3
         </a>
     </li>
                             
@@ -419,7 +427,7 @@
         <a href="../../week4/Lecture%204.2%20-%20Formal%20Relational%20Query%20Languages2_annotated/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf (PDF file)
+            Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf
         </a>
     </li>
                             
@@ -477,13 +485,13 @@
         <div class="container">
             <div class="row row-preview">
                 <div class="col">
-                    <a href="../.."
+                    <a href="../Lecture%203.2%20-%20Intermediate%20SQL1/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </div>
                 <div class="col">
-                    <a href="../Lecture%203.1%20-%20SQL%20Examples/"
+                    <a href="../week3/"
                         class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
@@ -556,7 +564,133 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p>
+        <p><div><h5 id="lecture-34-intermediate-sql3">Lecture 3.4- Intermediate SQL3</h5>
+<h3 id="transactions">Transactions</h3>
+<p><strong>Definition and Properties</strong></p>
+<ul>
+<li>A transaction is a unit of work in a database that must be either fully completed or fully rolled back.</li>
+<li>Transactions ensure <strong>atomicity</strong>, meaning they are indivisible and irreducible. If a transaction is partially completed and an error occurs, it must be rolled back entirely as if it never happened.</li>
+<li>Transactions must also maintain isolation from other transactions to prevent concurrency issues.</li>
+</ul>
+<p><strong>Implementation in SQL</strong></p>
+<ul>
+<li>Transactions begin implicitly and are ended by either a <code>commit</code> or <code>rollback</code> command.</li>
+<li>In most databases, each SQL statement commits automatically by default. However, auto-commit can be turned off for a session using APIs or specific SQL commands.</li>
+<li>SQL:1999 introduced the <code>begin atomic ... end</code> syntax to explicitly define transactions, although this is not widely supported.</li>
+</ul>
+<p><img alt="1718543297036" src="../image/Lecture3.4-IntermediateSQL3/1718543297036.png"></p>
+<h3 id="integrity-constraints">Integrity Constraints</h3>
+<p><strong>Purpose and Types</strong></p>
+<ul>
+<li>Integrity constraints are rules applied to database columns to ensure data accuracy and consistency.</li>
+<li>Common types of constraints include:</li>
+<li><code>NOT NULL</code>: Ensures that a column cannot have a NULL value.</li>
+<li><code>PRIMARY KEY</code>: A unique identifier for a row, which cannot be NULL.</li>
+<li><code>UNIQUE</code>: Ensures all values in a column or a set of columns are unique.</li>
+<li><code>CHECK</code>: Ensures that the value in a column meets a specific condition.</li>
+</ul>
+<p><strong>Examples and Usage</strong></p>
+<ul>
+<li>Example of a <code>NOT NULL</code> constraint: <code>name VARCHAR(20) NOT NULL</code>.</li>
+<li>Example of a <code>UNIQUE</code> constraint: <code>UNIQUE (A1, A2, ..., Am)</code> where <code>A1, A2, ..., Am</code> form a candidate key.</li>
+<li>Example of a <code>CHECK</code> constraint to restrict semester values:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">course_id</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">sec_id</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">8</span><span class="p">),</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="n">semester</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">year</span><span class="w"> </span><span class="nb">NUMERIC</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="n">building</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="n">room_number</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">7</span><span class="p">),</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="n">time_slot_id</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">course_id</span><span class="p">,</span><span class="w"> </span><span class="n">sec_id</span><span class="p">,</span><span class="w"> </span><span class="n">semester</span><span class="p">,</span><span class="w"> </span><span class="k">year</span><span class="p">),</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="k">CHECK</span><span class="w"> </span><span class="p">(</span><span class="n">semester</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="s1">'Fall'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Winter'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Spring'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Summer'</span><span class="p">))</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h3 id="referential-integrity">Referential Integrity</h3>
+<p><strong>Definition and Enforcement</strong></p>
+<ul>
+<li>Referential integrity ensures that a foreign key value in one table must match a primary key value in another table, maintaining consistency between related tables.</li>
+<li>Example: If "Biology" is a department name in the <code>instructor</code> table, it must exist in the <code>department</code> table.</li>
+</ul>
+<p><strong>Cascading Actions</strong></p>
+<ul>
+<li>Cascading actions define the behavior of the database when a user attempts to delete or update a key referenced by foreign keys.</li>
+<li>Example of cascading actions:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CREATE TABLE course (
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    course_id CHAR(5) PRIMARY KEY,
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    title VARCHAR(20),
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    dept_name VARCHAR(20),
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    FOREIGN KEY (dept_name) REFERENCES department
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    ON DELETE CASCADE
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    ON UPDATE CASCADE
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>);
+</code></pre></div>
+<p><img alt="1718543809149" src="../image/Lecture3.4-IntermediateSQL3/1718543809149.png">
+- Alternative actions include <code>NO ACTION</code>, <code>SET NULL</code>, and <code>SET DEFAULT</code>.</p>
+<h3 id="sql-data-types-and-schemas">SQL Data Types and Schemas</h3>
+<p><strong>Built-in Data Types</strong></p>
+<ul>
+<li>SQL provides several built-in data types:</li>
+<li><code>DATE</code>: Stores dates.</li>
+<li><code>TIME</code>: Stores time of day.</li>
+<li><code>TIMESTAMP</code>: Combines date and time.</li>
+<li><code>INTERVAL</code>: Represents a period of time.</li>
+<li>Examples:</li>
+<li><code>DATE '2005-07-27'</code></li>
+<li><code>TIME '09:00:30'</code></li>
+<li><code>TIMESTAMP '2005-07-27 09:00:30.75'</code></li>
+<li><code>INTERVAL '1' DAY</code></li>
+</ul>
+<h3 id="index-creation">Index Creation</h3>
+<p><img alt="1718543934786" src="../image/Lecture3.4-IntermediateSQL3/1718543934786.png"></p>
+<h3 id="alias-or-user-defined-data-type">Alias or User defined Data Type</h3>
+<p><img alt="1718544045222" src="../image/Lecture3.4-IntermediateSQL3/1718544045222.png"></p>
+<h3 id="domains">Domains</h3>
+<p><img alt="1718544112632" src="../image/Lecture3.4-IntermediateSQL3/1718544112632.png"></p>
+<h3 id="blob-and-clob">BLOB and Clob</h3>
+<p><img alt="1718544228176" src="../image/Lecture3.4-IntermediateSQL3/1718544228176.png"></p>
+<h3 id="authorization">Authorization</h3>
+<p><img alt="1718544271157" src="../image/Lecture3.4-IntermediateSQL3/1718544271157.png"></p>
+<p><img alt="1718544449826" src="../image/Lecture3.4-IntermediateSQL3/1718544449826.png"></p>
+<p><strong>Privileges and Roles</strong></p>
+<ul>
+<li>SQL includes mechanisms to control user access to data and operations.</li>
+<li>Privileges can be granted to users to allow specific actions, such as <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>.</li>
+<li>Example of granting select privilege on a view:</li>
+</ul>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">geo_instructor</span><span class="w"> </span><span class="k">AS</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">instructor</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Geology'</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">geo_instructor</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">geo_staff</span><span class="p">;</span>
+</code></pre></div>
+- References privilege is necessary to create foreign keys:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">Mariano</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Transfer and Revocation of Privileges</strong></p>
+<ul>
+<li>Privileges can be transferred from one user to another using the <code>GRANT ... WITH GRANT OPTION</code>.</li>
+<li>Privileges can be revoked using the <code>REVOKE</code> command:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">REVOKE</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Amit</span><span class="p">,</span><span class="w"> </span><span class="n">Satoshi</span><span class="w"> </span><span class="k">CASCADE</span><span class="p">;</span>
+</code></pre></div></li>
+</ul>
+<p><img alt="1718544509419" src="../image/Lecture3.4-IntermediateSQL3/1718544509419.png"></p>
+<h3 id="role">Role</h3>
+<p><img alt="1718544657820" src="../image/Lecture3.4-IntermediateSQL3/1718544657820.png"></p>
+<p><img alt="1718544754304" src="../image/Lecture3.4-IntermediateSQL3/1718544754304.png"></p>
+<h3 id="module-summary">Module Summary</h3>
+<p>The lecture summarizes the following key points:</p>
+<ul>
+<li>Introduction to transactions, ensuring atomicity and isolation.</li>
+<li>Detailed exploration of integrity constraints to maintain data consistency.</li>
+<li>Referential integrity to enforce relationships between tables.</li>
+<li>Advanced SQL data types for handling various forms of data.</li>
+<li>Authorization mechanisms to manage user permissions and roles within the database.</li>
+</ul>
+<p>Overall, this lecture provides an in-depth look at intermediate SQL concepts essential for maintaining robust and secure databases.</p></div></p>
     </article>
 </section>
             <!-- endblock -->

@@ -104,10 +104,10 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
-        <a href="../../tutorial_3_5/"
+        <a href="../../Lecture%203.5%20-%20Advanced%20SQL/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Tutorial 3 5
+            Lecture 3.5 - Advanced SQL
         </a>
     </li>
                             
@@ -123,7 +123,15 @@
         <a href="../../Lecture%203.2%20-%20Intermediate%20SQL1/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 3.2   Intermediate SQL1
+            Lecture 3.2 - Intermediate SQL1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Lecture%203.4%20-%20Intermediate%20SQL3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.4   Intermediate SQL3
         </a>
     </li>
                             
@@ -419,7 +427,7 @@
         <a href="../../../week4/Lecture%204.2%20-%20Formal%20Relational%20Query%20Languages2_annotated/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf (PDF file)
+            Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf
         </a>
     </li>
                             
@@ -583,7 +591,29 @@
 <li><strong>Right outer join:</strong> Returns all rows from the right relation and rows from the left relation that match on the specified condition.</li>
 <li><strong>Full outer join:</strong> Returns all rows from both relations, regardless of whether they match on the specified condition.</li>
 </ul>
-<p><strong>Views</strong></p>
+<h4 id="cross-join">Cross JOIN</h4>
+<ul>
+<li><strong>Cross join:</strong> Returns the Cartesian product of rows from tables in the join.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>select * from employee cross join department; 
+</code></pre></div>
+<p><strong>is  same</strong> </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>select * from employee , department;
+</code></pre></div>
+<p><img alt="1718537363083" src="../image/Lecture3.3-IntermediateSQL2/1718537363083.png"></p>
+<h5 id="inner-join">INNER JOIN</h5>
+<p>Inner join is the intersection of the two table </p>
+<p><img alt="1718537597126" src="../image/Lecture3.3-IntermediateSQL2/1718537597126.png"></p>
+<p>if we add natural then the result will ignore the the common attribute in the second table </p>
+<p><img alt="1718537681263" src="../image/Lecture3.3-IntermediateSQL2/1718537681263.png"></p>
+<h5 id="outer-join">Outer Join</h5>
+<h6 id="left-outer-join">Left Outer join</h6>
+<p><img alt="1718537827555" src="../image/Lecture3.3-IntermediateSQL2/1718537827555.png"></p>
+<h6 id="right-outer-join">Right outer Join</h6>
+<p><img alt="1718537879249" src="../image/Lecture3.3-IntermediateSQL2/1718537879249.png"></p>
+<h6 id="natural-full-outer-join">Natural Full outer Join</h6>
+<p><img alt="1718537967007" src="../image/Lecture3.3-IntermediateSQL2/1718537967007.png"></p>
+<h5 id="views"><strong>Views</strong></h5>
 <ul>
 <li><strong>Definition:</strong> A view is a virtual relation that is defined by a query expression.</li>
 <li><strong>Purpose:</strong> Views provide a mechanism to hide certain data from users or to create a new relation that is derived from existing relations.</li>
@@ -592,12 +622,13 @@
 <ul>
 <li>A view is defined using the <code>create view</code> statement, which has the form:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">create</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">create</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="o">&gt;</span>
 </code></pre></div>
 <ul>
 <li>The view name is represented by <code>v</code>.</li>
 <li>The query expression specifies the rows and columns that are included in the view.</li>
 </ul>
+<p><img alt="1718538819775" src="../image/Lecture3.3-IntermediateSQL2/1718538819775.png"></p>
 <p><strong>View Expansion</strong></p>
 <ul>
 <li><strong>Definition:</strong> View expansion is the process of replacing a view reference in a query or another view with the query expression that defines the view.</li>
