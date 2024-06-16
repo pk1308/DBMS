@@ -1,8 +1,9 @@
 # Lecture 3.1 - SQL Examples.pdf (PDF file)
+
 **Summary**
 **Introduction**
 
-This document provides a summary of the concepts covered in SQL Examples, a module in Database Management Systems. The focus is on providing a comprehensive overview of the material, including select statements, Cartesian products, the AS keyword, WHERE clauses with AND/OR operators, string operations, ORDER BY statements, the IN operator, set operations (UNION, INTERSECT, EXCEPT), and aggregation functions (AVG, MIN, MAX, COUNT, SUM).
+ summary of the concepts covered in SQL Examples, a module in Database Management Systems. The focus is on providing a comprehensive overview of the material, including select statements, Cartesian products, the AS keyword, WHERE clauses with AND/OR operators, string operations, ORDER BY statements, the IN operator, set operations (UNION, INTERSECT, EXCEPT), and aggregation functions (AVG, MIN, MAX, COUNT, SUM).
 
 **SELECT Statements**
 
@@ -16,6 +17,15 @@ WHERE conditions;
 
 The column_list specifies the columns to be retrieved, table_name specifies the table(s) to be queried, and the WHERE clause specifies any conditions that must be met for the rows to be included in the result.
 
+![1718516664003](image/Lecture3.1-SQLExamples/1718516664003.png)
+
+![1718516577458](image/Lecture3.1-SQLExamples/1718516577458.png)
+
+![1718516820209](image/Lecture3.1-SQLExamples/1718516820209.png)
+
+![1718516803836](image/Lecture3.1-SQLExamples/1718516803836.png)
+
+
 **Cartesian Products / AS Keyword**
 
 A Cartesian product is a combination of all rows from one table with all rows from another table. The AS keyword is used to assign an alias to a column or table. The syntax for a Cartesian product is:
@@ -26,6 +36,13 @@ FROM table_name1, table_name2
 [AS alias];
 ```
 
+![1718517020566](image/Lecture3.1-SQLExamples/1718517020566.png)
+
+
+![1718517036148](image/Lecture3.1-SQLExamples/1718517036148.png)
+
+![1718517260994](image/Lecture3.1-SQLExamples/1718517260994.png)
+
 **WHERE Clauses with AND/OR Operators**
 
 The WHERE clause is used to specify conditions that must be met for rows to be included in the result. The AND operator is used to combine multiple conditions that must all be true, and the OR operator is used to combine multiple conditions that only one must be true. The syntax is:
@@ -33,6 +50,10 @@ The WHERE clause is used to specify conditions that must be met for rows to be i
 ```
 WHERE condition1 [AND/OR condition2]...;
 ```
+
+![1718517433366](image/Lecture3.1-SQLExamples/1718517433366.png)
+
+![1718517446305](image/Lecture3.1-SQLExamples/1718517446305.png)
 
 **String Operations**
 
@@ -43,6 +64,8 @@ String operations can be used to compare strings and extract substrings. The mos
 * **LIKE:** Pattern matching
 * **SUBSTRING():** Extracts a substring
 
+![1718517726019](image/Lecture3.1-SQLExamples/1718517726019.png)
+
 **ORDER BY Statements**
 
 The ORDER BY statement is used to sort the results of a query. The syntax is:
@@ -52,6 +75,8 @@ ORDER BY column_name [ASC/DESC];
 ```
 
 The ASC keyword specifies ascending order, and the DESC keyword specifies descending order.
+
+![1718517801796](image/Lecture3.1-SQLExamples/1718517801796.png)
 
 **IN Operator**
 
@@ -73,6 +98,8 @@ SELECT column_list
 FROM query2;
 ```
 
+![1718518145714](image/Lecture3.1-SQLExamples/1718518145714.png)
+
 **Aggregation Functions (AVG, MIN, MAX, COUNT, SUM)**
 
 Aggregation functions are used to perform calculations on groups of rows. The most common aggregation functions are:
@@ -90,6 +117,17 @@ SELECT aggregate_function(column_name)
 FROM table_name
 GROUP BY group_by_column;
 ```
+
+![1718520583342](image/Lecture3.1-SQLExamples/1718520583342.png)
+
+
+![1718520656999](image/Lecture3.1-SQLExamples/1718520656999.png)
+
+
+![1718520801074](image/Lecture3.1-SQLExamples/1718520801074.png)
+
+
+![1718520888190](image/Lecture3.1-SQLExamples/1718520888190.png)
 
 **Conclusion**
 
