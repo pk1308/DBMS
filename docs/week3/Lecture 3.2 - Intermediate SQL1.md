@@ -1,4 +1,5 @@
-# Lecture 3.2 - Intermediate SQL1.pdf (PDF file)
+# Lecture 3.2 - Intermediate SQL1
+
 **Summary**
 **Nested Subqueries**
 
@@ -13,10 +14,10 @@ In SQL, a subquery is a select-from-where expression that is nested within anoth
 Subqueries in the WHERE clause are used to test conditions on the results of another query. For example, to find courses offered in both Fall 2009 and Spring 2010, you could use the following query:
 
 ```sql
-select distinct course id
+select distinct course_id
 from section
 where semester = 'Fall' and year = 2009 and
-course id in (select course id
+course_id in (select course_id
 from section
 where semester = 'Spring' and year = 2010);
 ```
@@ -35,6 +36,8 @@ group by dept name)
 where avg salary > 42000;
 ```
 
+![1718523244660](image/Lecture3.2-IntermediateSQL1/1718523244660.png)
+
 The subquery in the FROM clause is used to create a temporary table that contains the average salary for each department. This temporary table can then be used in the main query to find the departments with the highest average salaries.
 
 **Subqueries in the SELECT Clause**
@@ -50,7 +53,23 @@ as num instructors
 from department;
 ```
 
+![1718524140925](image/Lecture3.2-IntermediateSQL1/1718524140925.png)
+
 The subquery in the SELECT clause is used to return the number of instructors in each department. This value is then included as a column in the result set.
+
+
+![1718524351169](image/Lecture3.2-IntermediateSQL1/1718524351169.png)
+
+![1718524544239](image/Lecture3.2-IntermediateSQL1/1718524544239.png)
+
+![1718524450798](image/Lecture3.2-IntermediateSQL1/1718524450798.png)
+
+
+![1718524880904](image/Lecture3.2-IntermediateSQL1/1718524880904.png)
+
+![1718525014860](image/Lecture3.2-IntermediateSQL1/1718525014860.png)
+
+![1718525244896](image/Lecture3.2-IntermediateSQL1/1718525244896.png)
 
 **Modifications of the Database**
 
@@ -67,6 +86,18 @@ delete from instructor
 where salary < (select avg(salary)
 from instructor);
 ```
+
+![1718526042559](image/Lecture3.2-IntermediateSQL1/1718526042559.png)
+
+![1718526139448](image/Lecture3.2-IntermediateSQL1/1718526139448.png)
+
+
+![1718526176415](image/Lecture3.2-IntermediateSQL1/1718526176415.png)
+
+![1718526300454](image/Lecture3.2-IntermediateSQL1/1718526300454.png)
+
+
+![1718526312959](image/Lecture3.2-IntermediateSQL1/1718526312959.png)
 
 **Module Summary**
 
