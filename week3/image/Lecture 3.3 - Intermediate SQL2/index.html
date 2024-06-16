@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 3.3   Intermediate SQL2 - DBMS</title>
+        <title>Lecture 3.3 - Intermediate SQL2.pdf (PDF file) - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,7 +139,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 3.3   Intermediate SQL2
+            Lecture 3.3 - Intermediate SQL2.pdf (PDF file)
         </a>
     </li>
                     </ul>
@@ -556,7 +556,71 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p></p>
+        <p><div><h1 id="lecture-33-intermediate-sql2pdf-pdf-file">Lecture 3.3 - Intermediate SQL2.pdf (PDF file)</h1>
+<p><strong>Summary</strong>
+<strong>Module 13: Intermediate SQL/2</strong></p>
+<p><strong>Objectives</strong></p>
+<ul>
+<li>To learn SQL expressions for Join</li>
+<li>To learn SQL expressions for Views</li>
+</ul>
+<p><strong>Outline</strong></p>
+<ul>
+<li>Join Expressions</li>
+<li>Views</li>
+</ul>
+<p><strong>Join Expressions</strong></p>
+<ul>
+<li><strong>Definition:</strong> Join operations take two relations and return as a result another relation.</li>
+<li><strong>Purpose:</strong> Join operations are used to combine rows from two relations based on a specified condition.</li>
+</ul>
+<p><strong>Types of Join between Relations</strong></p>
+<ul>
+<li><strong>Cross join:</strong> Returns the Cartesian product of rows from tables in the join.</li>
+<li><strong>Inner join:</strong> Returns rows that match on the specified condition.</li>
+<li><strong>Outer join:</strong> Returns all rows from one relation and rows from the other relation that match on the specified condition.</li>
+<li><strong>Left outer join:</strong> Returns all rows from the left relation and rows from the right relation that match on the specified condition.</li>
+<li><strong>Right outer join:</strong> Returns all rows from the right relation and rows from the left relation that match on the specified condition.</li>
+<li><strong>Full outer join:</strong> Returns all rows from both relations, regardless of whether they match on the specified condition.</li>
+</ul>
+<p><strong>Views</strong></p>
+<ul>
+<li><strong>Definition:</strong> A view is a virtual relation that is defined by a query expression.</li>
+<li><strong>Purpose:</strong> Views provide a mechanism to hide certain data from users or to create a new relation that is derived from existing relations.</li>
+</ul>
+<p><strong>View Definition</strong></p>
+<ul>
+<li>A view is defined using the <code>create view</code> statement, which has the form:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">create</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="o">&gt;</span>
+</code></pre></div>
+<ul>
+<li>The view name is represented by <code>v</code>.</li>
+<li>The query expression specifies the rows and columns that are included in the view.</li>
+</ul>
+<p><strong>View Expansion</strong></p>
+<ul>
+<li><strong>Definition:</strong> View expansion is the process of replacing a view reference in a query or another view with the query expression that defines the view.</li>
+<li><strong>Purpose:</strong> View expansion is used to ensure that queries that use views always return the correct results, even if the underlying relations change.</li>
+</ul>
+<p><strong>Update of a View</strong></p>
+<ul>
+<li>Updates to views are typically not allowed.</li>
+<li>In some cases, updates to simple views (views that meet certain criteria) may be allowed.</li>
+</ul>
+<p><strong>Materialized Views</strong></p>
+<ul>
+<li><strong>Definition:</strong> A materialized view is a physical table that contains the results of a query.</li>
+<li><strong>Purpose:</strong> Materialized views can improve query performance by avoiding the need to re-execute the query every time it is used.</li>
+</ul>
+<p><strong>Module Summary</strong></p>
+<ul>
+<li>Join expressions are used to combine rows from two relations based on a specified condition.</li>
+<li>Views provide a mechanism to hide certain data from users or to create a new relation that is derived from existing relations.</li>
+<li>View expansion ensures that queries that use views always return the correct results, even if the underlying relations change.</li>
+<li>Updates to views are typically not allowed, but may be allowed in some cases for simple views.</li>
+<li>Materialized views can improve query performance by avoiding the need to re-execute the query every time it is used.</li>
+</ul></div></p>
     </article>
 </section>
             <!-- endblock -->
