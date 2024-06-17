@@ -101,19 +101,19 @@
 
 **Summary of Relational Algebra Operators**
 
-| Operator                                                                          | Description                                      |
-| --------------------------------------------------------------------------------- | ------------------------------------------------ |
-| σ                                                                                | Select                                           |
-| π                                                                                | Project                                          |
-| ∪                                                                                | Union                                            |
-| −                                                                                | Difference                                       |
-| ∩                                                                                | Intersection                                     |
-| ×                                                                                | Cartesian Product                                |
-| $\\bowtie$ | Natural Join                                     |
-| SUM                                                                               | Computes the sum of a specified column           |
-| AVG                                                                               | Computes the average of a specified column       |
-| MAX                                                                               | Computes the maximum value of a specified column |
-| MIN                                                                               | Computes the minimum value of a specified column |
+| Operator    | Description                                      |
+| ----------- | ------------------------------------------------ |
+| σ          | Select                                           |
+| π          | Project                                          |
+| ∪          | Union                                            |
+| −          | Difference                                       |
+| ∩          | Intersection                                     |
+| ×          | Cartesian Product                                |
+| $\bowtie$ | Natural Join                                     |
+| SUM         | Computes the sum of a specified column           |
+| AVG         | Computes the average of a specified column       |
+| MAX         | Computes the maximum value of a specified column |
+| MIN         | Computes the minimum value of a specified column |
 
 **Module Summary**
 
