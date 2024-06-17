@@ -615,8 +615,12 @@
 </ul>
 <p><strong>Cascading Actions</strong></p>
 <ul>
-<li>Cascading actions define the behavior of the database when a user attempts to delete or update a key referenced by foreign keys.</li>
-<li>Example of cascading actions:</li>
+<li>
+<p>Cascading actions define the behavior of the database when a user attempts to delete or update a key referenced by foreign keys.</p>
+</li>
+<li>
+<p>Example of cascading actions:</p>
+</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>CREATE TABLE course (
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    course_id CHAR(5) PRIMARY KEY,
@@ -627,8 +631,10 @@
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    ON UPDATE CASCADE
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>);
 </code></pre></div>
-<p><img alt="1718543809149" src="../image/Lecture3.4-IntermediateSQL3/1718543809149.png">
-- Alternative actions include <code>NO ACTION</code>, <code>SET NULL</code>, and <code>SET DEFAULT</code>.</p>
+<p><img alt="1718543809149" src="../image/Lecture3.4-IntermediateSQL3/1718543809149.png"></p>
+<ul>
+<li>Alternative actions include <code>NO ACTION</code>, <code>SET NULL</code>, and <code>SET DEFAULT</code>.</li>
+</ul>
 <h3 id="sql-data-types-and-schemas">SQL Data Types and Schemas</h3>
 <p><strong>Built-in Data Types</strong></p>
 <ul>
@@ -656,18 +662,26 @@
 <p><img alt="1718544449826" src="../image/Lecture3.4-IntermediateSQL3/1718544449826.png"></p>
 <p><strong>Privileges and Roles</strong></p>
 <ul>
-<li>SQL includes mechanisms to control user access to data and operations.</li>
-<li>Privileges can be granted to users to allow specific actions, such as <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>.</li>
-<li>Example of granting select privilege on a view:</li>
+<li>
+<p>SQL includes mechanisms to control user access to data and operations.</p>
+</li>
+<li>
+<p>Privileges can be granted to users to allow specific actions, such as <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>.</p>
+</li>
+<li>
+<p>Example of granting select privilege on a view:</p>
+</li>
 </ul>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">geo_instructor</span><span class="w"> </span><span class="k">AS</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">geo_instructor</span><span class="w"> </span><span class="k">AS</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">FROM</span><span class="w"> </span><span class="n">instructor</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">dept_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Geology'</span><span class="p">;</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">SELECT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">geo_instructor</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">geo_staff</span><span class="p">;</span>
 </code></pre></div>
-- References privilege is necessary to create foreign keys:
+<ul>
+<li>References privilege is necessary to create foreign keys:</li>
+</ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="p">(</span><span class="n">dept_name</span><span class="p">)</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">department</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">Mariano</span><span class="p">;</span>
 </code></pre></div>
 <p><strong>Transfer and Revocation of Privileges</strong></p>

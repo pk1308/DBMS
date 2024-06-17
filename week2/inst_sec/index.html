@@ -635,16 +635,16 @@ $$</p>
 <li>Cartesian Product</li>
 <li>Natural Join</li>
 </ul>
-<p>A relation is set. </p>
+<p>A relation is set.</p>
 <h6 id="selection">Selection</h6>
 <p>• Relation r
-<span class="arithmatex">\(σ_{A=B∧D&gt;5(r)}\)</span>
+<span class="arithmatex">\(σ\_{A=B∧D&gt;5(r)}\)</span>
 <strong>∧ means and</strong></p>
-<p>(A = B) intersect D &gt; 5 </p>
+<p>(A = B) intersect D &gt; 5</p>
 <p><img alt="1718286977341" src="../image/inst_sec/1718286977341.png"></p>
 <h6 id="projection">Projection</h6>
 <p>• Relation r
-• <span class="arithmatex">\(π_{A,C}\)</span> (r)</p>
+• <span class="arithmatex">\(π\_{A,C}\)</span> (r)</p>
 <ol>
 <li>fetch the columns</li>
 <li>no dulipcates</li>
@@ -669,27 +669,27 @@ r ∩ s = r- (r-s)
 <p>rows that are common to both relations.</p>
 <h6 id="cartesian-product">Cartesian Product</h6>
 <div class="arithmatex">\[
-R \bowtie S
+R \\bowtie S
 \]</div>
 <p><img alt="1718011977303" src="../image/Lecture2.2-IntroductiontoRelationalModel2/1718011977303.png"></p>
 <p><img alt="1718288275115" src="../image/inst_sec/1718288275115.png"></p>
 <p>when you have two atrributes with same name we remane the atrributes in cartseian product.</p>
-<p>we rename the table using </p>
+<p>we rename the table using</p>
 <div class="arithmatex">\[
 P_s(r)
 \]</div>
-<p>renaming the table or relationship r to s </p>
+<p>renaming the table or relationship r to s</p>
 <div class="arithmatex">\[
-r \bowtie p_s(r)
+r \\bowtie p_s(r)
 \]</div>
 <p>self join and rename r to s  = $ r\bowtie s$</p>
 <p><img alt="1718288455562" src="../image/inst_sec/1718288455562.png"></p>
 <div class="arithmatex">\[
-\sigma_{A=C}(r \bowtie s)
+\\sigma\_{A=C}(r \\bowtie s)
 \]</div>
 <p>do a cross join of r and s and the find A = C</p>
 <p><img alt="1718288920734" src="../image/inst_sec/1718288920734.png"></p>
-<p>not equal <span class="arithmatex">\(&lt;&gt;\)</span></p>
+<p>not equal <span class="arithmatex">\(\&lt;&gt;\)</span></p>
 <h6 id="inner-join">Inner Join</h6>
 <h6 id="natural-join">Natural Join</h6>
 <div class="arithmatex">\[

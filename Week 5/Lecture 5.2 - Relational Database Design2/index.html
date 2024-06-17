@@ -574,14 +574,14 @@
 </ul>
 <h3 id="formal-definition">Formal Definition</h3>
 <ul>
-<li>For a relation schema <span class="arithmatex">\( R \)</span>, <span class="arithmatex">\( $\alpha \subseteq R$ \)</span> and <span class="arithmatex">\( $\beta \subseteq R $\)</span>.</li>
-<li>The functional dependency ( $\alpha \to \beta $) holds on <span class="arithmatex">\( R \)</span> if for any legal relations <span class="arithmatex">\( r(R) \)</span>, whenever any two tuples <span class="arithmatex">\( $t_1$ \)</span> and <span class="arithmatex">\( $t_2$ \)</span> of <span class="arithmatex">\( $r$ \)</span> agree on the attributes <span class="arithmatex">\( $ \alpha $ \)</span>, they also agree on the attributes <span class="arithmatex">\( $\beta$ \)</span>.</li>
-<li>Example: <span class="arithmatex">\( $A \to B$ \)</span> does not hold, but <span class="arithmatex">\( $B \to A$ \)</span> holds for a certain instance.</li>
+<li>For a relation schema ( R ), ( <span class="arithmatex">\(\\alpha \\subseteq R\)</span> ) and ( $\beta \subseteq R $).</li>
+<li>The functional dependency ( $\alpha \to \beta $) holds on ( R ) if for any legal relations ( r(R) ), whenever any two tuples ( <span class="arithmatex">\(t_1\)</span> ) and ( <span class="arithmatex">\(t_2\)</span> ) of ( <span class="arithmatex">\(r\)</span> ) agree on the attributes ( $ \alpha $ ), they also agree on the attributes ( <span class="arithmatex">\(\\beta\)</span> ).</li>
+<li>Example: ( <span class="arithmatex">\(A \\to B\)</span> ) does not hold, but ( <span class="arithmatex">\(B \\to A\)</span> ) holds for a certain instance.</li>
 </ul>
 <h3 id="keys">Keys</h3>
 <ul>
-<li><strong>Superkey:</strong> <span class="arithmatex">\( $K$ \)</span> is a superkey for relation schema <span class="arithmatex">\( $R$ \)</span> if and only if ($ K \to R \ $).</li>
-<li><strong>Candidate Key:</strong> <span class="arithmatex">\( K \)</span> is a candidate key for <span class="arithmatex">\( R \)</span> if and only if <span class="arithmatex">\( $K \to R$ \)</span> and for no <span class="arithmatex">\($\alpha \subset K $\)</span>, <span class="arithmatex">\( $\alpha \to R $\)</span>.</li>
+<li><strong>Superkey:</strong> ( <span class="arithmatex">\(K\)</span> ) is a superkey for relation schema ( <span class="arithmatex">\(R\)</span> ) if and only if ($ K \to R \ $).</li>
+<li><strong>Candidate Key:</strong> ( K ) is a candidate key for ( R ) if and only if ( <span class="arithmatex">\(K \\to R\)</span> ) and for no ($\alpha \subset K $), ( $\alpha \to R $).</li>
 </ul>
 <h3 id="practical-examples">Practical Examples</h3>
 <ul>
@@ -596,24 +596,24 @@
 <h3 id="trivial-functional-dependencies">Trivial Functional Dependencies</h3>
 <ul>
 <li>A functional dependency is trivial if it is satisfied by all instances of a relation.</li>
-<li>Example: <span class="arithmatex">\( $\text{ID, name} \to \text{ID} $\)</span> and <span class="arithmatex">\( $\text{name} \to \text{name} $\)</span>.</li>
-<li>Generally, <span class="arithmatex">\( $\alpha \to \beta $ \)</span> is trivial if <span class="arithmatex">\( $\beta \subseteq \alpha $\)</span>.</li>
+<li>Example: ( $\text{ID, name} \to \text{ID} $) and ( $\text{name} \to \text{name} $).</li>
+<li>Generally, ( $\alpha \to \beta $ ) is trivial if ( $\beta \subseteq \alpha $).</li>
 </ul>
 <hr>
 <h2 id="armstrongs-axioms">Armstrong’s Axioms</h2>
 <h3 id="definition_1">Definition</h3>
 <ul>
-<li>Given a set of FDs <span class="arithmatex">\( F \)</span>, infer new dependencies using:</li>
-<li><strong>Reflexivity:</strong> If <span class="arithmatex">\( $\beta \subseteq \alpha$ \)</span>, then <span class="arithmatex">\( \alpha \to \beta \)</span>.</li>
-<li><strong>Augmentation:</strong> If <span class="arithmatex">\( $\alpha \to \beta $ \)</span>, then <span class="arithmatex">\( $\gamma\alpha \to \gamma\beta $\)</span>.</li>
-<li><strong>Transitivity:</strong> If <span class="arithmatex">\( $\alpha \to \beta $\)</span> and <span class="arithmatex">\( $\beta \to \gamma $\)</span>, then <span class="arithmatex">\( $\alpha \to \gamma $\)</span>.</li>
+<li>Given a set of FDs ( F ), infer new dependencies using:</li>
+<li><strong>Reflexivity:</strong> If ( <span class="arithmatex">\(\\beta \\subseteq \\alpha\)</span> ), then ( \alpha \to \beta ).</li>
+<li><strong>Augmentation:</strong> If ( $\alpha \to \beta $ ), then ( $\gamma\alpha \to \gamma\beta $).</li>
+<li><strong>Transitivity:</strong> If ( $\alpha \to \beta $) and ( $\beta \to \gamma $), then ( $\alpha \to \gamma $).</li>
 </ul>
 <h3 id="closure">Closure</h3>
 <ul>
-<li>The closure of a set of FDs <span class="arithmatex">\( $F$ \)</span> is the set <span class="arithmatex">\( $F^+ $\)</span> of all FDs logically implied by <span class="arithmatex">\( F \)</span>.</li>
+<li>The closure of a set of FDs ( <span class="arithmatex">\(F\)</span> ) is the set ( $F^+ $) of all FDs logically implied by ( F ).</li>
 <li>Example:</li>
-<li><span class="arithmatex">\( $F = \{ A \to B, B \to C \}$ \)</span></li>
-<li><span class="arithmatex">\( $F^+ = \{ A \to B, B \to C, A \to C \} $\)</span></li>
+<li>( <span class="arithmatex">\(F = { A \\to B, B \\to C }\)</span> )</li>
+<li>( $F^+ = { A \to B, B \to C, A \to C } $)</li>
 </ul>
 <h3 id="properties">Properties</h3>
 <ul>

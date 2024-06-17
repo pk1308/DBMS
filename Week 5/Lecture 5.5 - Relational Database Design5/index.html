@@ -574,42 +574,34 @@
 </ul>
 <p><strong>Dependency Preservation</strong></p>
 <ul>
-<li>A decomposition of R into D = {R1, R2, ..., Rn} is dependency preserving if (F1 ∪ F2 ∪ ... ∪ Fn) = F, where:<ul>
+<li>A decomposition of R into D = {R1, R2, ..., Rn} is dependency preserving if (F1 ∪ F2 ∪ ... ∪ Fn) = F, where:</li>
 <li>Fi is the set of FDs including attributes only in Ri</li>
-</ul>
-</li>
 <li>This ensures that all FDs in F are preserved in the decomposition.</li>
 </ul>
 <p><strong>Testing Dependency Preservation</strong></p>
 <ul>
-<li>Test if a dependency α → β is preserved by:<ul>
+<li>Test if a dependency α → β is preserved by:</li>
 <li>Computing F0 = F1 ∪ F2 ∪ ... ∪ Fn</li>
 <li>Check if β is in the attribute closure of α with respect to F0</li>
-</ul>
-</li>
 </ul>
 <p><strong>Practice Problems</strong></p>
 <p><strong>Lossless Join Decomposition</strong></p>
 <ul>
-<li>Determine if the following decompositions are lossless:<ul>
+<li>Determine if the following decompositions are lossless:</li>
 <li>R(ABC) : F = {A → B, A → C} → {R1(AB), R2(BC)}</li>
 <li>R(ABCDEF) : F = {A → B, B → C, C → D, E → F} → {R1(AB), R2(BCD), R3(DEF)}</li>
 <li>R(ABCDEF) : F = {A → B, C → DE, AC → F} → {R1(BE), R2(ACDEF)}</li>
 <li>R(ABCDEG) : F = {AB → C, AC → B, AD → E, B → D, BC → A, E → G} → {R1(AB), R2(BC), R3(ABDE), R4(EG)}</li>
 <li>R(ABCDEFGHIJ) : F = {AB → C, B → F, D → IJ, A → DE, F → GH} → {R1(ABC), R2(ADE), R3(BF), R4(FGH), R5(DIJ)}</li>
 </ul>
-</li>
-</ul>
 <p><strong>Dependency Preservation</strong></p>
 <ul>
-<li>Verify if the following decompositions preserve dependencies:<ul>
+<li>Verify if the following decompositions preserve dependencies:</li>
 <li>R(ABCD) : F = {A → B, B → C, C → D, D → A} → {AB, BC, CD}</li>
 <li>R(ABCDEF) : F = {AB → CD, C → D, D → E, E → F} → {AB, CDE, EF}</li>
 <li>R(ABCDEG) : F = {AB → C, AC → B, BC → A, AD → E, B → D, E → G} → {ABC, ACDE, ADG}</li>
 <li>R(ABCD) : F = {A → B, B → C, C → D, D → B} → {AB, BC, BD}</li>
 <li>R(ABCDE) : F = {A → BC, CD → E, B → D, E → A} → {ABCE, BD}</li>
-</ul>
-</li>
 </ul></div></p>
     </article>
 </section>
