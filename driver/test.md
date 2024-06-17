@@ -76,7 +76,6 @@ def convert_ipynb_to_markdown(folder_path):
 
 ```
 
-
 ```python
 import os
 from pathlib import Path
@@ -146,59 +145,51 @@ if __name__ == "__main__":
 
 ```
 
-
 ```python
 os.chdir("..")
 ```
-
 
 ```python
 yaml_file = read_yaml_as_dict(Path("mkdocs.yml" ))
 ```
 
-    [32m2024-05-13 21:22:03.717[0m | [1mINFO    [0m | [36m__main__[0m:[36mread_yaml_as_dict[0m:[36m29[0m - [1myaml file: mkdocs.yml loaded successfully[0m
+```
+[32m2024-05-13 21:22:03.717[0m | [1mINFO    [0m | [36m__main__[0m:[36mread_yaml_as_dict[0m:[36m29[0m - [1myaml file: mkdocs.yml loaded successfully[0m
 
 
-    [32m2024-05-13T21:22:03.717706+0400[0m [1myaml file: mkdocs.yml loaded successfully[0m
-
-
+[32m2024-05-13T21:22:03.717706+0400[0m [1myaml file: mkdocs.yml loaded successfully[0m
+```
 
 ```python
 yaml_file['nav']
 ```
 
-
-
-
-    [{'name': 'Home', 'children': ['cheatsheet.md', 'index.md']},
-     {'name': 'week3',
-      'children': ['week3/Lecture 3.1 - SQL Examples_annotated.md',
-       'week3/Lecture 3.2 - Intermediate SQL1_annotated.md']},
-     {'name': 'week1',
-      'children': ['week1/textbook.md',
-       'week1/check_list.md',
-       'week1/summary.md']},
-     {'name': 'week2',
-      'children': ['week2/Lecture 2.2 - Introduction to Relational Model2_annotated.md',
-       'week2/Lecture 2.5 - Introduction to SQL3_annotated.md',
-       'week2/Lecture 2.4 - Introduction to SQL2_annotated.md',
-       'week2/Lecture 2.3 - Introduction to SQL1_annotated.md',
-       'week2/tutorial_2.1.md',
-       'week2/check_list.md',
-       'week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md']}]
-
-
-
+```
+[{'name': 'Home', 'children': ['cheatsheet.md', 'index.md']},
+ {'name': 'week3',
+  'children': ['week3/Lecture 3.1 - SQL Examples_annotated.md',
+   'week3/Lecture 3.2 - Intermediate SQL1_annotated.md']},
+ {'name': 'week1',
+  'children': ['week1/textbook.md',
+   'week1/check_list.md',
+   'week1/summary.md']},
+ {'name': 'week2',
+  'children': ['week2/Lecture 2.2 - Introduction to Relational Model2_annotated.md',
+   'week2/Lecture 2.5 - Introduction to SQL3_annotated.md',
+   'week2/Lecture 2.4 - Introduction to SQL2_annotated.md',
+   'week2/Lecture 2.3 - Introduction to SQL1_annotated.md',
+   'week2/tutorial_2.1.md',
+   'week2/check_list.md',
+   'week2/Lecture 2.1 - Introduction to Relational Model1_annotated.md']}]
+```
 
 ```python
 [{key: value} for key , value in nav_value.items()]
 ```
 
-
 ```python
 
 ```
-
 
 ```python
 folder_path = "./docs"
@@ -227,26 +218,21 @@ file_path = Path(os.path.join(os.getcwd(), "mkdocs.yml"))
 write_yaml(file_path, yaml_file)
 ```
 
-
 ```python
 to_update
 ```
-
 
 ```python
 yaml_file['nav'] = to_update
 ```
 
-
 ```python
 file_path = Path(os.path.join(os.getcwd(), "mkdocs.yml"))
 ```
 
-
 ```python
 write_yaml(file_path, yaml_file)
 ```
-
 
 ```python
 import subprocess
@@ -275,11 +261,9 @@ convert_ipynb_to_markdown(folder_path)
 
 ```
 
-
 ```python
 os.chdir("..")
 ```
-
 
 ```python
 import os 
@@ -287,27 +271,22 @@ import os
 os.path.splitext("docs/week2/Lecture 2.4 - Introduction to SQL2_annotated.pdf")[0]
 ```
 
-
 ```python
 path_= os.path.basename("docs/week2/Lecture 2.4 - Introduction to SQL2_annotated.pdf")
 data = f"![Alt text](<./{path_}>)"+'{ type=application/pdf style="min-height:100vh;width:100%" }'
 ```
 
-
 ```python
 data = f"![Alt text](<./{path_}>)"+'{ type=application/pdf style="min-height:100vh;width:100%" }'
 ```
-
 
 ```python
 data
 ```
 
-
 ```python
 from collections import OrderedDict
 ```
-
 
 ```python
 @ensure_annotations
@@ -337,7 +316,6 @@ def write_yaml(file_path: Path, data: dict):
         raise IOError(f"Error writing YAML file: {file_path}") from e
 
 ```
-
 
 ```python
 

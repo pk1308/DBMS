@@ -3,7 +3,7 @@
 **Summary**
 **Introduction**
 
- summary of the concepts covered in SQL Examples, a module in Database Management Systems. The focus is on providing a comprehensive overview of the material, including select statements, Cartesian products, the AS keyword, WHERE clauses with AND/OR operators, string operations, ORDER BY statements, the IN operator, set operations (UNION, INTERSECT, EXCEPT), and aggregation functions (AVG, MIN, MAX, COUNT, SUM).
+summary of the concepts covered in SQL Examples, a module in Database Management Systems. The focus is on providing a comprehensive overview of the material, including select statements, Cartesian products, the AS keyword, WHERE clauses with AND/OR operators, string operations, ORDER BY statements, the IN operator, set operations (UNION, INTERSECT, EXCEPT), and aggregation functions (AVG, MIN, MAX, COUNT, SUM).
 
 **SELECT Statements**
 
@@ -25,7 +25,6 @@ The column_list specifies the columns to be retrieved, table_name specifies the 
 
 ![1718516803836](image/Lecture3.1-SQLExamples/1718516803836.png)
 
-
 **Cartesian Products / AS Keyword**
 
 A Cartesian product is a combination of all rows from one table with all rows from another table. The AS keyword is used to assign an alias to a column or table. The syntax for a Cartesian product is:
@@ -37,7 +36,6 @@ FROM table_name1, table_name2
 ```
 
 ![1718517020566](image/Lecture3.1-SQLExamples/1718517020566.png)
-
 
 ![1718517036148](image/Lecture3.1-SQLExamples/1718517036148.png)
 
@@ -59,10 +57,10 @@ WHERE condition1 [AND/OR condition2]...;
 
 String operations can be used to compare strings and extract substrings. The most common string operators are:
 
-* **= and !=:** Equality and inequality
-* **< and >:** Less than and greater than
-* **LIKE:** Pattern matching
-* **SUBSTRING():** Extracts a substring
+- **= and !=:** Equality and inequality
+- **\< and >:** Less than and greater than
+- **LIKE:** Pattern matching
+- **SUBSTRING():** Extracts a substring
 
 ![1718517726019](image/Lecture3.1-SQLExamples/1718517726019.png)
 
@@ -104,11 +102,11 @@ FROM query2;
 
 Aggregation functions are used to perform calculations on groups of rows. The most common aggregation functions are:
 
-* **AVG():** Average
-* **MIN():** Minimum
-* **MAX():** Maximum
-* **COUNT():** Count
-* **SUM():** Sum
+- **AVG():** Average
+- **MIN():** Minimum
+- **MAX():** Maximum
+- **COUNT():** Count
+- **SUM():** Sum
 
 The syntax is:
 
@@ -120,12 +118,9 @@ GROUP BY group_by_column;
 
 ![1718520583342](image/Lecture3.1-SQLExamples/1718520583342.png)
 
-
 ![1718520656999](image/Lecture3.1-SQLExamples/1718520656999.png)
 
-
 ![1718520801074](image/Lecture3.1-SQLExamples/1718520801074.png)
-
 
 ![1718520888190](image/Lecture3.1-SQLExamples/1718520888190.png)
 

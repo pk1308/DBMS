@@ -1,9 +1,9 @@
-* [X] lec class
-* [ ] PPA
-* [ ] GRPA
-* [ ] GA
-* [ ] instructor section 1
-* [ ] instructor section 2
-* [ ] TA session 1
-* [ ] TA session 2
-* [ ] Text book
+- \[X\] lec class
+- \[ \] PPA
+- \[ \] GRPA
+- \[ \] GA
+- \[ \] instructor section 1
+- \[ \] instructor section 2
+- \[ \] TA session 1
+- \[ \] TA session 2
+- \[ \] Text book

@@ -1,4 +1,5 @@
 # Lecture 4.1 - Formal Relational Query Languages1_annotated.pdf (PDF file)
+
 **Summary**
 **Introduction to Relational Algebra**
 
@@ -9,27 +10,27 @@ Relational algebra is a formal language used to manipulate and query relational 
 Relational algebra has six basic operators:
 
 1. **Select (σ)**: Filters rows based on a specified condition. Syntax: σp(r), where p is the selection predicate and r is the relation.
-2. **Project (Π)**: Selects specific columns from a relation. Syntax: ΠA1,A2,...Ak(r), where A1, A2, ... Ak are the selected attribute names and r is the relation.
-3. **Union (∪)**: Combines two relations with the same schema. Syntax: r ∪ s, where r and s are the relations to be joined.
-4. **Difference (–)**: Removes rows from one relation that are also present in another relation. Syntax: r - s, where r is the relation from which rows are to be removed and s is the relation containing the rows to be removed.
-5. **Intersection (∩)**: Finds rows that are present in both relations. Syntax: r ∩ s, where r and s are the relations to be intersected.
-6. **Cartesian Product (×)**: Combines all rows from two relations, creating a new relation with all possible pairings of rows. Syntax: r × s, where r and s are the relations to be joined.
+1. **Project (Π)**: Selects specific columns from a relation. Syntax: ΠA1,A2,...Ak(r), where A1, A2, ... Ak are the selected attribute names and r is the relation.
+1. **Union (∪)**: Combines two relations with the same schema. Syntax: r ∪ s, where r and s are the relations to be joined.
+1. **Difference (–)**: Removes rows from one relation that are also present in another relation. Syntax: r - s, where r is the relation from which rows are to be removed and s is the relation containing the rows to be removed.
+1. **Intersection (∩)**: Finds rows that are present in both relations. Syntax: r ∩ s, where r and s are the relations to be intersected.
+1. **Cartesian Product (×)**: Combines all rows from two relations, creating a new relation with all possible pairings of rows. Syntax: r × s, where r and s are the relations to be joined.
 
 **Additional Operators**
 
 In addition to the six basic operators, relational algebra also has several additional operators, such as:
 
 1. **Rename (ρ)**: Changes the name of a relation or its attributes.
-2. **Division (÷)**: Finds rows in one relation that correspond to all rows in another relation. Syntax: r ÷ s, where r is the relation to be divided and s is the relation containing the rows to be used as the divisor.
+1. **Division (÷)**: Finds rows in one relation that correspond to all rows in another relation. Syntax: r ÷ s, where r is the relation to be divided and s is the relation containing the rows to be used as the divisor.
 
 **Query Examples**
 
 Here are some examples of queries using relational algebra:
 
-* Find all students who are enrolled in the Physics department: σdept_name = 'Physics' (student)
-* Find the names and salaries of instructors: Πname, salary (instructor)
-* Find all courses taught in the Fall 2009 semester: Πcourse_id(σsemester = 'Fall' and year = 2009 (section))
-* Find all courses taught in the Fall 2009 semester, but not in the Spring 2010 semester: Πcourse_id(σsemester = 'Fall' and year = 2009 (section)) - Πcourse_id(σsemester = 'Spring' and year = 2010 (section))
+- Find all students who are enrolled in the Physics department: σdept_name = 'Physics' (student)
+- Find the names and salaries of instructors: Πname, salary (instructor)
+- Find all courses taught in the Fall 2009 semester: Πcourse_id(σsemester = 'Fall' and year = 2009 (section))
+- Find all courses taught in the Fall 2009 semester, but not in the Spring 2010 semester: Πcourse_id(σsemester = 'Fall' and year = 2009 (section)) - Πcourse_id(σsemester = 'Spring' and year = 2010 (section))
 
 **Benefits of Using Relational Algebra**
 

@@ -5,35 +5,35 @@ This module focuses on principles of relational database design. It emphasizes:
 
 **Features of Good Design:**
 
-* Reflects real-world structure
-* Accommodates future data additions
-* Avoids redundancy
-* Provides efficient data access
-* Maintains data integrity
+- Reflects real-world structure
+- Accommodates future data additions
+- Avoids redundancy
+- Provides efficient data access
+- Maintains data integrity
 
----
+______________________________________________________________________
 
 ![1717563677565](image/Lecture5.1-RelationalDatabaseDesign1/1717563677565.png)
 
----
+______________________________________________________________________
 
 **Redundancy and Anomaly:**
 
-* Redundancy (duplicate data) leads to anomalies:
-  * Insertion: Can't add data if unknown data is required
-  * Deletion: Losing unrelated information when deleting records
-  * Update: Inaccurate changes due to multiple occurrences of data
+- Redundancy (duplicate data) leads to anomalies:
+  - Insertion: Can't add data if unknown data is required
+  - Deletion: Losing unrelated information when deleting records
+  - Update: Inaccurate changes due to multiple occurrences of data
 
 **Decomposition:**
 
-* Decomposing relations into smaller ones removes redundancy and minimizes dependencies among attributes.
-* Good decomposition ensures data preservation and integrity.
+- Decomposing relations into smaller ones removes redundancy and minimizes dependencies among attributes.
+- Good decomposition ensures data preservation and integrity.
 
 **functional dependency** : dept name → building, budget
 In inst_dept, because dept_name is not a candidate key, the building and budget of a department may have to be repeated.
 ◦ This indicates the need to decompose inst dept
 
----
+______________________________________________________________________
 
 **Lossy Decomposition**
 
@@ -41,13 +41,11 @@ In inst_dept, because dept_name is not a candidate key, the building and budget 
 
 Lossless Join Decomposition is a decomposition of a relation R into relations R1 , R2 such that if we perform natural join of two smaller relations it will return the original relation
 
-
-
 **Atomic Domains and First Normal Form (1NF):**
 
-* Atomic domains consist of indivisible elements.
-* 1NF requires relations with atomic domains and each attribute holding a single value.
-* Non-atomic values complicate storage and encourage redundancy.
+- Atomic domains consist of indivisible elements.
+- 1NF requires relations with atomic domains and each attribute holding a single value.
+- Non-atomic values complicate storage and encourage redundancy.
 
 **Atomic Domains**
 
@@ -64,9 +62,9 @@ An atomic domain refers to the indivisibility of data within a domain. In the co
 A relation (table) is said to be in the First Normal Form (1NF) if it satisfies the following conditions:
 
 1. **Atomicity**: All the values in the database are atomic (indivisible).
-2. **Uniqueness of Rows**: Each row in the table must be unique, meaning no two rows can be identical.
-3. **Uniqueness of Column Names**: Each column should have a unique name.
-4. **No Repeating Groups**: Each table should contain only one value per cell (intersection of a row and a column), and columns should not contain sets or lists of values.
+1. **Uniqueness of Rows**: Each row in the table must be unique, meaning no two rows can be identical.
+1. **Uniqueness of Column Names**: Each column should have a unique name.
+1. **No Repeating Groups**: Each table should contain only one value per cell (intersection of a row and a column), and columns should not contain sets or lists of values.
 
 #### Examples of 1NF
 
@@ -101,7 +99,7 @@ In this 1NF table:
 To transform a table into 1NF:
 
 1. **Remove Repeating Groups**: Ensure that each column contains only a single value.
-2. **Create Separate Tables for Multivalued Attributes**: If necessary, split the multivalued attributes into separate rows or tables.
-3. **Ensure Primary Keys**: Define primary keys to uniquely identify each row in the table.
+1. **Create Separate Tables for Multivalued Attributes**: If necessary, split the multivalued attributes into separate rows or tables.
+1. **Ensure Primary Keys**: Define primary keys to uniquely identify each row in the table.
 
 By adhering to these principles, a database can be designed to comply with the First Normal Form, thus ensuring data integrity and facilitating easier querying and maintenance.

@@ -23,6 +23,7 @@
 **History of SQL**
 
 - IBM developed Structured English Query Language (SEQUEL) as part of System R project. Renamed Structured Query Language (SQL: pronounced still as SEQUEL)
+
 - ANSI and ISO standard SQL:
 
   - SQL-86 First formalized by ANSI
@@ -37,7 +38,7 @@
     the database, and publishing both XML and conventional SQL-data in XML form**
   - SQL:2008 Legalizes ORDER BY outside Cursor Definitions
 
-  + INSTEAD OF Triggers, TRUNCATE Statement, and FETCH Clause
+  * INSTEAD OF Triggers, TRUNCATE Statement, and FETCH Clause
 
   - SQL:2011 + Temporal Data (PERIOD FOR)
     Enhancements for Window Functions and FETCH Clause
@@ -159,7 +160,6 @@ primary key (ID),
 foreign key (dept name)
 references department);
 
-
 create table course (
 course id varchar(8),
 title varchar(50),
@@ -168,7 +168,6 @@ credits numeric(2, 0),
 primary key (course id),
 foreign key (dept name)
 references department);
-
 
 create table takes (
 ID varchar(5),
@@ -179,7 +178,6 @@ primary key (ID, course id, sec id, semester, year ),
 foreign key (ID) references student
 foreign key (course id, sec id, semester, year )
 references section);
-
 
 • Note: sec id can be dropped from primary key above,
 to ensure a student cannot be registered for two
@@ -214,12 +212,9 @@ sections of the same course in the same semester
 
 ![1718027882187](image/Lecture2.3-IntroductiontoSQL1/1718027882187.png)
 
-
 ![1718027999596](image/Lecture2.3-IntroductiontoSQL1/1718027999596.png)
 
 ![1718028104114](image/Lecture2.3-IntroductiontoSQL1/1718028104114.png)
-
-
 
 **Basic Query Structure**
 

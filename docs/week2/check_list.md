@@ -1,6 +1,6 @@
-- [ ] Text Book
-- [X] slides
-- [ ] weekly assigment
-- [X] lecture
-- [ ] live session
-- [ ] text book activity
+- \[ \] Text Book
+- \[X\] slides
+- \[ \] weekly assigment
+- \[X\] lecture
+- \[ \] live session
+- \[ \] text book activity

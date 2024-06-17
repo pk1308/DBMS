@@ -1,4 +1,5 @@
-#  Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf 
+# Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf
+
 **Summary**
 **Predicate Logic**
 
@@ -12,8 +13,8 @@ A predicate is a property that a subject of a statement can have. It is a functi
 
 Quantifiers are used in predicate logic to express the extent to which a predicate is true over a range of elements. There are two types of quantifiers:
 
-* Universal Quantifier (∀): Asserts that a property is true for all values of a variable in a particular domain.
-* Existential Quantifier (∃): Asserts that there is at least one element with a certain property.
+- Universal Quantifier (∀): Asserts that a property is true for all values of a variable in a particular domain.
+- Existential Quantifier (∃): Asserts that there is at least one element with a certain property.
 
 **Tuple Relational Calculus (TRC)**
 
@@ -25,8 +26,8 @@ TRC is a non-procedural query language where each query is in the form:
 
 where:
 
-* t = resulting tuples
-* P(t) = predicate that specifies the conditions used to fetch t.
+- t = resulting tuples
+- P(t) = predicate that specifies the conditions used to fetch t.
 
 **TRC Example**
 
@@ -46,8 +47,8 @@ DRC is a non-procedural query language equivalent to TRC. Each query is expresse
 
 where:
 
-* x1, x2, . . . , xn are domain variables
-* P is a formula similar to the predicate calculus
+- x1, x2, . . . , xn are domain variables
+- P is a formula similar to the predicate calculus
 
 **Equivalence of Relational Algebra (RA), TRC, and DRC**
 

@@ -56,6 +56,7 @@
 **Cascading Actions**
 
 - Cascading actions define the behavior of the database when a user attempts to delete or update a key referenced by foreign keys.
+
 - Example of cascading actions:
 
   ```pgsql
@@ -70,6 +71,7 @@
   ```
 
   ![1718543809149](image/Lecture3.4-IntermediateSQL3/1718543809149.png)
+
 - Alternative actions include `NO ACTION`, `SET NULL`, and `SET DEFAULT`.
 
 ### SQL Data Types and Schemas
@@ -112,7 +114,9 @@
 **Privileges and Roles**
 
 - SQL includes mechanisms to control user access to data and operations.
+
 - Privileges can be granted to users to allow specific actions, such as `SELECT`, `INSERT`, `UPDATE`, and `DELETE`.
+
 - Example of granting select privilege on a view:
 
   ```sql
@@ -123,6 +127,7 @@
 
   GRANT SELECT ON geo_instructor TO geo_staff;
   ```
+
 - References privilege is necessary to create foreign keys:
 
   ```sql

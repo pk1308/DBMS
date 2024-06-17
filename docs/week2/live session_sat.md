@@ -4,7 +4,6 @@
 
 ![1718425897263](image/livesession_sat/1718425897263.png)
 
-
 ```sql
 SELECT *
 FROM sales

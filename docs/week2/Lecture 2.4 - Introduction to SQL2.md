@@ -36,7 +36,7 @@ old name as new name
 - SQL includes a string-matching operator (`like`) for character string comparisons.
 - Uses special characters:
   - Percent (%) matches any substring
-  - Underscore (_) matches any character
+  - Underscore (\_) matches any character
 - Example: Find instructors with "dar" in their name:
 
 ```sql
@@ -47,14 +47,14 @@ where name like '%dar%'
 
 ![1718030860860](image/Lecture2.4-IntroductiontoSQL2/1718030860860.png)
 
-![1718030934760](image/Lecture2.4-IntroductiontoSQL2/1718030934760.png) 
+![1718030934760](image/Lecture2.4-IntroductiontoSQL2/1718030934760.png)
 
 • Patterns are case sensitive
 • Pattern matching examples:
 ◦ ’Intro%’ matches any string beginning with “Intro”
 ◦ ’%Comp%’ matches any string containing “Comp” as a substring
 ◦ ’- - -_’ matches any string of exactly three characters
-◦ ’_ _ _%’ matches any string of at least two characters
+◦ ’_ _ \_%’ matches any string of at least two characters
 • SQL supports a variety of string operations such as
 ◦ concatenation (using “||”)
 ◦ converting from upper to lower case (and vice versa)
@@ -75,7 +75,6 @@ order by name desc
 
 ![1718031230502](image/Lecture2.4-IntroductiontoSQL2/1718031230502.png)
 
-
 ### Select Top / Fetch Clause
 
 - Limits the number of records returned in the output.
@@ -86,8 +85,6 @@ order by name desc
 select top 10 distinct name
 from instructor
 ```
-
-
 
 ### Where Clause Predicates
 
@@ -121,7 +118,6 @@ select name, course_id
 from instructor , teaches
 where (instructor.ID, dept name) = (teaches.ID, ’Biology’);
 ```
-
 
 ### Duplicates ????
 

@@ -10,14 +10,14 @@
 
 ### Formal Definition
 
-- For a relation schema \( R \), \( $\alpha \subseteq R$ \) and \( $\beta \subseteq R $\).
-- The functional dependency ( $\alpha \to \beta $\) holds on \( R \) if for any legal relations \( r(R) \), whenever any two tuples \( $t_1$ \) and \( $t_2$ \) of \( $r$ \) agree on the attributes \( $ \alpha $ \), they also agree on the attributes \( $\beta$ \).
-- Example: \( $A \to B$ \) does not hold, but \( $B \to A$ \) holds for a certain instance.
+- For a relation schema ( R ), ( $\\alpha \\subseteq R$ ) and ( $\\beta \\subseteq R $).
+- The functional dependency ( $\\alpha \\to \\beta $) holds on ( R ) if for any legal relations ( r(R) ), whenever any two tuples ( $t_1$ ) and ( $t_2$ ) of ( $r$ ) agree on the attributes ( $ \\alpha $ ), they also agree on the attributes ( $\\beta$ ).
+- Example: ( $A \\to B$ ) does not hold, but ( $B \\to A$ ) holds for a certain instance.
 
 ### Keys
 
-- **Superkey:** \( $K$ \) is a superkey for relation schema \( $R$ \) if and only if \($ K \to R \ $).
-- **Candidate Key:** \( K \) is a candidate key for \( R \) if and only if \( $K \to R$ \) and for no \($\alpha \subset K $\), \( $\alpha \to R $\).
+- **Superkey:** ( $K$ ) is a superkey for relation schema ( $R$ ) if and only if ($ K \\to R \\ $).
+- **Candidate Key:** ( K ) is a candidate key for ( R ) if and only if ( $K \\to R$ ) and for no ($\\alpha \\subset K $), ( $\\alpha \\to R $).
 
 ### Practical Examples
 
@@ -32,32 +32,32 @@
 ### Trivial Functional Dependencies
 
 - A functional dependency is trivial if it is satisfied by all instances of a relation.
-- Example: \( $\text{ID, name} \to \text{ID} $\) and \( $\text{name} \to \text{name} $\).
-- Generally, \( $\alpha \to \beta $ \) is trivial if \( $\beta \subseteq \alpha $\).
+- Example: ( $\\text{ID, name} \\to \\text{ID} $) and ( $\\text{name} \\to \\text{name} $).
+- Generally, ( $\\alpha \\to \\beta $ ) is trivial if ( $\\beta \\subseteq \\alpha $).
 
----
+______________________________________________________________________
 
 ## Armstrong’s Axioms
 
 ### Definition
 
-- Given a set of FDs \( F \), infer new dependencies using:
-  - **Reflexivity:** If \( $\beta \subseteq \alpha$ \), then \( \alpha \to \beta \).
-  - **Augmentation:** If \( $\alpha \to \beta $ \), then \( $\gamma\alpha \to \gamma\beta $\).
-  - **Transitivity:** If \( $\alpha \to \beta $\) and \( $\beta \to \gamma $\), then \( $\alpha \to \gamma $\).
+- Given a set of FDs ( F ), infer new dependencies using:
+  - **Reflexivity:** If ( $\\beta \\subseteq \\alpha$ ), then ( \\alpha \\to \\beta ).
+  - **Augmentation:** If ( $\\alpha \\to \\beta $ ), then ( $\\gamma\\alpha \\to \\gamma\\beta $).
+  - **Transitivity:** If ( $\\alpha \\to \\beta $) and ( $\\beta \\to \\gamma $), then ( $\\alpha \\to \\gamma $).
 
 ### Closure
 
-- The closure of a set of FDs \( $F$ \) is the set \( $F^+ $\) of all FDs logically implied by \( F \).
+- The closure of a set of FDs ( $F$ ) is the set ( $F^+ $) of all FDs logically implied by ( F ).
 - Example:
-  - \( $F = \{ A \to B, B \to C \}$ \)
-  - \( $F^+ = \{ A \to B, B \to C, A \to C \} $\)
+  - ( $F = { A \\to B, B \\to C }$ )
+  - ( $F^+ = { A \\to B, B \\to C, A \\to C } $)
 
 ### Properties
 
 - Axioms are **sound** (generate only FDs that hold) and **complete** (generate all FDs that hold).
 
----
+______________________________________________________________________
 
 ## Module Summary
 

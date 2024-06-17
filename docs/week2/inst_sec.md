@@ -22,9 +22,9 @@ Atomic values - it cant mean broken down into smaller junks eg :
 Schema
 
 $$
-R = (A_1, A_2, ..... A_n) \ \ \\\
+R = (A_1, A_2, ..... A_n) \\ \\ \\\\
 
-Domain\ D = (D_1 , D_2, ....D_n)
+Domain\\ D = (D_1 , D_2, ....D_n)
 $$
 
 ![1718283128210](image/inst_sec/1718283128210.png)
@@ -69,50 +69,45 @@ he **matches** becomes the referencing relationship and **host_team_id , guest_t
 
 ##### Procedural and Non Procedural Language
 
-
-
 ##### Operations
 
-* Select
-* Project
-* Union
-* Difference
-* Intersection
-* Cartesian Product
-* Natural Join
+- Select
+- Project
+- Union
+- Difference
+- Intersection
+- Cartesian Product
+- Natural Join
 
-
-A relation is set. 
+A relation is set.
 
 ###### Selection
 
 • Relation r
-$σ_{A=B∧D>5(r)}$
+$σ\_{A=B∧D>5(r)}$
 **∧ means and**
 
-(A = B) intersect D > 5 
+(A = B) intersect D > 5
 
 ![1718286977341](image/inst_sec/1718286977341.png)
-
 
 ###### Projection
 
 • Relation r
-• $π_{A,C}$ (r)
+• $π\_{A,C}$ (r)
 
 1. fetch the columns
-2. no dulipcates
+1. no dulipcates
 
-###### **Union** 
+###### **Union**
 
 • Relation r,s
 • $r ∪ s$
 
 1. same nuumber of attributes or degree
-2. domains of the attributes has to be same
+1. domains of the attributes has to be same
 
 ![1718287318842](image/inst_sec/1718287318842.png)
-
 
 ###### Difference
 
@@ -122,59 +117,51 @@ $$
 
 ![1718287399627](image/inst_sec/1718287399627.png)
 
-
 ###### Intersection
 
 $$
 r ∩ s = r- (r-s)
 $$
 
-
 rows that are common to both relations.
 
 ###### Cartesian Product
 
 $$
-R \bowtie S
+R \\bowtie S
 $$
 
 ![1718011977303](image/Lecture2.2-IntroductiontoRelationalModel2/1718011977303.png)
 
-
 ![1718288275115](image/inst_sec/1718288275115.png)
-
 
 when you have two atrributes with same name we remane the atrributes in cartseian product.
 
-we rename the table using 
+we rename the table using
 
 $$
 P_s(r)
 $$
 
-renaming the table or relationship r to s 
-
+renaming the table or relationship r to s
 
 $$
-r \bowtie p_s(r)
+r \\bowtie p_s(r)
 $$
 
-self join and rename r to s  = $ r\bowtie s$
+self join and rename r to s  = $ r\\bowtie s$
 
 ![1718288455562](image/inst_sec/1718288455562.png)
 
 $$
-\sigma_{A=C}(r \bowtie s)
+\\sigma\_{A=C}(r \\bowtie s)
 $$
 
 do a cross join of r and s and the find A = C
 
-
 ![1718288920734](image/inst_sec/1718288920734.png)
 
-
-not equal $<>$
-
+not equal $\<>$
 
 ###### Inner Join
 

@@ -57,13 +57,11 @@ from department;
 
 The subquery in the SELECT clause is used to return the number of instructors in each department. This value is then included as a column in the result set.
 
-
 ![1718524351169](image/Lecture3.2-IntermediateSQL1/1718524351169.png)
 
 ![1718524544239](image/Lecture3.2-IntermediateSQL1/1718524544239.png)
 
 ![1718524450798](image/Lecture3.2-IntermediateSQL1/1718524450798.png)
-
 
 ![1718524880904](image/Lecture3.2-IntermediateSQL1/1718524880904.png)
 
@@ -91,11 +89,9 @@ from instructor);
 
 ![1718526139448](image/Lecture3.2-IntermediateSQL1/1718526139448.png)
 
-
 ![1718526176415](image/Lecture3.2-IntermediateSQL1/1718526176415.png)
 
 ![1718526300454](image/Lecture3.2-IntermediateSQL1/1718526300454.png)
-
 
 ![1718526312959](image/Lecture3.2-IntermediateSQL1/1718526312959.png)
 

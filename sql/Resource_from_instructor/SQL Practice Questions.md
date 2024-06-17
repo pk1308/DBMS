@@ -30,4 +30,4 @@ These practice questions cover various database queries based on the LIS, FLIS, 
 - Identifying research scholars who haven't issued books (LIS)
 - Finding the oldest player from the "All Stars" team (FLIS)
 - Retrieving book titles issued exclusively to "PG" students (LIS)# SQL Practice Questions.pdf (PDF file)
-![Alt text](<./SQL Practice Questions.pdf>){ type=application/pdf style="min-height:100vh;width:100%" }
+  ![Alt text](./SQL%20Practice%20Questions.pdf){ type=application/pdf style="min-height:100vh;width:100%" }

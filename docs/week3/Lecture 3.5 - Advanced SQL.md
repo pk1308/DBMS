@@ -49,7 +49,6 @@ CALL update_salary(1000, 50000);
 
 ![1718553466202](image/Lecture3.5-AdvancedSQL/1718553466202.png)
 
-
 **Language Constructs**
 
 SQL:1999 supports a rich set of imperative constructs, including loops, if-then-else statements, and assignment. These constructs can be used to create complex procedures and functions.
@@ -111,9 +110,9 @@ END;
 
 Triggers can be a powerful tool for automating database operations, but they can also have a negative impact on performance. The following are some factors that can affect the performance of triggers:
 
-* **The number of triggers:** The more triggers that are defined on a table, the greater the impact on performance.
-* **The complexity of the triggers:** Complex triggers that perform multiple operations can be more time-consuming to execute than simple triggers.
-* **The frequency of the triggering events:** Triggers that are activated by frequent events can have a significant impact on performance.
+- **The number of triggers:** The more triggers that are defined on a table, the greater the impact on performance.
+- **The complexity of the triggers:** Complex triggers that perform multiple operations can be more time-consuming to execute than simple triggers.
+- **The frequency of the triggering events:** Triggers that are activated by frequent events can have a significant impact on performance.
 
 It is important to carefully consider the impact of triggers on performance before creating them. If a trigger is not necessary, it should not be created. If a trigger is necessary, it should be designed to be as efficient as possible.
 
@@ -121,6 +120,6 @@ It is important to carefully consider the impact of triggers on performance befo
 
 Triggers can be used for a variety of purposes, including:
 
-* **Maintaining data integrity:** Triggers can be used to enforce business rules and ensure that data is consistent.
-* **Automating tasks:** Triggers can be used to automate tasks that would otherwise need to be performed manually.
-* **Improving performance:** Triggers can be used to improve performance by performing operations
+- **Maintaining data integrity:** Triggers can be used to enforce business rules and ensure that data is consistent.
+- **Automating tasks:** Triggers can be used to automate tasks that would otherwise need to be performed manually.
+- **Improving performance:** Triggers can be used to improve performance by performing operations

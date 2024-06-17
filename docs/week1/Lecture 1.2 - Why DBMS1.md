@@ -13,10 +13,10 @@ The module reviews the history of DBMSs, starting with the use of magnetic tapes
 Data Management
 
 1. Storage
-2. Retrieval
-3. Transaction
-4. Audit
-5. Archival
+1. Retrieval
+1. Transaction
+1. Audit
+1. Archival
 
 for :
 
@@ -27,13 +27,13 @@ for :
 Major Approach:
 
 1. Physical also know as Book keeping
-2. Electronic
+1. Electronic
 
----
+______________________________________________________________________
 
 ![1717326679323](image/Lecture1.2-WhyDBMS1/1717326679323.png)
 
----
+______________________________________________________________________
 
 Electronic Data or Records management depends on various parameters including:
 • Durability
@@ -46,15 +46,14 @@ Electronic Data or Records management depends on various parameters including:
 • Cost
 
 Problems with such an approach of book-keeping:
-    • Durability: Physical damage to these registers is a possibility due to rodents, humidity,
-    wear and tear
-    • Scalability: Very difficult to maintain for many years, some shops have numerous
-    registers spanning over years
-    • Security: Susceptible to tampering by outsiders
-    • Retrieval: Time consuming process to search for a previous entry
-    • Consistency: Prone to human errors
+• Durability: Physical damage to these registers is a possibility due to rodents, humidity,
+wear and tear
+• Scalability: Very difficult to maintain for many years, some shops have numerous
+registers spanning over years
+• Security: Susceptible to tampering by outsiders
+• Retrieval: Time consuming process to search for a previous entry
+• Consistency: Prone to human errors
 
-
-Spreadsheet files - a better solutionm to natural file creation 
+Spreadsheet files - a better solutionm to natural file creation
 
 ![1717327338160](image/Lecture1.2-WhyDBMS1/1717327338160.png)
