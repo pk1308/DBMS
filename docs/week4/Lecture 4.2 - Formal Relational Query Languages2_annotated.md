@@ -1,55 +1,51 @@
-# Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf
-
+#  Summary of Lecture 4.2 - Formal Relational Query Languages2_annotated.pdf 
 **Summary**
+**Module 17: Formal Relational Query Languages/2**
+
+**Objectives and Outline**
+
+**Objectives**
+
+* To understand formal calculus-based query language through relational algebra
+
+**Outline**
+
+* Overview of Tuple Relational Calculus
+* Overview of Domain Relational Calculus
+* Equivalence of Algebra and Calculus
+
 **Predicate Logic**
 
-Predicate logic, also known as predicate calculus, extends propositional logic or Boolean algebra. It introduces the concepts of predicates and quantifiers to better capture the meaning of statements that cannot be adequately expressed by propositional logic. Tuple Relational Calculus and Domain Relational Calculus are based on Predicate Calculus.
+* Predicate Logic is an extension of Propositional Logic or Boolean Algebra.
+* It adds the concept of predicates and quantifiers to better capture the meaning of statements that cannot be adequately expressed by propositional logic.
+* Tuple Relational Calculus and Domain Relational Calculus are based on Predicate Calculus.
 
-**Predicates**
+**Predicate**
 
-A predicate is a property that a subject of a statement can have. It is a function that tells the truth value of the statement at the subject.
+* A predicate is a property that the subject of a statement can have.
+* A statement involving n variables x1, x2, x3, · · · , xn can be denoted by P(x1, x2, x3, · · · , xn).
 
 **Quantifiers**
 
-Quantifiers are used in predicate logic to express the extent to which a predicate is true over a range of elements. There are two types of quantifiers:
+* Universal Quantifier: Asserts that a property is true for all the values of a variable in a particular domain.
+* Existential Quantifier: Asserts that there is an element with a certain property.
 
-- Universal Quantifier (∀): Asserts that a property is true for all values of a variable in a particular domain.
-- Existential Quantifier (∃): Asserts that there is at least one element with a certain property.
+**Tuple Relational Calculus**
 
-**Tuple Relational Calculus (TRC)**
-
-TRC is a non-procedural query language where each query is in the form:
-
-```
+* A non-procedural query language, where each query is of the form:
 {t | P(t)}
-```
+* t = resulting tuples
+* P(t) = predicate
 
-where:
+**Domain Relational Calculus**
 
-- t = resulting tuples
-- P(t) = predicate that specifies the conditions used to fetch t.
-
-**TRC Example**
-
-Find the first names of students whose age is greater than 21:
-
-```
-{t.Fname | Student(t) ∧ t.age > 21}
-```
-
-**Domain Relational Calculus (DRC)**
-
-DRC is a non-procedural query language equivalent to TRC. Each query is expressed as:
-
-```
+* A non-procedural query language equivalent in power to the tuple relational calculus
+* Each query is an expression of the form:
 {< x1, x2, . . . , xn > |P(x1, x2, . . . , xn)}
-```
+* x1, x2, . . . , xn represent domain variables
+* P represents a formula similar to that of the predicate calculus
 
-where:
+**Equivalence of Algebra and Calculus**
 
-- x1, x2, . . . , xn are domain variables
-- P is a formula similar to the predicate calculus
-
-**Equivalence of Relational Algebra (RA), TRC, and DRC**
-
-The expressive power of RA, TRC, and DRC is equivalent. This equivalence means that any query that can be expressed in one language can be expressed in the other two languages. This equivalence is important for database theory and for understanding the different ways to query data.
+* Relational Algebra, Tuple Relational Calculus, and Domain Relational Calculus are equivalent in expressive power.
+* This equivalence means that any query that can be expressed in one language can also be expressed in the other two languages.
