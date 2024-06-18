@@ -80,8 +80,8 @@
 * [X] [Lec-67: SQL Aggregate Functions - SUM, AVG(n), COUNT, MIN, MAX Functions | DBMS](https://youtube.com/watch?v=Yr4pHPZCshA)
 * [X] [Lec-68: Correlated Subquery in SQL with Example | Imp for Placements, GATE, NET &amp; SQL certification](https://youtube.com/watch?v=0d419Vo2Po4)
 * [X] [Lec-69: Difference between Joins, Nested Subquery and Correlated Subquery | Most Imp Concept of SQL](https://youtube.com/watch?v=bonJEipf3VU)
-* [ ] [Lec-70: Find Nth(1st,2nd,3rd....N) Highest Salary in SQL | Imp for Competitive &amp; Placement exam](https://youtube.com/watch?v=fh4yBn0oTaM)
-* [ ] [Lec-71: 3 Imp Questions on SQL basic Concepts | DBMS](https://youtube.com/watch?v=BKQcn0sLZGM)
+* [X] [Lec-70: Find Nth(1st,2nd,3rd....N) Highest Salary in SQL | Imp for Competitive &amp; Placement exam](https://youtube.com/watch?v=fh4yBn0oTaM)
+* [X] [Lec-71: 3 Imp Questions on SQL basic Concepts | DBMS](https://youtube.com/watch?v=BKQcn0sLZGM)
 
 ---
 
