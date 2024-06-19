@@ -344,3 +344,65 @@ study as left study as right
 | S_id (Left) |
 | ----------- |
 | s1          |
+
+# Equi Join
+
+![1718823323460](image/sql/1718823323460.png)
+
+```pgsql
+select e.E_name from emp e dept d where e.address = d.location and e.en_no = d.eno; 
+```
+
+![1718823579713](image/sql/1718823579713.png)
+
+# left outer join
+
+A LEFT OUTER JOIN in SQL is a type of join operation that combines rows from two or more tables based on a specified condition and includes unmatched rows from the left table. It allows you to retrieve data from multiple tables based on their related values. Here's a detailed explanation:
+
+### What is a LEFT OUTER JOIN?
+
+A LEFT OUTER JOIN is a type of join operation that combines rows from two or more tables based on a specified condition. It includes all rows from the left table (the "left" or "first" table) and matching rows from the right table (the "right" or "second" table). If there is no match in the right table, the result includes NULL values for the columns of the right table[1][2][3].
+
+### Syntax
+
+The syntax for a LEFT OUTER JOIN in SQL is as follows:
+
+```sql
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+```
+
+### Example
+
+For example, consider a query that retrieves all employees along with their departments and salaries (if available). The Employees table is the left table, and we perform a LEFT OUTER JOIN with the Departments table using the join condition `E.DepartmentID = D.DepartmentID`. This ensures that all employees from the Employees table are included in the result set, regardless of whether they have a matching department. We then perform another LEFT OUTER JOIN with the Salaries table using the join condition `E.EmployeeID = S.EmployeeID`, allowing us to include salary information for employees if it exists[2].
+
+```sql
+SELECT E.EmployeeID, E.Name, D.DepartmentName, S.SalaryAmount
+FROM Employees E
+LEFT OUTER JOIN Departments D ON E.DepartmentID = D.DepartmentID
+LEFT OUTER JOIN Salaries S ON E.EmployeeID = S.EmployeeID;
+```
+
+### Output
+
+The output of this query would include all employees, even if they do not have a matching department or salary. The unmatched rows in the Employees table would have NULL values in the DepartmentName and SalaryAmount columns[2].
+
+### Key Points
+
+- **Includes all rows from the left table**: A LEFT OUTER JOIN includes all rows from the left table, even if there are no matching rows in the right table.
+- **Includes matching rows from the right table**: If there is a match in the right table, the result includes the corresponding row from the right table.
+- **Includes NULL values for unmatched rows in the right table**: If there is no match in the right table, the result includes NULL values for the columns of the right table[1][2][3].
+
+### Practical Examples
+
+- **Retrieving all customers, even if they haven't placed any orders**: A LEFT OUTER JOIN can be used to retrieve all customers, even if they haven't placed any orders. The unmatched rows in the Customers table would have NULL values in the OrdersID column[2].
+
+![1718824652242](image/sql/1718824652242.png)
+
+
+# Right outer join
+
+
+![1718825047440](image/sql/1718825047440.png)

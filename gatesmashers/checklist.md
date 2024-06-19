@@ -45,9 +45,9 @@
 * [X] [Lec-38: Introduction to Joins and its types | Need of Joins with example | DBMS](https://youtube.com/watch?v=zYH-e6tUYbw)
 * [X] [Lec-39: Natural Join operation with Example | Database Management System](https://youtube.com/watch?v=jRxEjmjIIFs)
 * [X] [Lec-40: Self Join operation with Example | Database Management System](https://youtube.com/watch?v=6DQpvfdj6EE)
-* [ ] [Lec-41: Equi Join operation with Example | Database Management System](https://youtube.com/watch?v=lUiPjkOQG9w)
-* [ ] [Lec-42: Left Outer Join operation with Example | Database Management System](https://youtube.com/watch?v=unxn0KnzBzk)
-* [ ] [Lec-43: Right Outer Join operation with Example | Database Management System](https://youtube.com/watch?v=t7J__TGqoQs)
+* [X] [Lec-41: Equi Join operation with Example | Database Management System](https://youtube.com/watch?v=lUiPjkOQG9w)
+* [X] [Lec-42: Left Ou&gt;&gt;&gt;?ter Join operation with Example | Database Management System](https://youtube.com/watch?v=unxn0KnzBzk)
+* [X] [Lec-43: Right Outer Join operation with Example | Database Management System](https://youtube.com/watch?v=t7J__TGqoQs)
 
 ---
 
