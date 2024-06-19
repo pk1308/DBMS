@@ -1,7 +1,5 @@
 # SQL
 
-
-
 #### key
 
 - Candidate Key -> Primary Key
@@ -214,4 +212,135 @@ Department =
 | D3     | MRKT    | 4   |
 | D4     | FINANCE | 5   |
 
-# Cross join
+# Natural join
+
+cross poduct + condition = join
+
+employee natural join  department = cross poduct + condition $empolyee.eno = department.eno$
+
+cross product =
+
+```pgsql
+select * from employee , department
+```
+
+|              |        |         |        |         |                 |
+| ------------ | ------ | ------- | ------ | ------- | --------------- |
+| employee.Eno | E-name | Address | Dep_no | Name    | departmment.eno |
+| 1            | Ram    | delhi   | D1     | HR      | 1               |
+| 1            | Ram    | delhi   | D2     | IT      | 2               |
+| 1            | Ram    | delhi   | D3     | MRKT    | 4               |
+| 1            | Ram    | delhi   | D4     | FINANCE | 5               |
+| 2            | varun  | chd     | D1     | HR      | 1               |
+| 2            | varun  | chd     | D2     | IT      | 2               |
+| 2            | varun  | chd     | D3     | MRKT    | 4               |
+| 2            | varun  | chd     | D4     | FINANCE | 5               |
+| 3            | Ravi   | chd     | D1     | HR      | 1               |
+| 3            | Ravi   | chd     | D2     | IT      | 2               |
+| 3            | Ravi   | chd     | D3     | MRKT    | 4               |
+| 3            | Ravi   | chd     | D4     | FINANCE | 5               |
+| 4            | Amrit  | Delhi   | D1     | HR      | 1               |
+| 4            | Amrit  | Delhi   | D2     | IT      | 2               |
+| 4            | Amrit  | Delhi   | D3     | MRKT    | 4               |
+| 4            | Amrit  | Delhi   | D4     | FINANCE | 5               |
+| 5            | Nitin  | noida   | D1     | HR      | 1               |
+| 5            | Nitin  | noida   | D2     | IT      | 2               |
+| 5            | Nitin  | noida   | D3     | MRKT    | 4               |
+| 5            | Nitin  | noida   | D4     | FINANCE | 5               |
+
+```pgsql
+select * from employee  department empolyee.eno = department.eno
+```
+
+|     |        |         |        |         |     |                                   |
+| --- | ------ | ------- | ------ | ------- | --- | --------------------------------- |
+| Eno | E-name | Address | Dep_no | Name    | eno | `empolyee.eno = department.eno` |
+| 1   | Ram    | delhi   | D1     | HR      | 1   | True                              |
+| 1   | Ram    | delhi   | D2     | IT      | 2   | False                             |
+| 1   | Ram    | delhi   | D3     | MRKT    | 4   | False                             |
+| 1   | Ram    | delhi   | D4     | FINANCE | 5   | False                             |
+| 2   | varun  | chd     | D1     | HR      | 1   | False                             |
+| 2   | varun  | chd     | D2     | IT      | 2   | True                              |
+| 2   | varun  | chd     | D3     | MRKT    | 4   | False                             |
+| 2   | varun  | chd     | D4     | FINANCE | 5   | False                             |
+| 3   | Ravi   | chd     | D1     | HR      | 1   | False                             |
+| 3   | Ravi   | chd     | D2     | IT      | 2   | False                             |
+| 3   | Ravi   | chd     | D3     | MRKT    | 4   | False                             |
+| 3   | Ravi   | chd     | D4     | FINANCE | 5   | False                             |
+| 4   | Amrit  | Delhi   | D1     | HR      | 1   | False                             |
+| 4   | Amrit  | Delhi   | D2     | IT      | 2   | False                             |
+| 4   | Amrit  | Delhi   | D3     | MRKT    | 4   | True                              |
+| 4   | Amrit  | Delhi   | D4     | FINANCE | 5   | False                             |
+| 5   | Nitin  | noida   | D1     | HR      | 1   | False                             |
+| 5   | Nitin  | noida   | D2     | IT      | 2   | False                             |
+| 5   | Nitin  | noida   | D3     | MRKT    | 4   | False                             |
+| 5   | Nitin  | noida   | D4     | FINANCE | 5   | True                              |
+
+### result=
+
+|     |        |         |        |         |     |
+| --- | ------ | ------- | ------ | ------- | --- |
+| Eno | E-name | Address | Dep_no | Name    | eno |
+| 1   | Ram    | delhi   | D1     | HR      | 1   |
+| 2   | varun  | chd     | D2     | IT      | 2   |
+| 4   | Amrit  | Delhi   | D3     | MRKT    | 4   |
+| 5   | Nitin  | noida   | D4     | FINANCE | 5   |
+
+```pgsql
+select E-name from employee  natural join department
+```
+
+|        |
+| ------ |
+| E-name |
+| Ram    |
+| varun  |
+| Amrit  |
+| Nitin  |
+
+# self Join
+
+| S_id | course_id | since |
+| ---- | --------- | ----- |
+| s1   | c1        | 2016  |
+| s2   | c2        | 2017  |
+| s1   | c2        | 2017  |
+
+find student who is enrolled in two courses ?
+
+cross prduct
+
+| S_id (Left) | course_id (Left) | since (Left) | S_id (Right) | course_id (Right) | since (Right) |
+| ----------- | ---------------- | ------------ | ------------ | ----------------- | ------------- |
+| s1          | c1               | 2016         | s1           | c1                | 2016          |
+| s1          | c1               | 2016         | s2           | c2                | 2017          |
+| s1          | c1               | 2016         | s1           | c2                | 2017          |
+| s2          | c2               | 2017         | s1           | c1                | 2016          |
+| s2          | c2               | 2017         | s2           | c2                | 2017          |
+| s2          | c2               | 2017         | s1           | c2                | 2017          |
+| s1          | c2               | 2017         | s1           | c1                | 2016          |
+| s1          | c2               | 2017         | s2           | c2                | 2017          |
+| s1          | c2               | 2017         | s1           | c2                | 2017          |
+
+```pgsql
+ select LEFT.s_id from 
+study as left study as right 
+	where left.s_id = right.s_id 
+		and left.course_id < > right.course_id 
+```
+
+| S_id (Left) | course_id (Left) | since (Left) | S_id (Right) | course_id (Right) | since (Right) | CONDF |
+| ----------- | ---------------- | ------------ | ------------ | ----------------- | ------------- | ----- |
+| s1          | c1               | 2016         | s1           | c1                | 2016          | FALSE |
+| s1          | c1               | 2016         | s2           | c2                | 2017          | FALSE |
+| s1          | c1               | 2016         | s1           | c2                | 2017          | TRUE  |
+| s2          | c2               | 2017         | s1           | c1                | 2016          | FALSE |
+| s2          | c2               | 2017         | s2           | c2                | 2017          | FALSE |
+| s2          | c2               | 2017         | s1           | c2                | 2017          | FALSE |
+| s1          | c2               | 2017         | s1           | c1                | 2016          | TRUE  |
+| s1          | c2               | 2017         | s2           | c2                | 2017          | FALSE |
+| s1          | c2               | 2017         | s1           | c2                | 2017          | FALSE |
+
+| S_id (Left) |
+| ----------- |
+| s1          |
