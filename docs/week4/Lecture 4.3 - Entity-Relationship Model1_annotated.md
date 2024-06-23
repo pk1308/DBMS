@@ -1,4 +1,5 @@
-#  Summary of Lecture 4.3 - Entity-Relationship Model1_annotated.pdf 
+# Entity-Relationship Model
+
 **Summary**
 **Module 18: Entity-Relationship (ER) Model**
 
@@ -18,13 +19,17 @@
 **1. Attributes**
 
 * Properties associated with entities.
-* Can be simple or composite, single-valued or multivalued, and derived.
-* Each attribute has a domain, which is the set of possible values for that attribute.
+* Can be **simple or composite, single-valued or multivalued, and derived**.
+* Each attribute has a **domain**, which is the set of possible values for that attribute.
 
 **2. Entity Sets**
 
 * Collections of entities that share the same properties and attributes.
 * Each entity is uniquely identified by a primary key.
+
+![1719157412140](image/Lecture4.3-Entity-RelationshipModel1_annotated/1719157412140.png)
+
+![1719157434617](image/Lecture4.3-Entity-RelationshipModel1_annotated/1719157434617.png)
 
 **3. Relationships**
 
@@ -36,6 +41,10 @@
 
 * Specifies the mapping between entities in a relationship.
 * Types of cardinality include one-to-one, one-to-many, many-to-one, and many-to-many.
+  * partial
+  * 
+
+![1719157836185](image/Lecture4.3-Entity-RelationshipModel1_annotated/1719157836185.png)
 
 **5. Constraints**
 
@@ -46,6 +55,8 @@
 
 * Entity sets that do not have sufficient attributes to uniquely identify their entities.
 * Must have a total participation in an identifying relationship with a strong entity set.
+* **Discrimator** 
+
 
 **ER Diagram**
 
@@ -55,7 +66,6 @@
 
 **Example ER Diagram**
 
-![ER Diagram Example](image.png)
 
 **Benefits of ER Modeling**
 
