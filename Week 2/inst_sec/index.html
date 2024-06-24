@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Inst sec - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                    Home
+                </a>
+                <div class="collapse" id="home-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../cheatsheet/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Cheatsheet
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../.."
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Welcome to DBMS
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week3-collapse" aria-expanded="false">
+                    week3
+                </a>
+                <div class="collapse" id="week3-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture 3.5 - Advanced SQL.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/livesession.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture 3.1 - SQL Examples.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture 3.2 - Intermediate SQL1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture 3.4 - Intermediate SQL3.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/image/Lecture 3.3 - Intermediate SQL2.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#piyush-wairale-collapse" aria-expanded="false">
+                    Piyush Wairale
+                </a>
+                <div class="collapse" id="piyush-wairale-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/checklist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Checklist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/ER_model/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity Relationship Model
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-5-collapse" aria-expanded="false">
+                    Week 5
+                </a>
+                <div class="collapse" id="week-5-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.4%20-%20Relational%20Database%20Design4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.4 - Relational Database Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.1%20-%20Relational%20Database%20Design1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.1 - Relational Database Design1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.2%20-%20Relational%20Database%20Design2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.2: Relational Database Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/ex_can/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ex can
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/closureofartibut/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Closureofartibut
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.5%20-%20Relational%20Database%20Design5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.5 - Relational Database Design5.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.3%20-%20Relational%20Database%20Design3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.3 - Relational Database Design 3
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/week5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week5
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#gatesmashers-collapse" aria-expanded="false">
+                    gatesmashers
+                </a>
+                <div class="collapse" id="gatesmashers-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../gatesmashers/sql/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../gatesmashers/checklist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Checklist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../gatesmashers/notes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Notes
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week1-collapse" aria-expanded="false">
+                    week1
+                </a>
+                <div class="collapse" id="week1-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture 1.1 - Course Overview.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture 1.3 - Why DBMS2.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/week1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/textbook.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture 1.4 - Intro to DBMS1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/summary.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture 1.2 - Why DBMS1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture 1.5 - Intro to DBMS2.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week2-collapse" aria-expanded="false">
+                    week2
+                </a>
+                <div class="collapse" id="week2-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture 2.2 - Introduction to Relational Model2.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/inst_sec.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/tutorial_2.1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/live session_sat.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture 2.1 - Introduction to Relational Model1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/check_list.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture 2.5 - Introduction to SQL3.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/TRC.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture 2.4 - Introduction to SQL2.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture 2.3 - Introduction to SQL1.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week4-collapse" aria-expanded="false">
+                    week4
+                </a>
+                <div class="collapse" id="week4-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture 4.5 - Entity-Relationship Model3_annotated.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/week4.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture 4.1 - Formal Relational Query Languages1_annotated.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture 4.3 - Entity-Relationship Model1_annotated.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture 4.4 - Entity-Relationship Model2_annotated.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/er_model.md"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            None
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><p>columns - attribute</p>
+<p>rows - tuple</p>
+<p>Primary keys:</p>
+<ul>
+<li>not null</li>
+<li>uniquie</li>
+</ul>
+<p>Table will have one <strong>Primary key multiple candiates key</strong></p>
+<h5 id="domain">Domain</h5>
+<p>set of allowed values for each attribute is called domain</p>
+<p>primary key is not nullable</p>
+<p><img alt="1718282415392" src="../image/inst_sec/1718282415392.png"></p>
+<p>Atomic values - it cant mean broken down into smaller junks eg :</p>
+<p>Schema</p>
+<p>$$
+R = (A_1, A_2, ..... A_n) \ \ \\</p>
+<p>Domain\ D = (D_1 , D_2, ....D_n)
+$$</p>
+<p><img alt="1718283128210" src="../image/inst_sec/1718283128210.png"></p>
+<ul>
+<li>order of rows or tuple is irrelevant</li>
+<li>no two tuple or row may be identical</li>
+</ul>
+<h5 id="keys">Keys</h5>
+<ul>
+<li>
+<p>A <strong>superkey</strong> uniquely identifies tuples in a relation.</p>
+</li>
+<li>
+<ul>
+<li>Example: {ID} and {ID, name} are both superkeys of instructor</li>
+</ul>
+</li>
+<li>A <strong>candidate key is a minimal superkey.</strong></li>
+<li><strong>min no of super key to indentify a tuple.</strong></li>
+<li>Example: {ID} is a candidate key for instructor</li>
+<li><strong>A primary key is the selected candidate key used for unique identification.</strong></li>
+<li>
+<p>A <strong>surrogate key (or synthetic key)</strong> in a database is a unique identifier for either an entity in the modeled world or an object in the database
+  eg : <strong>transaction id of amazon the transaction id is only valid in the order life time .</strong></p>
+</li>
+<li>
+<p><strong>Super key.</strong></p>
+</li>
+<li><strong>Candidate key.</strong></li>
+<li><strong>Primary key.</strong></li>
+<li><strong>Surrogate key.</strong></li>
+</ul>
+<p><img alt="1718284096055" src="../image/inst_sec/1718284096055.png"></p>
+<ul>
+<li>Secondary / Alternate Key: <strong>{First Name, Last Name}, Aadhaar #</strong></li>
+<li>Simple Key: Consists of a single attribute <strong>Aadhaar #</strong></li>
+<li>Composite Key: <strong>{First Name, Last Name}</strong></li>
+</ul>
+<p><strong>Foreign key constrain</strong> : Value in a relation must appear in another</p>
+<p><img alt="1718285363058" src="../image/inst_sec/1718285363058.png"></p>
+<p>he <strong>matches</strong> becomes the referencing relationship and <strong>host_team_id , guest_team_id is foreign key.</strong></p>
+<p><strong>Match_num is primary key in match_referees and matches.</strong></p>
+<p><strong>Compound key</strong> = two foreign key + simple key to used to identify an entity occurrence .</p>
+<p><img alt="1718286514565" src="../image/inst_sec/1718286514565.png"></p>
+<h5 id="procedural-and-non-procedural-language">Procedural and Non Procedural Language</h5>
+<h5 id="operations">Operations</h5>
+<ul>
+<li>Select</li>
+<li>Project</li>
+<li>Union</li>
+<li>Difference</li>
+<li>Intersection</li>
+<li>Cartesian Product</li>
+<li>Natural Join</li>
+</ul>
+<p>A relation is set.</p>
+<h6 id="selection">Selection</h6>
+<p>• Relation r
+<span class="arithmatex">\(σ\_{A=B∧D&gt;5(r)}\)</span>
+<strong>∧ means and</strong></p>
+<p>(A = B) intersect D &gt; 5</p>
+<p><img alt="1718286977341" src="../image/inst_sec/1718286977341.png"></p>
+<h6 id="projection">Projection</h6>
+<p>• Relation r
+• <span class="arithmatex">\(π\_{A,C}\)</span> (r)</p>
+<ol>
+<li>fetch the columns</li>
+<li>no dulipcates</li>
+</ol>
+<h6 id="union"><strong>Union</strong></h6>
+<p>• Relation r,s
+• <span class="arithmatex">\(r ∪ s\)</span></p>
+<ol>
+<li>same nuumber of attributes or degree</li>
+<li>domains of the attributes has to be same</li>
+</ol>
+<p><img alt="1718287318842" src="../image/inst_sec/1718287318842.png"></p>
+<h6 id="difference">Difference</h6>
+<div class="arithmatex">\[
+r-s
+\]</div>
+<p><img alt="1718287399627" src="../image/inst_sec/1718287399627.png"></p>
+<h6 id="intersection">Intersection</h6>
+<div class="arithmatex">\[
+r ∩ s = r- (r-s)
+\]</div>
+<p>rows that are common to both relations.</p>
+<h6 id="cartesian-product">Cartesian Product</h6>
+<div class="arithmatex">\[
+R \\bowtie S
+\]</div>
+<p><img alt="1718011977303" src="../image/Lecture2.2-IntroductiontoRelationalModel2/1718011977303.png"></p>
+<p><img alt="1718288275115" src="../image/inst_sec/1718288275115.png"></p>
+<p>when you have two atrributes with same name we remane the atrributes in cartseian product.</p>
+<p>we rename the table using</p>
+<div class="arithmatex">\[
+P_s(r)
+\]</div>
+<p>renaming the table or relationship r to s</p>
+<div class="arithmatex">\[
+r \\bowtie p_s(r)
+\]</div>
+<p>self join and rename r to s  = $ r\bowtie s$</p>
+<p><img alt="1718288455562" src="../image/inst_sec/1718288455562.png"></p>
+<div class="arithmatex">\[
+\\sigma\_{A=C}(r \\bowtie s)
+\]</div>
+<p>do a cross join of r and s and the find A = C</p>
+<p><img alt="1718288920734" src="../image/inst_sec/1718288920734.png"></p>
+<p>not equal <span class="arithmatex">\(\&lt;&gt;\)</span></p>
+<h6 id="inner-join">Inner Join</h6>
+<h6 id="natural-join">Natural Join</h6>
+<div class="arithmatex">\[
+r∩s
+\]</div>
+<p><img alt="1718289879840" src="../image/inst_sec/1718289879840.png"></p></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
