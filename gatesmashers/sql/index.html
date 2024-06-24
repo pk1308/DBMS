@@ -1,0 +1,1861 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>SQL - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                    Home
+                </a>
+                <div class="collapse" id="home-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../cheatsheet/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Cheatsheet
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../.."
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Welcome to DBMS
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week3-collapse" aria-expanded="false">
+                    week3
+                </a>
+                <div class="collapse" id="week3-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture%203.5%20-%20Advanced%20SQL/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.5 - Advanced SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/livesession/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Livesession
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture%203.1%20-%20SQL%20Examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.1 - SQL Examples.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture%203.2%20-%20Intermediate%20SQL1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.2 - Intermediate SQL1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/Lecture%203.4%20-%20Intermediate%20SQL3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.4   Intermediate SQL3
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week3/image/Lecture%203.3%20-%20Intermediate%20SQL2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.3 - Intermediate SQL2.pdf (PDF file)
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#piyush-wairale-collapse" aria-expanded="false">
+                    Piyush Wairale
+                </a>
+                <div class="collapse" id="piyush-wairale-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/checklist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Checklist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/ER_model/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity Relationship Model
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-5-collapse" aria-expanded="false">
+                    Week 5
+                </a>
+                <div class="collapse" id="week-5-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.4%20-%20Relational%20Database%20Design4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.4 - Relational Database Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.1%20-%20Relational%20Database%20Design1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.1 - Relational Database Design1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.2%20-%20Relational%20Database%20Design2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.2: Relational Database Design
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/ex_can/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ex can
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/closureofartibut/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Closureofartibut
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.5%20-%20Relational%20Database%20Design5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.5 - Relational Database Design5.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.3%20-%20Relational%20Database%20Design3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 5.3 - Relational Database Design 3
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/week5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week5
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#gatesmashers-collapse" aria-expanded="false">
+                    gatesmashers
+                </a>
+                <div class="collapse" id="gatesmashers-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../checklist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Checklist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../notes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Notes
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week1-collapse" aria-expanded="false">
+                    week1
+                </a>
+                <div class="collapse" id="week1-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture%201.1%20-%20Course%20Overview/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.1 - Course Overview.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture%201.3%20-%20Why%20DBMS2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.3 - Why DBMS2.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/week1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/textbook/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Textbook
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture%201.4%20-%20Intro%20to%20DBMS1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.4 - Intro to DBMS1.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/summary/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture%201.2%20-%20Why%20DBMS1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.2 - Why DBMS1.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week1/Lecture%201.5%20-%20Intro%20to%20DBMS2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.5 - Intro to DBMS2.pdf (PDF file)
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week2-collapse" aria-expanded="false">
+                    week2
+                </a>
+                <div class="collapse" id="week2-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture%202.2%20-%20Introduction%20to%20Relational%20Model2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.2 - Introduction to Relational Model2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/inst_sec/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Inst sec
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/tutorial_2.1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tutorial 2.1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/live%20session_sat/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Live session sat
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture%202.1%20-%20Introduction%20to%20Relational%20Model1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.1 - Introduction to Relational Model1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/check_list/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Check list
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture%202.5%20-%20Introduction%20to%20SQL3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.5 - Introduction to SQL3
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/TRC/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            TRC
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture%202.4%20-%20Introduction%20to%20SQL2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.4 - Introduction to SQL2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week2/Lecture%202.3%20-%20Introduction%20to%20SQL1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.3 - Introduction to SQL1
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week4-collapse" aria-expanded="false">
+                    week4
+                </a>
+                <div class="collapse" id="week4-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture%204.5%20-%20Entity-Relationship%20Model3_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity-Relationship Model
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/week4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week4
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture%204.2%20-%20Formal%20Relational%20Query%20Languages2_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Formal Relational Query Languages
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture%204.1%20-%20Formal%20Relational%20Query%20Languages1_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Formal Relational Query Languages1_annotated
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture%204.3%20-%20Entity-Relationship%20Model1_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity-Relationship Model
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/Lecture%204.4%20-%20Entity-Relationship%20Model2_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity-Relationship (ER) Model/2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week4/er_model/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Er model
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../Week%205/week5/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../checklist/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><h1 id="sql">SQL</h1>
+<h4 id="key">key</h4>
+<ul>
+<li>Candidate Key -&gt; Primary Key</li>
+<li>Candidate key -&gt; keys which are not used as primary key are called alternative key</li>
+</ul>
+<h4 id="primary-key">Primary Key</h4>
+<ul>
+<li>{Unique + Not Null }</li>
+</ul>
+<h4 id="foreign-key">Foreign Key</h4>
+<ul>
+<li>
+<p>Refrencing Table</p>
+</li>
+<li>
+<p>insert course violation if FK is not in in refrenced table</p>
+</li>
+<li>
+<p>Refrenced Table</p>
+</li>
+<li>
+<p>on delete cascade</p>
+</li>
+<li>on delete set null</li>
+<li>on delete no action</li>
+<li>on update cascade</li>
+<li>on update set null</li>
+<li>on update  no action</li>
+</ul>
+<p><strong>Summary of Relational Algebra Operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>σ</td>
+<td>Select</td>
+</tr>
+<tr>
+<td>π</td>
+<td>Project</td>
+</tr>
+<tr>
+<td>∪</td>
+<td>Union</td>
+</tr>
+<tr>
+<td>−</td>
+<td>Difference</td>
+</tr>
+<tr>
+<td>∩</td>
+<td>Intersection</td>
+</tr>
+<tr>
+<td>×</td>
+<td>Cartesian Product</td>
+</tr>
+<tr>
+<td>$ \rho$</td>
+<td>Rename</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\bowtie\)</span></td>
+<td>Natural Join</td>
+</tr>
+<tr>
+<td>SUM</td>
+<td>Computes the sum of a specified column</td>
+</tr>
+<tr>
+<td>AVG</td>
+<td>Computes the average of a specified column</td>
+</tr>
+<tr>
+<td>MAX</td>
+<td>Computes the maximum value of a specified column</td>
+</tr>
+<tr>
+<td>MIN</td>
+<td>Computes the minimum value of a specified column</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ddl-data-definition-language">DDL- Data Definition Language</h2>
+<ul>
+<li>Create</li>
+<li>Alter</li>
+<li>Drop</li>
+<li>Truncate</li>
+<li>Rename</li>
+</ul>
+<h2 id="dml-data-defination-language">DML - Data Defination Language</h2>
+<ul>
+<li>Select</li>
+<li>Insert</li>
+<li>update</li>
+<li>Delete</li>
+</ul>
+<h2 id="dcl-data-control-language">DCL - Data Control Language</h2>
+<ul>
+<li>Grant</li>
+<li>Revoke</li>
+</ul>
+<h2 id="tcl-transaction-control-language">TCL - Transaction Control Language</h2>
+<ul>
+<li>Commit</li>
+<li>Rollback</li>
+<li>save point</li>
+</ul>
+<h2 id="constraints">Constraints</h2>
+<ul>
+<li>primary key</li>
+<li>foreign key</li>
+<li>check</li>
+<li>unique</li>
+<li>default</li>
+<li>Not null</li>
+</ul>
+<h2 id="create-table-ddl">Create Table - DDL</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> create table &lt;table name&gt; ( col1name  datattype , 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                col2name  datattype ,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                 col1name  datattype);
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>desc tablename;
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>create table student ( ID varchar(5),name varchar(20) not null,
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>            dept name varchar(20),tot cred numeric(3, 0),
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>            primary key (ID),
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>            foreign key (dept name) references department);
+</code></pre></div>
+<p><img alt="1718702547444" src="../image/sql/1718702547444.png"></p>
+<p><img alt="1718702694723" src="../image/sql/1718702694723.png"></p>
+<h2 id="alter-ddl">Alter - DDL</h2>
+<ul>
+<li>add columns</li>
+<li>remove columns</li>
+<li>modify datatype</li>
+<li>modify datatype length</li>
+<li>add constraints</li>
+<li>remove constraints</li>
+<li>rename constraints</li>
+</ul>
+<p><img alt="1718702990524" src="../image/sql/1718702990524.png"></p>
+<p><img alt="1718703212847" src="../image/sql/1718703212847.png"></p>
+<p><img alt="1718703277575" src="../image/sql/1718703277575.png"></p>
+<p><img alt="1718703482048" src="../image/sql/1718703482048.png"></p>
+<h2 id="alter-vs-update">Alter vs Update</h2>
+<ul>
+<li>alter - DDL</li>
+<li>update - DML</li>
+</ul>
+<h2 id="delete-vs-drop-vs-truncate">Delete Vs Drop Vs Truncate</h2>
+<ul>
+<li>Delete - DML</li>
+<li>Drop - DDL - drop table</li>
+<li>Truncate - DDL -   no back up even in roll back</li>
+</ul>
+<h2 id="constraints_1">Constraints</h2>
+<p>Condition for columns or attribute</p>
+<ul>
+<li>unique</li>
+<li>not null</li>
+<li>primary -&gt; unique + not null</li>
+<li>check</li>
+<li>forgien key</li>
+<li>default</li>
+</ul>
+<h2 id="nested-subquery-vs-correlated-sub-query-vs-joins">Nested subquery Vs correlated sub query vs joins</h2>
+<p><img alt="1718715702472" src="../image/sql/1718715702472.png"></p>
+<p><img alt="1718716187738" src="../image/sql/1718716187738.png"></p>
+<p>Instructor = e1=</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>30000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>40000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+<p>Instructor = e2=</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>salary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>30000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>40000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5000</td>
+</tr>
+</tbody>
+</table>
+<p><strong>first row</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>e1.salary</th>
+<th>id</th>
+<th>e2.salary</th>
+<th>e2.salary &gt; e1.salary</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10000</td>
+<td>1</td>
+<td>10000</td>
+<td>False</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10000</td>
+<td>2</td>
+<td>20000</td>
+<td>True</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10000</td>
+<td>3</td>
+<td>20000</td>
+<td>True</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10000</td>
+<td>4</td>
+<td>30000</td>
+<td>True</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>10000</td>
+<td>5</td>
+<td>40000</td>
+<td>True</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10000</td>
+<td>2</td>
+<td>50000</td>
+<td>True</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Second row</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>e1.salary</th>
+<th>id</th>
+<th>e2.salary</th>
+<th>e2.salary &gt; e1.salary</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>20000</td>
+<td>1</td>
+<td>10000</td>
+<td>False</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+<td>2</td>
+<td>20000</td>
+<td>False</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+<td>3</td>
+<td>20000</td>
+<td>False</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+<td>4</td>
+<td>30000</td>
+<td>True</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+<td>5</td>
+<td>40000</td>
+<td>True</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20000</td>
+<td>2</td>
+<td>50000</td>
+<td>True</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h1 id="joins">Joins</h1>
+<p>employee=</p>
+<table>
+<thead>
+<tr>
+<th>PK</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eno</td>
+<td>E-name</td>
+<td>Address</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+</tr>
+</tbody>
+</table>
+<p>Department =</p>
+<table>
+<thead>
+<tr>
+<th>PK</th>
+<th></th>
+<th>FK</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dep_no</td>
+<td>Name</td>
+<td>eno</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h1 id="natural-join">Natural join</h1>
+<p>cross poduct + condition = join</p>
+<p>employee natural join  department = cross poduct + condition <span class="arithmatex">\(empolyee.eno = department.eno\)</span></p>
+<p>cross product =</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>select * from employee , department
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>employee.Eno</td>
+<td>E-name</td>
+<td>Address</td>
+<td>Dep_no</td>
+<td>Name</td>
+<td>departmment.eno</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>select * from employee  department empolyee.eno = department.eno
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eno</td>
+<td>E-name</td>
+<td>Address</td>
+<td>Dep_no</td>
+<td>Name</td>
+<td>eno</td>
+<td><code>empolyee.eno = department.eno</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+<td>True</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+<td>False</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+<td>False</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+<td>False</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+<td>False</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+<td>True</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+<td>False</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+<td>False</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+<td>False</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+<td>False</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+<td>False</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>chd</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+<td>False</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+<td>False</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+<td>False</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+<td>True</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+<td>False</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+<td>False</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+<td>False</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+<td>False</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h3 id="result">result=</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eno</td>
+<td>E-name</td>
+<td>Address</td>
+<td>Dep_no</td>
+<td>Name</td>
+<td>eno</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Ram</td>
+<td>delhi</td>
+<td>D1</td>
+<td>HR</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>varun</td>
+<td>chd</td>
+<td>D2</td>
+<td>IT</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Amrit</td>
+<td>Delhi</td>
+<td>D3</td>
+<td>MRKT</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Nitin</td>
+<td>noida</td>
+<td>D4</td>
+<td>FINANCE</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>select E-name from employee  natural join department
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-name</td>
+</tr>
+<tr>
+<td>Ram</td>
+</tr>
+<tr>
+<td>varun</td>
+</tr>
+<tr>
+<td>Amrit</td>
+</tr>
+<tr>
+<td>Nitin</td>
+</tr>
+</tbody>
+</table>
+<h1 id="self-join">self Join</h1>
+<table>
+<thead>
+<tr>
+<th>S_id</th>
+<th>course_id</th>
+<th>since</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+</tbody>
+</table>
+<p>find student who is enrolled in two courses ?</p>
+<p>cross prduct</p>
+<table>
+<thead>
+<tr>
+<th>S_id (Left)</th>
+<th>course_id (Left)</th>
+<th>since (Left)</th>
+<th>S_id (Right)</th>
+<th>course_id (Right)</th>
+<th>since (Right)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> select LEFT.s_id from 
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>study as left study as right 
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    where left.s_id = right.s_id 
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        and left.course_id &lt; &gt; right.course_id 
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>S_id (Left)</th>
+<th>course_id (Left)</th>
+<th>since (Left)</th>
+<th>S_id (Right)</th>
+<th>course_id (Right)</th>
+<th>since (Right)</th>
+<th>CONDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c1</td>
+<td>2016</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>s2</td>
+<td>c2</td>
+<td>2017</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>s1</td>
+<td>c2</td>
+<td>2017</td>
+<td>FALSE</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>S_id (Left)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s1</td>
+</tr>
+</tbody>
+</table>
+<h1 id="equi-join">Equi Join</h1>
+<p><img alt="1718823323460" src="../image/sql/1718823323460.png"></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>select e.E_name from emp e dept d where e.address = d.location and e.en_no = d.eno; 
+</code></pre></div>
+<p><img alt="1718823579713" src="../image/sql/1718823579713.png"></p>
+<h1 id="left-outer-join">left outer join</h1>
+<p>A LEFT OUTER JOIN in SQL is a type of join operation that combines rows from two or more tables based on a specified condition and includes unmatched rows from the left table. It allows you to retrieve data from multiple tables based on their related values. Here's a detailed explanation:</p>
+<h3 id="what-is-a-left-outer-join">What is a LEFT OUTER JOIN?</h3>
+<p>A LEFT OUTER JOIN is a type of join operation that combines rows from two or more tables based on a specified condition. It includes all rows from the left table (the "left" or "first" table) and matching rows from the right table (the "right" or "second" table). If there is no match in the right table, the result includes NULL values for the columns of the right table[1][2][3].</p>
+<h3 id="syntax">Syntax</h3>
+<p>The syntax for a LEFT OUTER JOIN in SQL is as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">table1</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">table2</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">ON</span><span class="w"> </span><span class="n">table1</span><span class="p">.</span><span class="k">column_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">table2</span><span class="p">.</span><span class="k">column_name</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="example">Example</h3>
+<p>For example, consider a query that retrieves all employees along with their departments and salaries (if available). The Employees table is the left table, and we perform a LEFT OUTER JOIN with the Departments table using the join condition <code>E.DepartmentID = D.DepartmentID</code>. This ensures that all employees from the Employees table are included in the result set, regardless of whether they have a matching department. We then perform another LEFT OUTER JOIN with the Salaries table using the join condition <code>E.EmployeeID = S.EmployeeID</code>, allowing us to include salary information for employees if it exists[2].</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">,</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">D</span><span class="p">.</span><span class="n">DepartmentName</span><span class="p">,</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">SalaryAmount</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">FROM</span><span class="w"> </span><span class="n">Employees</span><span class="w"> </span><span class="n">E</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Departments</span><span class="w"> </span><span class="n">D</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">DepartmentID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">D</span><span class="p">.</span><span class="n">DepartmentID</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">LEFT</span><span class="w"> </span><span class="k">OUTER</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">Salaries</span><span class="w"> </span><span class="n">S</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">E</span><span class="p">.</span><span class="n">EmployeeID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">S</span><span class="p">.</span><span class="n">EmployeeID</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="output">Output</h3>
+<p>The output of this query would include all employees, even if they do not have a matching department or salary. The unmatched rows in the Employees table would have NULL values in the DepartmentName and SalaryAmount columns[2].</p>
+<h3 id="key-points">Key Points</h3>
+<ul>
+<li><strong>Includes all rows from the left table</strong>: A LEFT OUTER JOIN includes all rows from the left table, even if there are no matching rows in the right table.</li>
+<li><strong>Includes matching rows from the right table</strong>: If there is a match in the right table, the result includes the corresponding row from the right table.</li>
+<li><strong>Includes NULL values for unmatched rows in the right table</strong>: If there is no match in the right table, the result includes NULL values for the columns of the right table[1][2][3].</li>
+</ul>
+<h3 id="practical-examples">Practical Examples</h3>
+<ul>
+<li><strong>Retrieving all customers, even if they haven't placed any orders</strong>: A LEFT OUTER JOIN can be used to retrieve all customers, even if they haven't placed any orders. The unmatched rows in the Customers table would have NULL values in the OrdersID column[2].</li>
+</ul>
+<p><img alt="1718824652242" src="../image/sql/1718824652242.png"></p>
+<h1 id="right-outer-join">Right outer join</h1>
+<p><img alt="1718825047440" src="../image/sql/1718825047440.png"></p></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
