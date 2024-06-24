@@ -3,13 +3,23 @@ nav:
 - Home:
   - cheatsheet.md
   - index.md
-- week3:
-  - week3/Lecture 3.5 - Advanced SQL.md
-  - week3/livesession.md
-  - week3/Lecture 3.1 - SQL Examples.md
-  - week3/Lecture 3.2 - Intermediate SQL1.md
-  - week3/Lecture 3.4 - Intermediate SQL3.md
-  - week3/image/Lecture 3.3 - Intermediate SQL2.md
+- Week 4:
+  - Week 4/Lecture 4.5 - Entity-Relationship Model3_annotated.md
+  - Week 4/week4.md
+  - Week 4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md
+  - Week 4/Lecture 4.1 - Formal Relational Query Languages1_annotated.md
+  - Week 4/Lecture 4.3 - Entity-Relationship Model1_annotated.md
+  - Week 4/Lecture 4.4 - Entity-Relationship Model2_annotated.md
+  - Week 4/er_model.md
+- Week 1:
+  - Week 1/Lecture 1.1 - Course Overview.md
+  - Week 1/Lecture 1.3 - Why DBMS2.md
+  - Week 1/week1.md
+  - Week 1/textbook.md
+  - Week 1/Lecture 1.4 - Intro to DBMS1.md
+  - Week 1/summary.md
+  - Week 1/Lecture 1.2 - Why DBMS1.md
+  - Week 1/Lecture 1.5 - Intro to DBMS2.md
 - Piyush Wairale:
   - Piyush Wairale/checklist.md
   - Piyush Wairale/ER_model.md
@@ -26,34 +36,25 @@ nav:
   - gatesmashers/sql.md
   - gatesmashers/checklist.md
   - gatesmashers/notes.md
-- week1:
-  - week1/Lecture 1.1 - Course Overview.md
-  - week1/Lecture 1.3 - Why DBMS2.md
-  - week1/week1.md
-  - week1/textbook.md
-  - week1/Lecture 1.4 - Intro to DBMS1.md
-  - week1/summary.md
-  - week1/Lecture 1.2 - Why DBMS1.md
-  - week1/Lecture 1.5 - Intro to DBMS2.md
-- week2:
-  - week2/Lecture 2.2 - Introduction to Relational Model2.md
-  - week2/inst_sec.md
-  - week2/tutorial_2.1.md
-  - week2/live session_sat.md
-  - week2/Lecture 2.1 - Introduction to Relational Model1.md
-  - week2/check_list.md
-  - week2/Lecture 2.5 - Introduction to SQL3.md
-  - week2/TRC.md
-  - week2/Lecture 2.4 - Introduction to SQL2.md
-  - week2/Lecture 2.3 - Introduction to SQL1.md
-- week4:
-  - week4/Lecture 4.5 - Entity-Relationship Model3_annotated.md
-  - week4/week4.md
-  - week4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md
-  - week4/Lecture 4.1 - Formal Relational Query Languages1_annotated.md
-  - week4/Lecture 4.3 - Entity-Relationship Model1_annotated.md
-  - week4/Lecture 4.4 - Entity-Relationship Model2_annotated.md
-  - week4/er_model.md
+- Week 3:
+  - Week 3/Lecture 3.5 - Advanced SQL.md
+  - Week 3/livesession.md
+  - Week 3/Lecture 3.1 - SQL Examples.md
+  - Week 3/Lecture 3.2 - Intermediate SQL1.md
+  - Week 3/Lecture 3.4 - Intermediate SQL3.md
+  - Week 3/image/Lecture 3.3 - Intermediate SQL2.md
+- Week 2:
+  - Week 2/Lecture 2.2 - Introduction to Relational Model2.md
+  - Week 2/inst_sec.md
+  - Week 2/tutorial_2.1.md
+  - Week 2/live session_sat.md
+  - Week 2/Lecture 2.1 - Introduction to Relational Model1.md
+  - Week 2/check_list.md
+  - Week 2/Lecture 2.5 - Introduction to SQL3.md
+  - Week 2/TRC.md
+  - Week 2/Lecture 2.4 - Introduction to SQL2.md
+  - Week 2/Lecture 2.3 - Introduction to SQL1.md
+  - Week 2/ppa_grpa.md
 site_author: PK
 site_description: DESCRIPTION
 repo_name: pk1308/DBMS
