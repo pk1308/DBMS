@@ -5,11 +5,14 @@ nav:
   - index.md
 - Week 4:
   - Week 4/Lecture 4.5 - Entity-Relationship Model3_annotated.md
+  - Week 4/Tutorial 4.3.md
   - Week 4/week4.md
   - Week 4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md
   - Week 4/Lecture 4.1 - Formal Relational Query Languages1_annotated.md
   - Week 4/Lecture 4.3 - Entity-Relationship Model1_annotated.md
   - Week 4/Lecture 4.4 - Entity-Relationship Model2_annotated.md
+  - Week 4/Tutorial 4.2.md
+  - Week 4/Tutorial 4.4.md
   - Week 4/er_model.md
 - Week 1:
   - Week 1/Lecture 1.1 - Course Overview.md
@@ -22,6 +25,7 @@ nav:
   - Week 1/Lecture 1.5 - Intro to DBMS2.md
 - Piyush Wairale:
   - Piyush Wairale/checklist.md
+  - Piyush Wairale/Relational_algebra.md
   - Piyush Wairale/ER_model.md
 - Week 5:
   - Week 5/Lecture 5.4 - Relational Database Design4.md
