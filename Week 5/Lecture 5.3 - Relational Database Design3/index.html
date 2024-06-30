@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.3 - Relational Database Design 3 - DBMS</title>
+        <title>Summary of Lecture 5.3 - Relational Database Design3.pdf - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,6 +112,14 @@
     </li>
                             
     <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.3.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
         <a href="../../Week%204/week4/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -148,6 +156,22 @@
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Entity-Relationship (ER) Model/2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.2.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.4.pdf
         </a>
     </li>
                             
@@ -256,6 +280,14 @@
     </li>
                             
     <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/Relational_algebra/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Relational algebra
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
         <a href="../../Piyush%20Wairale/ER_model/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -279,7 +311,7 @@
         <a href="../Lecture%205.4%20-%20Relational%20Database%20Design4/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.4 - Relational Database Design
+            Summary of Lecture 5.4 - Relational Database Design4.pdf
         </a>
     </li>
                             
@@ -319,7 +351,7 @@
         <a href="../Lecture%205.5%20-%20Relational%20Database%20Design5/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.5 - Relational Database Design5.pdf (PDF file)
+            Summary of Lecture 5.5 - Relational Database Design5.pdf
         </a>
     </li>
                             
@@ -327,7 +359,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.3 - Relational Database Design 3
+            Summary of Lecture 5.3 - Relational Database Design3.pdf
         </a>
     </li>
                             
@@ -644,36 +676,63 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-53-relational-database-design-3">Lecture 5.3 - Relational Database Design 3</h1>
-<p><strong>Summary</strong>
-This module discusses relational database design using functional dependencies (FDs).</p>
-<p><strong>FD Theory:</strong></p>
+        <p><div><h1 id="summary-of-lecture-53-relational-database-design3pdf">Summary of Lecture 5.3 - Relational Database Design3.pdf</h1>
+<p><strong>Summary</strong></p>
+<h2 id="module-23-relational-database-design3">Module 23: Relational Database Design/3</h2>
+<h3 id="objectives-outline">Objectives &amp; Outline</h3>
 <ul>
-<li>Armstrong's Axioms are used to derive new FDs from a given set.</li>
-<li>Closure of FDs generates all FDs logically implied by a set.</li>
-<li>Closure of attributes determines the attributes functionally determined by a set of attributes.</li>
+<li>Functional Dependency Theory</li>
+<li>Armstrong's Axioms</li>
+<li>Closure of FDs</li>
+<li>Closure of Attributes</li>
+<li>Decomposition using FDs</li>
+<li>BCNF</li>
+<li>3NF</li>
+<li>Normalization</li>
 </ul>
-<p><strong>Decomposition Using FDs:</strong></p>
+<h3 id="functional-dependency-theory">Functional Dependency Theory</h3>
+<p><strong>Definition:</strong> A functional dependency (FD) α → β on a relation schema R is a constraint that, for any two tuples t1 and t2 in R, if t1[α] = t2[α], then t1[β] = t2[β].</p>
+<h3 id="armstrongs-axioms">Armstrong's Axioms</h3>
+<p>Armstrong's axioms are a set of rules that can be used to infer new FDs from a given set of FDs.</p>
 <ul>
-<li>Boyce-Codd Normal Form (BCNF) ensures that non-trivial FDs involve superkeys or attributes in candidate keys.</li>
-<li>Decomposing relations into BCNF guarantees lossless join but may not preserve dependencies.</li>
+<li><strong>Reflexivity:</strong> If β ⊆ α, then α → β.</li>
+<li><strong>Augmentation:</strong> If α → β, then γα → γβ.</li>
+<li><strong>Transitivity:</strong> If α → β and β → γ, then α → γ.</li>
 </ul>
-<p><strong>3NF (Third Normal Form):</strong></p>
+<h3 id="closure-of-fds">Closure of FDs</h3>
+<p>The closure of a set of FDs F, denoted F+, is the set of all FDs that can be inferred from F using Armstrong's axioms.</p>
+<h3 id="closure-of-attributes">Closure of Attributes</h3>
+<p>The closure of a set of attributes α, denoted α+, is the set of all attributes that are functionally determined by α under F.</p>
+<h3 id="decomposition-using-fds">Decomposition using FDs</h3>
+<p>Decomposition is the process of breaking down a relation schema into smaller relation schemas. Decomposition using FDs can be used to ensure that the resulting relation schemas are in a "good" form, such as BCNF or 3NF.</p>
+<h3 id="bcnf-boyce-codd-normal-form">BCNF (Boyce-Codd Normal Form)</h3>
+<p>A relation schema R is in BCNF with respect to a set F of FDs if, for all FDs in F+ of the form α → β, where α ⊆ R and β ⊆ R, at least one of the following holds:</p>
 <ul>
-<li>Relaxes BCNF by allowing attributes in candidate keys but enforces dependency preservation.</li>
+<li>α → β is trivial (that is, β ⊆ α).</li>
+<li>α is a superkey for R.</li>
 </ul>
-<p><strong>Normalization Goals:</strong></p>
+<h3 id="3nf-third-normal-form">3NF (Third Normal Form)</h3>
+<p>A relation schema R is in 3NF if, for all α → β ∈ F+, at least one of the following holds:</p>
 <ul>
-<li>Evaluate relation schemes for "good" form.</li>
-<li>Decompose schemes into lossless-join and dependency-preserving relations.</li>
+<li>α → β is trivial (that is, β ⊆ α).</li>
+<li>α is a superkey for R.</li>
+<li>Each attribute A in β - α is contained in a candidate key for R.</li>
 </ul>
-<p><strong>Problems with Decomposition:</strong></p>
+<h3 id="normalization">Normalization</h3>
+<p>Normalization is the process of decomposing a relation schema into a set of relation schemas that are in a "good" form, such as BCNF or 3NF. Normalization can help to reduce redundancy and improve the efficiency of queries.</p>
+<h3 id="problems-with-decomposition">Problems with Decomposition</h3>
+<p>There are three potential problems to consider when decomposing a relation schema:</p>
 <ul>
-<li>Potential lossiness, dependency checking issues, and query performance concerns exist.</li>
+<li><strong>Lossiness:</strong> The decomposition may result in a loss of data.</li>
+<li><strong>Dependency checking:</strong> Dependency checking may require joins.</li>
+<li><strong>Query performance:</strong> Some queries may become more expensive to execute.</li>
 </ul>
-<p><strong>Limitations of BCNF:</strong></p>
+<h3 id="how-good-is-bcnf">How good is BCNF?</h3>
+<p>BCNF is a good normal form, but it is not perfect. There are some database schemas in BCNF that do not seem to be sufficiently normalized. This suggests the need for higher normal forms, such as the Fourth Normal Form (4NF).</p>
+<h3 id="module-summary">Module Summary</h3>
 <ul>
-<li>BCNF may not prevent insertion anomalies in certain scenarios, suggesting the need for higher normal forms like 4NF.</li>
+<li>Introduced the theory of functional dependencies.</li>
+<li>Discussed issues in "good" design in the context of functional dependencies.</li>
 </ul></div></p>
     </article>
 </section>

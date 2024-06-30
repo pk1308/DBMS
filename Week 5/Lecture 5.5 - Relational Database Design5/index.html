@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.5 - Relational Database Design5.pdf (PDF file) - DBMS</title>
+        <title>Summary of Lecture 5.5 - Relational Database Design5.pdf - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,6 +112,14 @@
     </li>
                             
     <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.3.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
         <a href="../../Week%204/week4/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -148,6 +156,22 @@
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
             Entity-Relationship (ER) Model/2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.2.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.4.pdf
         </a>
     </li>
                             
@@ -256,6 +280,14 @@
     </li>
                             
     <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/Relational_algebra/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Relational algebra
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
         <a href="../../Piyush%20Wairale/ER_model/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -279,7 +311,7 @@
         <a href="../Lecture%205.4%20-%20Relational%20Database%20Design4/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.4 - Relational Database Design
+            Summary of Lecture 5.4 - Relational Database Design4.pdf
         </a>
     </li>
                             
@@ -319,7 +351,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.5 - Relational Database Design5.pdf (PDF file)
+            Summary of Lecture 5.5 - Relational Database Design5.pdf
         </a>
     </li>
                             
@@ -327,7 +359,7 @@
         <a href="../Lecture%205.3%20-%20Relational%20Database%20Design3/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.3 - Relational Database Design 3
+            Summary of Lecture 5.3 - Relational Database Design3.pdf
         </a>
     </li>
                             
@@ -644,45 +676,98 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-55-relational-database-design5pdf-pdf-file">Lecture 5.5 - Relational Database Design5.pdf (PDF file)</h1>
+        <p><div><h1 id="summary-of-lecture-55-relational-database-design5pdf">Summary of Lecture 5.5 - Relational Database Design5.pdf</h1>
 <p><strong>Summary</strong>
-<strong>Relational Database Design</strong></p>
-<p><strong>Lossless Join Decomposition</strong></p>
-<ul>
-<li>A decomposition of a relation R into R1 and R2 is lossless if either R1 ∩ R2 → R1 or R1 ∩ R2 → R2 is in the set of functional dependencies (FDs) for R.</li>
-<li>This condition ensures that the original relation can be reconstructed by joining R1 and R2.</li>
-</ul>
+<strong>Lossless Join Decomposition</strong></p>
+<p><strong>Definition:</strong></p>
+<p>A decomposition of a relation R into R1 and R2 is lossless join if the natural join of R1 and R2 is equal to R.</p>
+<p><strong>Necessary and Sufficient Conditions:</strong></p>
+<p>For the case of R = (R1, R2), we require that for all possible relations r on schema R,</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>r = πR1(r) ./ πR2(r)
+</code></pre></div>
+<p>A decomposition of R into R1 and R2 is lossless join if at least one of the following dependencies is in F:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>R1 ∩ R2 → R1
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>R1 ∩ R2 → R2
+</code></pre></div>
+<p><strong>Example:</strong></p>
+<p>Consider the Supplier Parts schema:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Supplier Parts(S#, Sname, City, P#, Qty)
+</code></pre></div>
+<p>Having dependencies:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>S# → Sname
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>S# → City
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>(S#, P#) → Qty
+</code></pre></div>
+<p>Decompose as:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Supplier(S#, Sname, City, Qty)
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Parts(P#, Qty)
+</code></pre></div>
+<p>Take Natural Join to reconstruct:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Supplier ./ Parts
+</code></pre></div>
+<p>We get back the original relation. Join is Lossless.</p>
+<p>Common attribute S# is a superkey in Supplier.</p>
+<p>Preserves all dependencies.</p>
 <p><strong>Dependency Preservation</strong></p>
-<ul>
-<li>A decomposition of R into D = {R1, R2, ..., Rn} is dependency preserving if (F1 ∪ F2 ∪ ... ∪ Fn) = F, where:</li>
-<li>Fi is the set of FDs including attributes only in Ri</li>
-<li>This ensures that all FDs in F are preserved in the decomposition.</li>
-</ul>
-<p><strong>Testing Dependency Preservation</strong></p>
-<ul>
-<li>Test if a dependency α → β is preserved by:</li>
-<li>Computing F0 = F1 ∪ F2 ∪ ... ∪ Fn</li>
-<li>Check if β is in the attribute closure of α with respect to F0</li>
-</ul>
+<p><strong>Definition:</strong></p>
+<p>A decomposition of a relation R into D = {R1, R2, ..., Rn} is dependency preserving if:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>(F1 ∪ F2 ∪ ... ∪ Fn)+ = F+
+</code></pre></div>
+<p>where Fi is the set of dependencies F+ that include only attributes in Ri.</p>
+<p><strong>Testing:</strong></p>
+<p>To check if a dependency α → β is preserved in a decomposition of R into D = {R1, R2, ..., Rn}, we apply the following test:</p>
+<ol>
+<li>Compute F+.</li>
+<li>For each schema Ri in D, compute Fi, the restriction of F+ to Ri.</li>
+<li>Initialize F0 = φ.</li>
+<li>For each restriction Fi, compute F0 = F0 ∪ Fi.</li>
+<li>Compute F0+.</li>
+<li>If F0+ = F+, then return true.</li>
+<li>Otherwise, return false.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<p>Consider the relation R(A, B, C, D, E, F) with dependencies:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>F = {A → BCD, A → EF, BC → AD, BC → E, BC → F, B → F, D → E}
+</code></pre></div>
+<p>Decompose into:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>R1(A, B, C, D)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>R2(B, F)
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>R3(D, E)
+</code></pre></div>
+<p>Check if the dependency A → E is preserved:</p>
+<ol>
+<li>Compute F+ as {A → BCD, A → EF, BC → AD, BC → E, BC → F, B → F, D → E}.</li>
+<li>Compute F1 as {A → ABCD, B → B, C → C, D → D, AB → ABCD, BC → ABCD, CD → CD, AD → ABCD, ABC → ABCD, ABD → ABCD, ACD → ABCD, BCD → ABCD}</li>
+<li>Compute F2 as {B → BF, F → F}</li>
+<li>Compute F3 as {D → DE, E → E}</li>
+<li>Compute F0 as F1 ∪ F2 ∪ F3 = {A → ABCD, B → B, C → C, D → D, AB → ABCD, BC → ABCD, CD → CD, AD → ABCD, ABC → ABCD, ABD → ABCD, ACD → ABCD, BCD → ABCD, B → BF, F → F, D → DE, E → E}</li>
+<li>Compute F0+ as {A → ABCD, A → BF, A → DE, B → B, B → F, C → C, D → D, D → E, E → E, AB → ABCD, ABC → ABCD, ABD → ABCD, ACD → ABCD, AD → ABCD, BC → ABCD, BC → DE, BD → ABCD, CD → CD, DF → F}</li>
+<li>Compare F0+ and F+: F0+ does not equal F+, so the dependency A → E is not preserved.</li>
+</ol>
 <p><strong>Practice Problems</strong></p>
 <p><strong>Lossless Join Decomposition</strong></p>
-<ul>
-<li>Determine if the following decompositions are lossless:</li>
-<li>R(ABC) : F = {A → B, A → C} → {R1(AB), R2(BC)}</li>
-<li>R(ABCDEF) : F = {A → B, B → C, C → D, E → F} → {R1(AB), R2(BCD), R3(DEF)}</li>
-<li>R(ABCDEF) : F = {A → B, C → DE, AC → F} → {R1(BE), R2(ACDEF)}</li>
-<li>R(ABCDEG) : F = {AB → C, AC → B, AD → E, B → D, BC → A, E → G} → {R1(AB), R2(BC), R3(ABDE), R4(EG)}</li>
-<li>R(ABCDEFGHIJ) : F = {AB → C, B → F, D → IJ, A → DE, F → GH} → {R1(ABC), R2(ADE), R3(BF), R4(FGH), R5(DIJ)}</li>
-</ul>
+<ol>
+<li>Check if the decomposition of R into D is lossless:
+   a) R(ABC) : F = {A → B, A → C}. D = R1(AB), R2(BC)
+   b) R(ABCDEF) : F = {A → B, B → C, C → D, E → F}. D = R1(AB), R2(BCD), R3(DEF)
+   c) R(ABCDEF) : F = {A → B, C → DE, AC → F}. D = R1(BE), R2(ACDEF)
+   d) R(ABCDEG) : F = {AB → C, AC → B, AD → E, B → D, BC → A, E → G}
+   i) D1 = R1(AB), R2(BC), R3(ABDE), R4(EG)
+   ii) D2 = R1(ABC), R2(ACDE), R3(ADG)
+   e) R(ABCDEFGHIJ) : F = {AB → C, B → F, D → IJ, A → DE, F → GH}
+   i) D1 = R1(ABC), R2(ADE), R3(BF), R4(FGH), R5(DIJ)
+   ii) D2 = R1(ABCDE), R2(BFGH), R3(DIJ)
+   iii) D3 = R1(ABCD), R2(DE), R3(BF), R4(FGH), R5(DIJ)</li>
+</ol>
 <p><strong>Dependency Preservation</strong></p>
-<ul>
-<li>Verify if the following decompositions preserve dependencies:</li>
-<li>R(ABCD) : F = {A → B, B → C, C → D, D → A} → {AB, BC, CD}</li>
-<li>R(ABCDEF) : F = {AB → CD, C → D, D → E, E → F} → {AB, CDE, EF}</li>
-<li>R(ABCDEG) : F = {AB → C, AC → B, BC → A, AD → E, B → D, E → G} → {ABC, ACDE, ADG}</li>
-<li>R(ABCD) : F = {A → B, B → C, C → D, D → B} → {AB, BC, BD}</li>
-<li>R(ABCDE) : F = {A → BC, CD → E, B → D, E → A} → {ABCE, BD}</li>
-</ul></div></p>
+<ol>
+<li>Check whether the decomposition of R into D is preserving dependency:
+   a) R(ABCD) : F = {A → B, B → C, C → D, D → A}. D = {AB, BC, CD}
+   b) R(ABCDEF) : F = {AB → CD, C → D, D → E, E → F}. D = {AB, CDE, EF}
+   c) R(ABCDEG) : F = {AB → C, AC → B, BC → A, AD → E, B → D, E → G}. D = {ABC, ACDE, ADG}
+   d) R(ABCD) : F = {A → B, B → C, C → D, D → B}. D = {AB, BC, BD}
+   e) R(ABCDE) : F = {A → BC, CD → E, B → D, E → A}. D = {ABCE, BD}</li>
+</ol></div></p>
     </article>
 </section>
             <!-- endblock -->
