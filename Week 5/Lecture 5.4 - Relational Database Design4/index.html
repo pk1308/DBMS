@@ -678,110 +678,87 @@
     <article>
         <p><div><h1 id="summary-of-lecture-54-relational-database-design4pdf">Summary of Lecture 5.4 - Relational Database Design4.pdf</h1>
 <p><strong>Summary</strong>
-<strong>Algorithms for Functional Dependencies</strong></p>
+<strong>Module 24: Relational Database Design/4</strong></p>
+<p><strong>Objectives</strong></p>
 <ul>
-<li><strong>Attribute Set Closure:</strong><ul>
-<li>Computes the set of attributes that are functionally dependent on a given set of attributes.</li>
-<li>Algorithm:<ul>
-<li>Start with the given set of attributes.</li>
-<li>Repeatedly add to the set all attributes that are functionally dependent on the current set, until no new attributes can be added.</li>
+<li>Learn Algorithms for Properties of Functional Dependencies</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><strong>Extraneous Attributes:</strong><ul>
-<li>Identifies attributes that can be removed from a functional dependency without changing its meaning.</li>
-<li>Tests:<ul>
-<li>For an attribute A in the left-hand side:<ul>
-<li>Compute the attribute closure of (α - A)+.</li>
-<li>If it contains β, then A is extraneous.</li>
-</ul>
-</li>
-<li>For an attribute A in the right-hand side:<ul>
-<li>Compute the attribute closure of α+.</li>
-<li>If it contains A, then A is extraneous.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Equivalence of Functional Dependency Sets:</strong><ul>
-<li>Two sets of functional dependencies are equivalent if they imply the same set of functional dependencies.</li>
-<li>Tests:<ul>
-<li><strong>F+ = G+:</strong> F logically implies all dependencies in G, and G logically implies all dependencies in F.</li>
-<li><strong>F covers G:</strong> All functional dependencies in G are logically implied by F.</li>
-<li><strong>G covers F:</strong> All functional dependencies in F are logically implied by G.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>Canonical Cover of Functional Dependencies</strong></p>
+<p><strong>Outline</strong></p>
 <ul>
-<li>A canonical cover is a minimal set of functional dependencies that is equivalent to the original set of dependencies.</li>
-<li>Properties:<ul>
+<li>Algorithms for Functional Dependencies</li>
+<li>Attribute Set Closure</li>
+<li>Extraneous Attributes</li>
+<li>Equivalence of FD Sets</li>
+<li>Canonical Cover of FDs</li>
+<li>Practice Problems</li>
+</ul>
+<p><strong>Algorithms for Functional Dependencies</strong></p>
+<p>Functional dependencies (FDs) are used to represent relationships between attributes in a database table. The following algorithms can be used to test for various properties of FDs:</p>
+<ul>
+<li><strong>Attribute Set Closure</strong>: Calculates the closure of an attribute set under a set of FDs, which is the set of all attributes that are functionally dependent on the given attribute set.</li>
+<li><strong>Extraneous Attributes</strong>: Determines if an attribute in a functional dependency is extraneous, meaning it can be removed without affecting the set of FDs.</li>
+<li><strong>Equivalence of FD Sets</strong>: Checks if two sets of FDs are equivalent, meaning they imply the same relationships between attributes.</li>
+</ul>
+<p><strong>Attribute Set Closure</strong></p>
+<p>To calculate the attribute set closure, we start with a set of attributes and repeatedly apply the following rules:</p>
+<ol>
+<li>If an attribute A is in the set, then add all attributes that are functionally dependent on A.</li>
+<li>If an attribute B is in the set and B → C is a functional dependency, then add C.</li>
+</ol>
+<p>Example:
+* Given F = {A → B, A → C, CG → H, CG → I, B → H}
+* (AG)+
+    * (AG) = AG
+    * (AG) = ABCG (A → C and A → B)
+    * (AG) = ABCGH (CG → H and CG ⊆ AGBC)
+    * (AG) = ABCGHI (CG → I and CG ⊆ AGBCH)</p>
+<p><strong>Extraneous Attributes</strong></p>
+<p>An attribute A is extraneous in a functional dependency α → β if:</p>
+<ul>
+<li>A ∈ α and F logically implies (F − {α → β}) ∪ {(α − A) → β}</li>
+<li>A ∈ β and the set of FDs (F − {α → β}) ∪ {α → (β − A)} logically implies F</li>
+</ul>
+<p>Example:
+* Given F = {A → C, AB → C}
+    * B is extraneous in AB → C because {A → C, AB → C} logically implies A → C.
+    * A is extraneous in AB → C because A → C can be inferred from {AB → C} and {A → B}.</p>
+<p><strong>Equivalence of FD Sets</strong></p>
+<p>Two sets of functional dependencies F and G are equivalent if F+ = G+. That is:</p>
+<ul>
+<li>(F+ = G+) ⇔ (F+ ⇒ G and G+ ⇒ F)</li>
+</ul>
+<p>Equivalence means that every functional dependency in F can be inferred from G, and every functional dependency in G can be inferred from F.</p>
+<p><strong>Canonical Cover</strong></p>
+<p>A canonical cover for a set of FDs is a set of dependencies Fc such that:</p>
+<ul>
 <li>F+ = Fc+</li>
-<li>No extraneous attributes</li>
-<li>Each left-hand side of a functional dependency is unique.</li>
+<li>No functional dependency in Fc contains an extraneous attribute.</li>
+<li>Each left side of functional dependency in Fc is unique.</li>
 </ul>
-</li>
-<li>Algorithm:<ul>
-<li>Repeatedly apply the following steps:<ul>
-<li>Use the union rule to combine dependencies with the same left-hand side.</li>
-<li>Find a dependency with an extraneous attribute and delete it.</li>
-</ul>
-</li>
-<li>Continue until the set of dependencies does not change.</li>
-</ul>
-</li>
-</ul>
+<p>Intuitively, a canonical cover is a minimal set of FDs that is logically equivalent to the original set of FDs.</p>
 <p><strong>Practice Problems</strong></p>
-<p><strong>Functional Dependency Implication:</strong></p>
-<ul>
-<li>For F = {A → BC, CD → E, E → C, D → AEH, ABH → BD, DH → BC}:<ul>
-<li>Check: BCD → H</li>
-<li>Check: AED → C</li>
-</ul>
-</li>
-<li>For F = {AB → CD, AF → D, DE → F, C → G, F → E, G → A}:<ul>
-<li>Check: CF → DF</li>
-<li>Check: BG → E</li>
-<li>Check: AF → G</li>
-<li>Check: AB → EF</li>
-</ul>
-</li>
-</ul>
-<p><strong>Super Key Identification:</strong></p>
-<ul>
-<li>R(ABCDE) with F = {AB → C, DE → B, CD → E}</li>
-<li>R(ABCDE) with F = {AB → C, C → D, B → EA}</li>
-</ul>
-<p><strong>Candidate Key Identification:</strong></p>
-<ul>
-<li>R(ABCDE) with F = {AB → C, DE → B, CD → E}</li>
-<li>R(ABCDE) with F = {AB → C, C → D, B → EA}</li>
-</ul>
-<p><strong>Prime and Non-Prime Attribute Identification:</strong></p>
-<ul>
-<li>R(ABCDEF) with F = {AB → C, C → D, D → E, F → B, E → F}</li>
-<li>R(ABCDEF) with F = {AB → C, C → DE, E → F, C → B}</li>
-<li>R(ABCDEFGHIJ) with F = {AB → C, A → DE, B → F, F → GH, D → IJ}</li>
-<li>R(ABDLPT) with F = {B → PT, A → D, T → L}</li>
-<li>R(ABCDEFGH) with F = {E → G, AB → C, AC → B, AD → E, B → D, BC → A}</li>
-<li>R(ABCDE) with F = {A → BC, CD → E, B → D, E → A}</li>
-<li>R(ABCDEH) with F = {A → B, BC → D, E → C, D → A}</li>
-</ul>
-<p><strong>Functional Dependency Equivalence:</strong></p>
-<ul>
-<li>F = {A → C, AC → D, E → AD, E → H}, G = {A → CD, E → AH}</li>
-<li>P = {A → B, AB → C, D → ACE}, Q = {A → BC, D → AE}</li>
-</ul>
-<p><strong>Canonical Cover Computation:</strong></p>
-<ul>
-<li>F = {AB → CD, BC → D}</li>
-<li>F = {ABCD → E, E → D, AC → D, A → B}</li>
-</ul></div></p>
+<ol>
+<li>Find if the given functional dependency is implied from the set of Functional Dependencies:
+    a) A → BC, CD → E, E → C, D → AEH, ABH → BD, DH → BC
+        i) Check: BCD → H
+        ii) Check: AED → C</li>
+<li>Find Super Key using Functional Dependencies:
+    a) Relational Schema R(ABCDE). Functional dependencies:
+        AB → C, DE → B, CD → E</li>
+<li>Find Candidate Key using Functional Dependencies:
+    a) Relational Schema R(ABCDE). Functional dependencies:
+        AB → C, DE → B, CD → E</li>
+<li>Find Prime and Non Prime Attributes using Functional Dependencies:
+    a) R(ABCDEF) having FDs {AB → C, C → D, D → E, F → B, E → F}</li>
+<li>Check the Equivalence of a Pair of Sets of Functional Dependencies:
+    a) Consider the two sets F and G with their FDs as below :
+        i) F : A → C, AC → D, E → AD, E → H
+        ii) G : A → CD, E → AH</li>
+<li>Find the Minimal Cover or Irreducible Sets or Canonical Cover of a Set of
+Functional Dependencies:
+    a) AB → CD, BC → D
+    b) ABCD → E, E → D, AC → D, A → B</li>
+</ol></div></p>
     </article>
 </section>
             <!-- endblock -->
