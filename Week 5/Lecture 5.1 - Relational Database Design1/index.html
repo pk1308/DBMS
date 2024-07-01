@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.1 - Relational Database Design1 - DBMS</title>
+        <title>Relational Database Design- 1 + 1NF - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -319,7 +319,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.1 - Relational Database Design1
+            Relational Database Design- 1 + 1NF
         </a>
     </li>
                             
@@ -327,7 +327,7 @@
         <a href="../Lecture%205.2%20-%20Relational%20Database%20Design2/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.2: Relational Database Design
+            Relational Database Design-2 - Functional Dependencies
         </a>
     </li>
                             
@@ -676,7 +676,7 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-51-relational-database-design1">Lecture 5.1 - Relational Database Design1</h1>
+        <p><div><h1 id="relational-database-design-1-1nf">Relational Database Design- 1 + 1NF</h1>
 <p><strong>Summary</strong>
 This module focuses on principles of relational database design. It emphasizes:</p>
 <p><strong>Features of Good Design:</strong></p>
@@ -691,9 +691,15 @@ This module focuses on principles of relational database design. It emphasizes:<
 <p><img alt="1717563677565" src="../image/Lecture5.1-RelationalDatabaseDesign1/1717563677565.png"></p>
 <hr>
 <p><strong>Redundancy and Anomaly:</strong></p>
+<p>Anomaly: inconsistencies that can arise due to data changes in a database with insertion, deletion, and update</p>
 <ul>
-<li>Redundancy (duplicate data) leads to anomalies:</li>
-<li>Insertion: Can't add data if unknown data is required</li>
+<li>These problems occur in poorly planned, un-normalised databases where all the data is stored in one table (a flat-file database)</li>
+<li>
+<p>Redundancy (duplicate data) leads to anomalies:</p>
+</li>
+<li>
+<p>Insertion: Can't add data if unknown data is required</p>
+</li>
 <li>Deletion: Losing unrelated information when deleting records</li>
 <li>Update: Inaccurate changes due to multiple occurrences of data</li>
 </ul>
@@ -707,8 +713,11 @@ In inst_dept, because dept_name is not a candidate key, the building and budget 
 ◦ This indicates the need to decompose inst dept</p>
 <hr>
 <p><strong>Lossy Decomposition</strong></p>
+<p><img alt="1719803473000" src="../image/Lecture5.1-RelationalDatabaseDesign1/1719803473000.png"></p>
 <p><img alt="1717567637165" src="../image/Lecture5.1-RelationalDatabaseDesign1/1717567637165.png"></p>
 <p>Lossless Join Decomposition is a decomposition of a relation R into relations R1 , R2 such that if we perform natural join of two smaller relations it will return the original relation</p>
+<p><img alt="1719803591340" src="../image/Lecture5.1-RelationalDatabaseDesign1/1719803591340.png"></p>
+<p><img alt="1719803650073" src="../image/Lecture5.1-RelationalDatabaseDesign1/1719803650073.png"></p>
 <p><strong>Atomic Domains and First Normal Form (1NF):</strong></p>
 <ul>
 <li>Atomic domains consist of indivisible elements.</li>

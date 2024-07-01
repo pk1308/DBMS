@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Lecture 5.2: Relational Database Design - DBMS</title>
+        <title>Relational Database Design-2 - Functional Dependencies - DBMS</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -319,7 +319,7 @@
         <a href="../Lecture%205.1%20-%20Relational%20Database%20Design1/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.1 - Relational Database Design1
+            Relational Database Design- 1 + 1NF
         </a>
     </li>
                             
@@ -327,7 +327,7 @@
         <a href="./"
             class=" active 
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
-            Lecture 5.2: Relational Database Design
+            Relational Database Design-2 - Functional Dependencies
         </a>
     </li>
                             
@@ -676,68 +676,70 @@
             <!-- block content -->
                 <section class="p-md-5 section-content">
     <article>
-        <p><div><h1 id="lecture-52-relational-database-design">Lecture 5.2: Relational Database Design</h1>
-<h2 id="functional-dependencies">Functional Dependencies</h2>
-<h3 id="definition">Definition</h3>
+        <p><div><h1 id="relational-database-design-2-functional-dependencies">Relational Database Design-2 - Functional Dependencies</h1>
+<p><strong>Summary</strong>
+<strong>Objectives</strong></p>
+<ul>
+<li>To introduce functional dependencies, a fundamental concept for designing relational databases.</li>
+</ul>
+<p><strong>Outline</strong></p>
+<ol>
+<li>Functional Dependencies</li>
+<li>Armstrong's Axioms</li>
+<li>Closure of Functional Dependencies</li>
+</ol>
+<p><strong>Functional Dependencies</strong></p>
 <ul>
 <li>Constraints on the set of legal relations.</li>
 <li>Require that the value for a certain set of attributes determines uniquely the value for another set of attributes.</li>
-<li>A generalization of the notion of a key.</li>
+<li>Formal definition: Let R be a relation schema, α ⊆ R, and β ⊆ R. The functional dependency (FD) α → β holds on R if and only if for any legal relations r(R), whenever any two tuples t1 and t2 of r agree on the attributes α, they also agree on the attributes β.</li>
 </ul>
-<h3 id="formal-definition">Formal Definition</h3>
+<p><img alt="1719809821355" src="../image/Lecture5.2-RelationalDatabaseDesign2/1719809821355.png"></p>
+<p><img alt="1719809980746" src="../image/Lecture5.2-RelationalDatabaseDesign2/1719809980746.png"></p>
+<p><img alt="1719810053926" src="../image/Lecture5.2-RelationalDatabaseDesign2/1719810053926.png"></p>
+<p><img alt="1719810123262" src="../image/Lecture5.2-RelationalDatabaseDesign2/1719810123262.png"></p>
+<p><strong>primary key</strong> </p>
+<p><img alt="1719810633535" src="../image/Lecture5.2-RelationalDatabaseDesign2/1719810633535.png"></p>
+<p><strong>Armstrong's Axioms</strong></p>
 <ul>
-<li>For a relation schema ( R ), ( <span class="arithmatex">\(\\alpha \\subseteq R\)</span> ) and ( $\beta \subseteq R $).</li>
-<li>The functional dependency ( $\alpha \to \beta $) holds on ( R ) if for any legal relations ( r(R) ), whenever any two tuples ( <span class="arithmatex">\(t_1\)</span> ) and ( <span class="arithmatex">\(t_2\)</span> ) of ( <span class="arithmatex">\(r\)</span> ) agree on the attributes ( $ \alpha $ ), they also agree on the attributes ( <span class="arithmatex">\(\\beta\)</span> ).</li>
-<li>Example: ( <span class="arithmatex">\(A \\to B\)</span> ) does not hold, but ( <span class="arithmatex">\(B \\to A\)</span> ) holds for a certain instance.</li>
+<li>A set of rules that allow us to infer new FDs from a given set of FDs.</li>
+<li>Reflexivity: if β ⊆ α, then α → β</li>
+<li>Augmentation: if α → β, then γα → γβ</li>
+<li>Transitivity: if α → β and β → γ, then α → γ</li>
 </ul>
-<h3 id="keys">Keys</h3>
+<p><strong>Closure of Functional Dependencies</strong></p>
 <ul>
-<li><strong>Superkey:</strong> ( <span class="arithmatex">\(K\)</span> ) is a superkey for relation schema ( <span class="arithmatex">\(R\)</span> ) if and only if ($ K \to R \ $).</li>
-<li><strong>Candidate Key:</strong> ( K ) is a candidate key for ( R ) if and only if ( <span class="arithmatex">\(K \\to R\)</span> ) and for no ($\alpha \subset K $), ( $\alpha \to R $).</li>
+<li>The set of all FDs that can be logically inferred from a given set of FDs F using Armstrong's Axioms.</li>
+<li>Denoted by F+.</li>
 </ul>
-<h3 id="practical-examples">Practical Examples</h3>
+<p><strong>Applications of Functional Dependencies</strong></p>
 <ul>
-<li><strong>Schema:</strong> <code>inst_dept(ID, name, salary, dept_name, building, budget)</code></li>
-<li>Expected FDs:</li>
-<li><code>dept_name → building</code></li>
-<li><code>dept_name → budget</code></li>
-<li><code>ID → budget</code></li>
-<li>Unexpected FD:</li>
-<li><code>dept_name → salary</code></li>
+<li>Testing relations to determine if they satisfy a given set of FDs.</li>
+<li>Specifying constraints on the set of legal relations.</li>
+<li>Expressing constraints that cannot be expressed using superkeys.</li>
 </ul>
-<h3 id="trivial-functional-dependencies">Trivial Functional Dependencies</h3>
+<p><strong>Properties of Armstrong's Axioms</strong></p>
+<ul>
+<li>Soundness: Generate only FDs that actually hold.</li>
+<li>Completeness: Eventually generate all FDs that hold.</li>
+</ul>
+<p><strong>Properties of Functional Dependencies</strong></p>
 <ul>
 <li>A functional dependency is trivial if it is satisfied by all instances of a relation.</li>
-<li>Example: ( $\text{ID, name} \to \text{ID} $) and ( $\text{name} \to \text{name} $).</li>
-<li>Generally, ( $\alpha \to \beta $ ) is trivial if ( $\beta \subseteq \alpha $).</li>
+<li>Example: ID, name → ID; name → name</li>
+<li>In general, α → β is trivial if β ⊆ α.</li>
 </ul>
-<hr>
-<h2 id="armstrongs-axioms">Armstrong’s Axioms</h2>
-<h3 id="definition_1">Definition</h3>
+<p><strong>Examples of Functional Dependencies</strong></p>
 <ul>
-<li>Given a set of FDs ( F ), infer new dependencies using:</li>
-<li><strong>Reflexivity:</strong> If ( <span class="arithmatex">\(\\beta \\subseteq \\alpha\)</span> ), then ( \alpha \to \beta ).</li>
-<li><strong>Augmentation:</strong> If ( $\alpha \to \beta $ ), then ( $\gamma\alpha \to \gamma\beta $).</li>
-<li><strong>Transitivity:</strong> If ( $\alpha \to \beta $) and ( $\beta \to \gamma $), then ( $\alpha \to \gamma $).</li>
+<li>studentID → semester</li>
+<li>studentID, lecture → TA</li>
+<li>{studentID, lecture} → {TA, semester}</li>
+<li>employeeID → employeeName</li>
+<li>employeeID → departmentID</li>
+<li>departmentID → departmentName</li>
 </ul>
-<h3 id="closure">Closure</h3>
-<ul>
-<li>The closure of a set of FDs ( <span class="arithmatex">\(F\)</span> ) is the set ( $F^+ $) of all FDs logically implied by ( F ).</li>
-<li>Example:</li>
-<li>( <span class="arithmatex">\(F = { A \\to B, B \\to C }\)</span> )</li>
-<li>( $F^+ = { A \to B, B \to C, A \to C } $)</li>
-</ul>
-<h3 id="properties">Properties</h3>
-<ul>
-<li>Axioms are <strong>sound</strong> (generate only FDs that hold) and <strong>complete</strong> (generate all FDs that hold).</li>
-</ul>
-<hr>
-<h2 id="module-summary">Module Summary</h2>
-<ul>
-<li>Introduced the notion of Functional Dependencies.</li>
-<li>Explained Armstrong’s Axioms and their application to infer new FDs.</li>
-<li>Discussed the concept of the closure of a set of FDs.</li>
-</ul></div></p>
+<p><strong>Conclusion</strong></p>
+<p>Functional dependencies are a powerful tool for designing relational databases, allowing us to express data constraints and enforce referential integrity. Armstrong's Axioms provide a formal framework for manipulating and reasoning about FDs, while the closure of FDs helps us identify all possible constraints that can be derived from a given set of FDs.</p></div></p>
     </article>
 </section>
             <!-- endblock -->
