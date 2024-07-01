@@ -24,7 +24,7 @@
 * [ ] [SQL command part 1 | Database Management &amp; Warehousing | GATE Data Science &amp; AI #gate2024](https://youtube.com/watch?v=pxbMbFW5zlE)
 * [ ] [SQL command part 2 | Database Management &amp; Warehousing | GATE Data Science &amp; AI #gate2024](https://youtube.com/watch?v=2wS5z8kiNAY)
 * [ ] [SQL: SELECT Command |Database Management &amp; Warehousing | GATE Data Science &amp; AI #gate2024](https://youtube.com/watch?v=OK8mu-Xaav4)
-* [ ] [Functional Dependency | DBMS and Warehousing |  GATE Data Science &amp; AI](https://youtube.com/watch?v=IQdSJjIY4j8)
+* [X] [Functional Dependency | DBMS and Warehousing |  GATE Data Science &amp; AI](https://youtube.com/watch?v=IQdSJjIY4j8)
 * [ ] [PYQ:  SQL, Relational Algebra &amp; Calculus | Database Management &amp; Warehousing  | GATE DA  #gate2025](https://youtube.com/watch?v=tPb2KhnTfkM)
 
 ---
