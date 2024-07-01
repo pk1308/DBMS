@@ -113,3 +113,7 @@ To transform a table into 1NF:
 3. **Ensure Primary Keys**: Define primary keys to uniquely identify each row in the table.
 
 By adhering to these principles, a database can be designed to comply with the First Normal Form, thus ensuring data integrity and facilitating easier querying and maintenance.
+
+
+
+![1719848394569](image/Lecture5.1-RelationalDatabaseDesign1/1719848394569.png)
