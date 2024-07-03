@@ -28,11 +28,6 @@
 * [ ] [Lec-21: First Normal form in DBMS in HINDI | 1st Normal form क्या होती है ?](https://youtube.com/watch?v=NlgZy30Dv9A)
 * [ ] [Lec-22: Finding Closure of Functional dependency in DBMS | Easiest &amp; Simplest way](https://youtube.com/watch?v=bSdvM_0hzgc)
 * [ ] [Lec-23: Functional Dependency &amp; its properties in DBMS in HINDI](https://youtube.com/watch?v=qn5neFBpU40)
-
----
-
-
-
 * [ ] [Lec-24: Second Normal Form | 2NF | Database Management System](https://youtube.com/watch?v=tkbAA--wKOc)
 * [ ] [Lec-25: Third Normal Form in dbms with examples in Hindi | Normalization](https://youtube.com/watch?v=IeSai2JVm78)
 * [ ] [Lec-26: Boyce Codd Normal Form #BCNF #DBMS #Normalization with best examples](https://youtube.com/watch?v=mf_PbWPo7VM)
