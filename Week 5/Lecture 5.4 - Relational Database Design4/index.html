@@ -272,6 +272,14 @@
                     <ul class="mb-5 drac-list drac-list-none">
                             
     <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/sql/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
         <a href="../../Piyush%20Wairale/checklist/"
             class="
             drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
@@ -705,23 +713,28 @@
 <li>If an attribute A is in the set, then add all attributes that are functionally dependent on A.</li>
 <li>If an attribute B is in the set and B → C is a functional dependency, then add C.</li>
 </ol>
-<p>Example:
-* Given F = {A → B, A → C, CG → H, CG → I, B → H}
-* (AG)+
-    * (AG) = AG
-    * (AG) = ABCG (A → C and A → B)
-    * (AG) = ABCGH (CG → H and CG ⊆ AGBC)
-    * (AG) = ABCGHI (CG → I and CG ⊆ AGBCH)</p>
+<p>Example:</p>
+<ul>
+<li>Given F = {A → B, A → C, CG → H, CG → I, B → H}</li>
+<li>(AG)+</li>
+<li>(AG) = AG</li>
+<li>(AG) = ABCG (A → C and A → B)</li>
+<li>(AG) = ABCGH (CG → H and CG ⊆ AGBC)</li>
+<li>(AG) = ABCGHI (CG → I and CG ⊆ AGBCH)</li>
+</ul>
 <p><strong>Extraneous Attributes</strong></p>
 <p>An attribute A is extraneous in a functional dependency α → β if:</p>
 <ul>
 <li>A ∈ α and F logically implies (F − {α → β}) ∪ {(α − A) → β}</li>
 <li>A ∈ β and the set of FDs (F − {α → β}) ∪ {α → (β − A)} logically implies F</li>
 </ul>
-<p>Example:
-* Given F = {A → C, AB → C}
-    * B is extraneous in AB → C because {A → C, AB → C} logically implies A → C.
-    * A is extraneous in AB → C because A → C can be inferred from {AB → C} and {A → B}.</p>
+<p>Example:</p>
+<ul>
+<li>Given F = {A → C, AB → C}</li>
+<li>B is extraneous in AB → C because {A → C, AB → C} logically implies A → C.</li>
+<li>A is extraneous in AB → C because A → C can be inferred from {AB → C} and {A → B}.</li>
+</ul>
+<p><img alt="1719892491951" src="../image/Lecture5.4-RelationalDatabaseDesign4/1719892491951.png"></p>
 <p><strong>Equivalence of FD Sets</strong></p>
 <p>Two sets of functional dependencies F and G are equivalent if F+ = G+. That is:</p>
 <ul>
@@ -739,25 +752,25 @@
 <p><strong>Practice Problems</strong></p>
 <ol>
 <li>Find if the given functional dependency is implied from the set of Functional Dependencies:
-    a) A → BC, CD → E, E → C, D → AEH, ABH → BD, DH → BC
-        i) Check: BCD → H
-        ii) Check: AED → C</li>
+   a) A → BC, CD → E, E → C, D → AEH, ABH → BD, DH → BC
+   i) Check: BCD → H
+   ii) Check: AED → C</li>
 <li>Find Super Key using Functional Dependencies:
-    a) Relational Schema R(ABCDE). Functional dependencies:
-        AB → C, DE → B, CD → E</li>
+   a) Relational Schema R(ABCDE). Functional dependencies:
+   AB → C, DE → B, CD → E</li>
 <li>Find Candidate Key using Functional Dependencies:
-    a) Relational Schema R(ABCDE). Functional dependencies:
-        AB → C, DE → B, CD → E</li>
+   a) Relational Schema R(ABCDE). Functional dependencies:
+   AB → C, DE → B, CD → E</li>
 <li>Find Prime and Non Prime Attributes using Functional Dependencies:
-    a) R(ABCDEF) having FDs {AB → C, C → D, D → E, F → B, E → F}</li>
+   a) R(ABCDEF) having FDs {AB → C, C → D, D → E, F → B, E → F}</li>
 <li>Check the Equivalence of a Pair of Sets of Functional Dependencies:
-    a) Consider the two sets F and G with their FDs as below :
-        i) F : A → C, AC → D, E → AD, E → H
-        ii) G : A → CD, E → AH</li>
+   a) Consider the two sets F and G with their FDs as below :
+   i) F : A → C, AC → D, E → AD, E → H
+   ii) G : A → CD, E → AH</li>
 <li>Find the Minimal Cover or Irreducible Sets or Canonical Cover of a Set of
-Functional Dependencies:
-    a) AB → CD, BC → D
-    b) ABCD → E, E → D, AC → D, A → B</li>
+   Functional Dependencies:
+   a) AB → CD, BC → D
+   b) ABCD → E, E → D, AC → D, A → B</li>
 </ol></div></p>
     </article>
 </section>
