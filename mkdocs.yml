@@ -33,10 +33,13 @@ nav:
   - Week 5/Lecture 5.1 - Relational Database Design1.md
   - Week 5/Lecture 5.2 - Relational Database Design2.md
   - Week 5/ex_can.md
+  - Week 5/hw.md
   - Week 5/closureofartibut.md
   - Week 5/Lecture 5.5 - Relational Database Design5.md
   - Week 5/Lecture 5.3 - Relational Database Design3.md
   - Week 5/week5.md
+- revision:
+  - revision/quiz1_1.md
 - gatesmashers:
   - gatesmashers/sql.md
   - gatesmashers/checklist.md
