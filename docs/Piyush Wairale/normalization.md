@@ -1,0 +1,1 @@
+![1721203642271](image/normalization/1721203642271.png)
