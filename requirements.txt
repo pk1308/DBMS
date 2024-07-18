@@ -11,9 +11,9 @@ attrs==23.2.0
 Babel==2.15.0
 beautifulsoup4==4.12.3
 bleach==6.1.0
-Brotli @ file:///croot/brotli-split_1714483155106/work
+
 cachetools==5.3.2
-certifi @ file:///croot/certifi_1717618050233/work/certifi
+
 cffi==1.16.0
 charset-normalizer==3.3.2
 click==8.1.7
@@ -79,9 +79,7 @@ langsmith==0.0.83
 loguru==0.7.2
 lxml==5.2.2
 Markdown==3.6
-markdown-icons @ https://github.com/MadLittleMods/markdown-icons/archive/master.zip#sha256=cdac598f6a15aebf68125e772648fe681a016bd1427fcbee84ed25b16ce95c43
-markdown-it-py==3.0.0
-MarkupSafe @ file:///work/perseverance-python-buildout/croot/markupsafe_1707342994941/work
+
 marshmallow==3.20.2
 matplotlib==3.8.4
 matplotlib-inline==0.1.7
@@ -95,8 +93,6 @@ mkdocs-get-deps==0.2.0
 mkdocs-material==9.5.22
 mkdocs-material-extensions==1.3.1
 mkdocs-pdf==0.1.2
-mkl-fft @ file:///work/perseverance-python-buildout/croot/mkl_fft_1698845673361/work
-mkl-random @ file:///work/perseverance-python-buildout/croot/mkl_random_1698845720894/work
 mkl-service==2.4.0
 multidict==6.0.4
 mypy-extensions==1.0.0
@@ -106,7 +102,7 @@ nbformat==5.10.4
 nest-asyncio==1.6.0
 notebook==7.1.3
 notebook_shim==0.2.4
-numpy @ file:///croot/numpy_and_numpy_base_1708638617955/work/dist/numpy-1.26.4-cp312-cp312-linux_x86_64.whl#sha256=1d700f51d8b4fa684d858c9e3b56b1656bc5c82b6b79ff08d4e3b491c430059f
+
 overrides==7.7.0
 packaging==23.2
 paginate==0.5.6
@@ -115,7 +111,6 @@ pandocfilters==1.5.1
 parso==0.8.4
 pathspec==0.12.1
 pexpect==4.9.0
-pillow @ file:///croot/pillow_1714398848491/work
 platformdirs==4.2.1
 prometheus_client==0.20.0
 prompt-toolkit==3.0.43
@@ -137,10 +132,10 @@ PyMuPDFb==1.24.3
 pyparsing==3.1.2
 PyPDF2==3.0.1
 pypdfium2==4.26.0
-PySocks @ file:///work/perseverance-python-buildout/croot/pysocks_1698845478203/work
+
 python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
-python-markdown-math @ https://github.com/mitya57/python-markdown-math/archive/master.zip#sha256=27290f75e444d7dd85eb2ee6c482884fb759ea0e4527d2c918da34c63c7dd8af
+
 pytube==15.0.0
 pytz==2024.1
 PyYAML==6.0.1
@@ -177,7 +172,7 @@ typing-inspect==0.9.0
 typing_extensions==4.9.0
 tzdata==2024.1
 uri-template==1.3.0
-urllib3 @ file:///croot/urllib3_1715635851070/work
+
 watchdog==4.0.0
 wcwidth==0.2.13
 webcolors==1.13
