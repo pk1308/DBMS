@@ -1,4 +1,5 @@
-#  Summary of Lecture 8.5 - Storage and File Structure2.pdf 
+# Summary of Lecture 8.5 - Storage and File Structure2.pdf
+
 **Summary**
 **File Organization**
 
@@ -49,3 +50,12 @@ When the buffer is full and a new block needs to be loaded, the buffer manager m
 * **Pinned Block:** Do not allow a block to be replaced, even if it has not been used recently.
 
 The choice of buffer replacement policy depends on the access patterns of the database.
+
+
+
+![1721591119203](image/Lecture8.5-StorageandFileStructure2/1721591119203.png)
+
+![1721591168099](image/Lecture8.5-StorageandFileStructure2/1721591168099.png)
+
+
+![1721591332811](image/Lecture8.5-StorageandFileStructure2/1721591332811.png)
