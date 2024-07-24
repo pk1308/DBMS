@@ -1,0 +1,1565 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+        <title>Normalization - DBMS</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        <meta name="author" content="PK">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">DBMS</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                    Home
+                </a>
+                <div class="collapse" id="home-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../cheatsheet/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Cheatsheet
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../.."
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Welcome to DBMS
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-4-collapse" aria-expanded="false">
+                    Week 4
+                </a>
+                <div class="collapse" id="week-4-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Lecture%204.5%20-%20Entity-Relationship%20Model3_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity-Relationship Model
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.3.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/week4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week4
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Lecture%204.2%20-%20Formal%20Relational%20Query%20Languages2_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Formal Relational Query Languages
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Lecture%204.1%20-%20Formal%20Relational%20Query%20Languages1_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Formal Relational Query Languages1_annotated
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Lecture%204.3%20-%20Entity-Relationship%20Model1_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity-Relationship Model
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Lecture%204.4%20-%20Entity-Relationship%20Model2_annotated/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity-Relationship (ER) Model/2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.2.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/Tutorial%204.4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Tutorial 4.4.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%204/er_model/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Er model
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-1-collapse" aria-expanded="false">
+                    Week 1
+                </a>
+                <div class="collapse" id="week-1-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/Lecture%201.1%20-%20Course%20Overview/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.1 - Course Overview.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/Lecture%201.3%20-%20Why%20DBMS2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.3 - Why DBMS2.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/week1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/textbook/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Textbook
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/Lecture%201.4%20-%20Intro%20to%20DBMS1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.4 - Intro to DBMS1.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/summary/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/Lecture%201.2%20-%20Why%20DBMS1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.2 - Why DBMS1.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%201/Lecture%201.5%20-%20Intro%20to%20DBMS2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 1.5 - Intro to DBMS2.pdf (PDF file)
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#piyush-wairale-collapse" aria-expanded="false">
+                    Piyush Wairale
+                </a>
+                <div class="collapse" id="piyush-wairale-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/sql/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/candiatekey/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Candiatekey
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/checklist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Checklist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/normalization/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Normalization
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/Relational_algebra/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Relational algebra
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Piyush%20Wairale/ER_model/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Entity Relationship Model
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-8-collapse" aria-expanded="false">
+                    week 8
+                </a>
+                <div class="collapse" id="week-8-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%208/Lecture%208.2%20-%20Algorithms%20and%20Data%20Structures2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 8.2 - Algorithms and Data Structures2.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%208/Lecture%208.1%20-%20Algorithms%20and%20Data%20Structures1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 8.1 - Algorithms and Data Structures1.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%208/Lecture%208.4%20-%20Storage%20and%20File%20Structure1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 8.4 - Storage and File Structure1.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%208/Lecture%208.5%20-%20Storage%20and%20File%20Structure2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 8.5 - Storage and File Structure2.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%208/Lecture%208.3%20-%20Algorithms%20and%20Data%20Structures3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 8.3 - Algorithms and Data Structures3.pdf
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-5-collapse" aria-expanded="false">
+                    Week 5
+                </a>
+                <div class="collapse" id="week-5-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.4%20-%20Relational%20Database%20Design4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 5.4 - Relational Database Design4.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.1%20-%20Relational%20Database%20Design1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Relational Database Design- 1 + 1NF
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.2%20-%20Relational%20Database%20Design2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Relational Database Design-2 - Functional Dependencies
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/ex_can/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ex can
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/hw/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Hw
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/closureofartibut/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Closureofartibut
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.5%20-%20Relational%20Database%20Design5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 5.5 - Relational Database Design5.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/Lecture%205.3%20-%20Relational%20Database%20Design3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 5.3 - Relational Database Design3.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%205/week5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Week5
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-7-collapse" aria-expanded="false">
+                    week 7
+                </a>
+                <div class="collapse" id="week-7-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%207/Lecture%207.5%20-%20Application%20Design%20and%20Development5/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 7.5 - Application Design and Development5.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%207/Lecture%207.1%20-%20Application%20Design%20and%20Development1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 7.1 - Application Design and Development1.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%207/Lecture%207.4%20-%20Application%20Design%20and%20Development4/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 7.4 - Application Design and Development4.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%207/Lecture%207.2%20-%20Application%20Design%20and%20Development2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Web Fundamentals
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#revision-collapse" aria-expanded="false">
+                    revision
+                </a>
+                <div class="collapse" id="revision-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../revision/quiz1_1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Quiz1 1
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class=" active 
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#gatesmashers-collapse" aria-expanded="false">
+                    gatesmashers
+                </a>
+                <div class="collapse" id="gatesmashers-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="./"
+            class=" active 
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Normalization
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../sql/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../checklist/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Checklist
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../notes/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Notes
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../Minimalcover/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Minimalcover
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-3-collapse" aria-expanded="false">
+                    Week 3
+                </a>
+                <div class="collapse" id="week-3-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%203/Lecture%203.5%20-%20Advanced%20SQL/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.5 - Advanced SQL
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%203/livesession/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Livesession
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%203/Lecture%203.1%20-%20SQL%20Examples/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.1 - SQL Examples.pdf (PDF file)
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%203/Lecture%203.2%20-%20Intermediate%20SQL1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.2 - Intermediate SQL1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%203/Lecture%203.4%20-%20Intermediate%20SQL3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.4   Intermediate SQL3
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%203/image/Lecture%203.3%20-%20Intermediate%20SQL2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 3.3 - Intermediate SQL2.pdf (PDF file)
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-6-collapse" aria-expanded="false">
+                    week 6
+                </a>
+                <div class="collapse" id="week-6-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%206/Lecture%206.3%20-%20Relational%20Database%20Design8/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 6.3 - Relational Database Design8.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%206/Lecture%206.4%20-%20Relational%20Database%20Design9/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 6.4 - Relational Database Design9.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%206/Lecture%206.2%20-%20Relational%20Database%20Design7/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 6.2 - Relational Database Design7.pdf
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%206/Lecture%206.5%20-%20Relational%20Database%20Design10/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 6.5   Relational Database Design10
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../week%206/Lecture%206.1%20-%20Relational%20Database%20Design6/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Summary of Lecture 6.1 - Relational Database Design6.pdf
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#week-2-collapse" aria-expanded="false">
+                    Week 2
+                </a>
+                <div class="collapse" id="week-2-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/Lecture%202.2%20-%20Introduction%20to%20Relational%20Model2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.2 - Introduction to Relational Model2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/inst_sec/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Inst sec
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/tutorial_2.1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Tutorial 2.1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/live%20session_sat/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Live session sat
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/Lecture%202.1%20-%20Introduction%20to%20Relational%20Model1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.1 - Introduction to Relational Model1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/check_list/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Check list
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/Lecture%202.5%20-%20Introduction%20to%20SQL3/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.5 - Introduction to SQL3
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/TRC/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            TRC
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/Lecture%202.4%20-%20Introduction%20to%20SQL2/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.4 - Introduction to SQL2
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/Lecture%202.3%20-%20Introduction%20to%20SQL1/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Lecture 2.3 - Introduction to SQL1
+        </a>
+    </li>
+                            
+    <li class="drac-box-ternary">
+        <a href="../../Week%202/ppa_grpa/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Ppa grpa
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+        <div class="container">
+            <div class="row row-preview">
+                <div class="col">
+                    <a href="../../revision/quiz1_1/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover">
+                        <i class="fa fa-arrow-left"></i> Previous
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="../sql/"
+                        class="btn-preview drac-btn drac-btn-outline drac-text-white drac-text-cyan-green--hover" style="padding-left: 3%;">
+                        Next <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                            
+                                <div class="md-source source-detail">
+    <div class="md-source-repo-icon">
+        <i class="fa fa-github-alt drac-text-white" aria-hidden="true"></i>
+    </div>
+
+    <div class="md-source-repo-url">
+        <a href="https://github.com/pk1308/DBMS"
+            class="md-source drac-anchor drac-text drac-text-white drac-text-cyan-green--hover">
+            pk1308/DBMS
+        </a>
+
+        <ul class="md-source-repo-text">
+            <li>
+                <i class="fa fa-tag drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub tag (latest by date)"
+                    src="https://img.shields.io/github/v/tag/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-star drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub Repo stars"
+                    src="https://img.shields.io/github/stars/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+
+            <li>
+                <i class="fa fa-code-fork drac-text-black" aria-hidden="true"></i>
+                <img alt="GitHub forks"
+                    src="https://img.shields.io/github/forks/pk1308/DBMS?color=white&label=%20&style=flat-square">
+            </li>
+        </ul>
+    </div>
+
+</div>
+                            
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><div><h1 id="normalization">Normalization</h1>
+<h2 id="anomaly">Anomaly</h2>
+<ul>
+<li>Insertion Anomaly</li>
+<li>Deletion Anomaly</li>
+<li>Updation Anomaly</li>
+</ul>
+<h3 id="first-normal-form-1nf-ef-codd">First Normal Form (1NF) - EF Codd</h3>
+<p><strong>Definition:</strong></p>
+<ol>
+<li>A table should not contain any multivalued attribute.</li>
+<li>This ensures that each column contains atomic (indivisible) values, and each entry in a column has a single value.</li>
+</ol>
+<h3 id="example-table">Example Table</h3>
+<table>
+<thead>
+<tr>
+<th>Rollno</th>
+<th>Name</th>
+<th>Course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sai</td>
+<td>C, Java</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aish</td>
+<td>C, DBMS</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Explanation of the Example:</strong></p>
+<ul>
+<li>The table has three columns: Rollno, Name, and Course.</li>
+<li>The <code>Course</code> column contains multiple values for some entries, which means it is not in 1NF.</li>
+<li>For instance, for Rollno 1, the courses are "C" and "Java," and for Rollno 2, the courses are "C" and "DBMS."</li>
+</ul>
+<h3 id="not-in-1nf">Not in 1NF</h3>
+<ul>
+<li>The table violates 1NF because it contains multivalued attributes in the <code>Course</code> column.</li>
+<li>To convert this table to 1NF, each value in the <code>Course</code> column should be atomic. This would typically be done by creating separate rows for each course.</li>
+</ul>
+<h3 id="conversion-to-1nf">Conversion to 1NF:</h3>
+<table>
+<thead>
+<tr>
+<th>Rollno</th>
+<th>Name</th>
+<th>Course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sai</td>
+<td>C</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Sai</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aish</td>
+<td>C</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aish</td>
+<td>DBMS</td>
+</tr>
+</tbody>
+</table>
+<p>In this converted table:</p>
+<ul>
+<li>Each entry in the <code>Course</code> column is now atomic.</li>
+<li>There are no multivalued attributes.</li>
+<li>Primary key {Rollno , Course} -&gt; Composite Key</li>
+</ul>
+<p>By following this process, the table adheres to the rules of the First Normal Form (1NF), ensuring that each column contains only indivisible values and each row represents a unique entity.</p>
+<p><img alt="1721128638205" src="../image/Normalization/1721128638205.png"></p>
+<p>list of properties related to functional dependencies in the context of database theory. <strong>Reflexivity</strong>:</p>
+<ol>
+<li>
+<ul>
+<li>If <span class="arithmatex">\( Y \)</span> is a subset of <span class="arithmatex">\( X \)</span>, then <span class="arithmatex">\( X $\rightarrow$ Y \)</span>.</li>
+</ul>
+</li>
+<li>This means that if <span class="arithmatex">\( Y \)</span> is contained within <span class="arithmatex">\( X \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span>.</li>
+<li>
+<p><strong>Augmentation</strong>:</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span>, then <span class="arithmatex">\( XZ $\rightarrow$ YZ \)</span>.</p>
+</li>
+<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span>, then adding the same set <span class="arithmatex">\( Z \)</span> to both sides preserves the functional dependency.</li>
+<li>
+<p><strong>Transitivity</strong>:</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( Y $\rightarrow$ Z \)</span>, then <span class="arithmatex">\( X $\rightarrow$ Z \)</span>.</p>
+</li>
+<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Y \)</span> functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Z \)</span>.</li>
+<li>
+<p><strong>Union</strong>:</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( X $\rightarrow$ Z \)</span>, then <span class="arithmatex">\( X $\rightarrow$ YZ \)</span>.</p>
+</li>
+<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( X \)</span> also functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines the combination of <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span>.</li>
+<li>
+<p><strong>Decomposition</strong>:</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( X $\rightarrow$ YZ \)</span>, then <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( X $\rightarrow$ Z \)</span>.</p>
+</li>
+<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines the combination of <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Z \)</span> separately.</li>
+<li>
+<p><strong>Pseudotransitivity</strong>:</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( WY $\rightarrow$ Z \)</span>, then <span class="arithmatex">\( WX $\rightarrow$ Z \)</span>.</p>
+</li>
+<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( WY \)</span> functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( WX \)</span> functionally determines <span class="arithmatex">\( Z \)</span>.</li>
+<li>
+<p><strong>Composition</strong>:</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( Z $\rightarrow$ W \)</span>, then <span class="arithmatex">\( XZ $\rightarrow$ YW \)</span>.</p>
+</li>
+<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span> functionally determines <span class="arithmatex">\( W \)</span>, then the combination <span class="arithmatex">\( XZ \)</span> functionally determines the combination <span class="arithmatex">\( YW \)</span>.</li>
+</ol>
+<p>These properties are fundamental in understanding and working with functional dependencies in relational database design, particularly in the normalization process.</p>
+<h3 id="explanation-of-second-normal-form-2nf-with-example-table">Explanation of Second Normal Form (2NF) with Example Table</h3>
+<h4 id="second-normal-form-2nf">Second Normal Form (2NF)</h4>
+<p>To achieve Second Normal Form, a table must satisfy the following conditions:</p>
+<ol>
+<li>
+<p><strong>First Normal Form (1NF)</strong>:</p>
+</li>
+<li>
+<p>The table must already be in First Normal Form. This means that the table should have no repeating groups or arrays. Each column should contain atomic (indivisible) values, and each record should be unique.</p>
+</li>
+<li>
+<p><strong>Full Functional Dependency</strong>:</p>
+</li>
+<li>
+<p>All non-prime attributes (attributes that are not part of any candidate key) must be fully functionally dependent on the candidate key. This means that each non-prime attribute should depend on the whole candidate key, not just a part of it.</p>
+</li>
+</ol>
+<h4 id="example-table_1">Example Table</h4>
+<p>Consider the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Customer ID</th>
+<th>Store ID</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>Delhi</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>Mumbai</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>Delhi</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>Bangalore</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>Mumbai</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Customer ID</strong> and <strong>Store ID</strong> together form a composite key.</li>
+<li><strong>Location</strong> is a non-prime attribute.</li>
+</ul>
+<h4 id="analysis-of-the-example-table">Analysis of the Example Table</h4>
+<ol>
+<li>
+<p><strong>First Normal Form (1NF)</strong>:</p>
+</li>
+<li>
+<p>The table is in 1NF as all values are atomic and each record is unique.</p>
+</li>
+<li>
+<p><strong>Full Functional Dependency</strong>:</p>
+</li>
+<li>
+<p>The non-prime attribute <strong>Location</strong> should be fully functionally dependent on the entire composite key (Customer ID, Store ID). However, in this table, <strong>Location</strong> depends only on <strong>Store ID</strong> and not on the combination of <strong>Customer ID</strong> and <strong>Store ID</strong>. This indicates a partial dependency, which violates the 2NF rule.</p>
+</li>
+</ol>
+<h4 id="converting-to-second-normal-form-2nf">Converting to Second Normal Form (2NF)</h4>
+<p>To convert this table to 2NF, we need to remove the partial dependency by creating separate tables. For example:</p>
+<ol>
+<li>
+<p><strong>Stores Table</strong>:</p>
+</li>
+<li>
+<p>Columns: <strong>Store ID</strong>, <strong>Location</strong></p>
+</li>
+<li>This table will store the location of each store.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Store ID</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Delhi</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bangalore</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mumbai</td>
+</tr>
+<tr>
+<td>2. <strong>Customer_Store Table</strong>:</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Columns: <strong>Customer ID</strong>, <strong>Store ID</strong></li>
+<li>This table will store the relationship between customers and stores.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Customer ID</th>
+<th>Store ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>By splitting the original table into these two tables, we ensure that the non-prime attribute (Location) is fully functionally dependent on the candidate key in its respective table, satisfying the 2NF requirements.</p>
+<p>To determine the 2nd Normal Form (2NF) for a given relation, we need to ensure that the relation is in 1st Normal Form (1NF) and that all non-prime attributes are fully functionally dependent on the primary key.</p>
+<p>From the image, we have the following information:</p>
+<ul>
+<li>Relation <span class="arithmatex">\( R(ABCDEF) \)</span></li>
+<li>
+<p>Functional Dependencies (FDs):</p>
+</li>
+<li>
+<p><span class="arithmatex">\( FD: C $\rightarrow $F \)</span></p>
+</li>
+<li><span class="arithmatex">\( E $\rightarrow $A \)</span></li>
+<li><span class="arithmatex">\( EC $\rightarrow $D \)</span></li>
+<li><span class="arithmatex">\( A $\rightarrow $B \)</span></li>
+<li>Candidate Key (CK): <span class="arithmatex">\( EC \)</span></li>
+<li>Prime Attributes: <span class="arithmatex">\( E, C \)</span></li>
+<li>Non-Prime Attributes: <span class="arithmatex">\( A, B, D, F \)</span></li>
+</ul>
+<p>To be in 2NF, the relation must be in 1NF and all non-prime attributes must be fully functionally dependent on the entire candidate key, not just part of it.</p>
+<h3 id="steps-to-achieve-2nf">Steps to achieve 2NF:</h3>
+<ol>
+<li>
+<p><strong>Identify Partial Dependencies</strong>:</p>
+</li>
+<li>
+<p><span class="arithmatex">\( C $\rightarrow $F \)</span> (Partial dependency since <span class="arithmatex">\( C \)</span> is part of the candidate key <span class="arithmatex">\( EC \)</span>)</p>
+</li>
+<li><span class="arithmatex">\( E $\rightarrow $A \)</span> (Partial dependency since <span class="arithmatex">\( E \)</span> is part of the candidate key <span class="arithmatex">\( EC \)</span>)</li>
+<li><span class="arithmatex">\( EC $\rightarrow $D \)</span> (Full dependency since <span class="arithmatex">\( D \)</span> depends on the entire candidate key <span class="arithmatex">\( EC \)</span>)</li>
+<li><span class="arithmatex">\( A $\rightarrow $B \)</span> (Not a partial dependency since <span class="arithmatex">\( A \)</span> is not part of the candidate key)</li>
+<li>
+<p><strong>Remove Partial Dependencies</strong>:</p>
+</li>
+<li>
+<p>Create new relations to remove partial dependencies:</p>
+<ul>
+<li><span class="arithmatex">\( R1(CE, D) \)</span> with <span class="arithmatex">\( CE $\rightarrow $D \)</span></li>
+<li><span class="arithmatex">\( R2(C, F) \)</span> with <span class="arithmatex">\( C $\rightarrow $F \)</span></li>
+<li><span class="arithmatex">\( R3(E, A) \)</span> with <span class="arithmatex">\( E $\rightarrow $A \)</span></li>
+<li><span class="arithmatex">\( R4(A, B) \)</span> with <span class="arithmatex">\( A $\rightarrow $B \)</span></li>
+</ul>
+</li>
+</ol>
+<h3 id="resulting-relations-in-2nf">Resulting Relations in 2NF:</h3>
+<ul>
+<li><span class="arithmatex">\( R1(CE, D) \)</span></li>
+<li><span class="arithmatex">\( R2(C, F) \)</span></li>
+<li><span class="arithmatex">\( R3(E, A , B) \)</span></li>
+</ul>
+<p>These relations are now in 2NF because all non-prime attributes are fully functionally dependent on the entire candidate key of their respective relations.</p>
+<h4 id="explanation-of-third-normal-form-3nf">Explanation of Third Normal Form (3NF)</h4>
+<ol>
+<li>
+<p><strong>Prerequisite: Second Normal Form (2NF)</strong></p>
+</li>
+<li>
+<p>A table must already be in the Second Normal Form (2NF) before it can be considered for 3NF.</p>
+</li>
+<li>2NF requires that the table is in the First Normal Form (1NF) and that all non-key attributes are fully functionally dependent on the primary key.</li>
+<li>
+<p><strong>No Transitive Dependency</strong></p>
+</li>
+<li>
+<p>For a table to be in 3NF, it should not have any transitive dependencies.</p>
+</li>
+<li>A transitive dependency occurs when a non-key attribute depends on another non-key attribute rather than depending directly on the primary key.</li>
+</ol>
+<h3 id="example">Example</h3>
+<p>Consider the table shown in the image:</p>
+<table>
+<thead>
+<tr>
+<th>Rollno</th>
+<th>State</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Punjab</td>
+<td>Mohali</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Haryana</td>
+<td>Ambala</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Punjab</td>
+<td>Mohali</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Haryana</td>
+<td>Ambala</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Bihar</td>
+<td>Patna</td>
+</tr>
+</tbody>
+</table>
+<p>In this table:</p>
+<ul>
+<li><code>Rollno</code> is the primary key.</li>
+<li><code>State</code> and <code>City</code> are non-key attributes.</li>
+</ul>
+<h4 id="step-by-step-normalization-to-3nf">Step-by-Step Normalization to 3NF</h4>
+<ol>
+<li>
+<p><strong>First Normal Form (1NF)</strong></p>
+</li>
+<li>
+<p>The table is already in 1NF because all columns contain atomic values, and each column contains values of a single type.</p>
+</li>
+<li>
+<p><strong>Second Normal Form (2NF)</strong></p>
+</li>
+<li>
+<p>The table is in 2NF because there are no partial dependencies; all non-key attributes (<code>State</code> and <code>City</code>) depend on the whole primary key (<code>Rollno</code>).</p>
+</li>
+<li>
+<p><strong>Third Normal Form (3NF)</strong></p>
+</li>
+<li>
+<p>To check for 3NF, we need to ensure there are no transitive dependencies.</p>
+</li>
+<li>In the given table, <code>City</code> depends on <code>State</code>, and <code>State</code> depends on <code>Rollno</code>. This is a transitive dependency because <code>City</code> indirectly depends on <code>Rollno</code> through <code>State</code>.</li>
+</ol>
+<p>To remove the transitive dependency, we can decompose the table into two tables:</p>
+<p><strong>Table 1: Rollno_State</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rollno</th>
+<th>State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Punjab</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Haryana</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Punjab</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Haryana</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Bihar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 2: State_City</strong></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Punjab</td>
+<td>Mohali</td>
+</tr>
+<tr>
+<td>Haryana</td>
+<td>Ambala</td>
+</tr>
+<tr>
+<td>Bihar</td>
+<td>Patna</td>
+</tr>
+</tbody>
+</table>
+<p>Now, both tables are in 3NF:</p>
+<ul>
+<li>In <code>Rollno_State</code>, <code>State</code> depends directly on <code>Rollno</code>.</li>
+<li>In <code>State_City</code>, <code>City</code> depends directly on <code>State</code>.</li>
+</ul>
+<p>By decomposing the original table, we have removed the transitive dependency, thus achieving the Third Normal Form (3NF).</p>
+<h2 id="concept-of-boyce-codd-normal-form-bcnf-using-a-table-named-student-here-is-a-detailed-explanation">concept of Boyce-Codd Normal Form (BCNF) using a table named "Student." Here is a detailed explanation:</h2>
+<h3 id="table-structure">Table Structure</h3>
+<p>The table "Student" has the following columns:</p>
+<ul>
+<li><strong>Rollno</strong>: Unique identifier for each student.</li>
+<li><strong>Name</strong>: Name of the student.</li>
+<li><strong>Voteid</strong>: Voter ID of the student.</li>
+<li><strong>Age</strong>: Age of the student.</li>
+</ul>
+<h3 id="data-in-the-table">Data in the Table</h3>
+<table>
+<thead>
+<tr>
+<th>Rollno</th>
+<th>Name</th>
+<th>Voteid</th>
+<th>Age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ravi</td>
+<td>K0123</td>
+<td>20</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Varun</td>
+<td>M034</td>
+<td>21</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ravi</td>
+<td>K786</td>
+<td>23</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rahul</td>
+<td>D286</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<h3 id="candidate-keys-ck">Candidate Keys (CK)</h3>
+<p>The candidate keys for this table are:</p>
+<ul>
+<li>Rollno</li>
+<li>Voteid</li>
+</ul>
+<h3 id="functional-dependencies-fd">Functional Dependencies (FD)</h3>
+<p>The functional dependencies in the table are:</p>
+<ol>
+<li>Rollno → Name</li>
+<li>Rollno → Voteid</li>
+<li>Voteid → Age</li>
+<li>Voteid → Rollno</li>
+</ol>
+<h3 id="explanation-of-bcnf">Explanation of BCNF</h3>
+<p>BCNF is a higher version of the Third Normal Form (3NF). A table is in BCNF if, for every one of its non-trivial functional dependencies X → Y, X is a super key. In other words, for every functional dependency, the left-hand side should be a candidate key.</p>
+<h3 id="analysis-of-the-table">Analysis of the Table</h3>
+<ul>
+<li><strong>Rollno → Name</strong>: Rollno is a candidate key, so this dependency is fine.</li>
+<li><strong>Rollno → Voteid</strong>: Rollno is a candidate key, so this dependency is fine.</li>
+<li><strong>Voteid → Age</strong>: Voteid is a candidate key, so this dependency is fine.</li>
+<li><strong>Voteid → Rollno</strong>: Voteid is a candidate key, so this dependency is fine.</li>
+</ul>
+<p>Since all the functional dependencies have candidate keys on the left-hand side, the table is already in BCNF.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>The table "Student" is in Boyce-Codd Normal Form (BCNF) because all the functional dependencies have candidate keys on the left-hand side. This ensures that the table is free from redundancy and update anomalies.</p>
+<p><img alt="1721143030609" src="../image/Normalization/1721143030609.png"></p>
+<p><strong>Dependency Preserving Decomposition</strong>:</p>
+<ol>
+<li>
+<ul>
+<li><strong>Third Normal Form (3NF)</strong>: Always ensures that the decomposition of a database schema is dependency preserving. This means that after decomposing a relation into smaller relations, all functional dependencies are preserved in the resulting relations. This is crucial for maintaining the integrity and consistency of the database.</li>
+</ul>
+</li>
+<li><strong>Boyce-Codd Normal Form (BCNF)</strong>: Does not always ensure dependency preserving decomposition. While BCNF is a stricter form of normalization compared to 3NF, it may sometimes result in a loss of some functional dependencies when decomposing a relation.</li>
+<li>
+<p><strong>Lossless Decomposition</strong>:</p>
+</li>
+<li>
+<p>Both <strong>3NF and BCNF</strong> ensure lossless decomposition. This means that when a relation is decomposed into two or more relations, it is possible to reconstruct the original relation without any loss of information. Lossless decomposition is essential to ensure that no data is lost during the normalization process.</p>
+</li>
+<li>
+<p><strong>Example</strong>:</p>
+</li>
+<li>
+<p>The relation <span class="arithmatex">\( R(ABCD) \)</span> is given with the functional dependencies <span class="arithmatex">\( \{A \rightarrow B, C \rightarrow D, D \rightarrow A\} \)</span>. This example illustrates a scenario where the concepts of dependency preservation and lossless decomposition are applied.</p>
+</li>
+</ol>
+<p>In summary, while both 3NF and BCNF ensure that the decomposition of a relation is lossless, only 3NF guarantees that all functional dependencies are preserved in the decomposed relations. BCNF, being a stricter form of normalization, may sometimes sacrifice dependency preservation to achieve a higher level of normalization.</p>
+<table>
+<thead>
+<tr>
+<th>1st Normal Form</th>
+<th>2nd Normal Form</th>
+<th>3rd Normal Form</th>
+<th>BCNF</th>
+<th>4th Normal Form</th>
+<th>5th Normal Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>* No Multivalued attribute</td>
+<td>* In 1st NF +</td>
+<td>* In 2nd NF +</td>
+<td>* In 3rd NF +</td>
+<td>* In BCNF +</td>
+<td>* In 4th NF +</td>
+</tr>
+<tr>
+<td>* Only Single valued</td>
+<td>* No Partial Dependency</td>
+<td>* No Transitive Dependency</td>
+<td>* L.H.S must be CK or SK</td>
+<td>* No Multivalued Dependency</td>
+<td>* Lossless Decomposition</td>
+</tr>
+<tr>
+<td>Rollno</td>
+<td>* Only Full Dependency</td>
+<td>* No Non-prime should determine non-prime</td>
+<td>X -&gt; Y</td>
+<td>X -&gt; -&gt; Y</td>
+<td></td>
+</tr>
+<tr>
+<td>1 C, C++</td>
+<td>if AB is the primary key<br>AB -&gt; C</td>
+<td>if x is the prime and y and z are no prime<br>X -&gt; Y -&gt; Z</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2 C++, Java</td>
+<td>B -&gt; C not possible</td>
+<td>PK -&gt; Non-prime</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>A -&gt; C not possible</td>
+<td>CK - &gt; Prime</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>This condition vilotse<br>Non-prime -&gt; Non- prime</td>
+<td></td>
+<td></td>
+<td><br></td>
+</tr>
+</tbody>
+</table></div></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../javascripts/mathjax.js" defer></script>
+			<script src="https://polyfill.io/v3/polyfill.min.js" defer></script>
+			<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
