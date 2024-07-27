@@ -25,9 +25,17 @@ nav:
   - Week 1/Lecture 1.5 - Intro to DBMS2.md
 - Piyush Wairale:
   - Piyush Wairale/sql.md
+  - Piyush Wairale/candiatekey.md
   - Piyush Wairale/checklist.md
+  - Piyush Wairale/normalization.md
   - Piyush Wairale/Relational_algebra.md
   - Piyush Wairale/ER_model.md
+- week 8:
+  - week 8/Lecture 8.2 - Algorithms and Data Structures2.md
+  - week 8/Lecture 8.1 - Algorithms and Data Structures1.md
+  - week 8/Lecture 8.4 - Storage and File Structure1.md
+  - week 8/Lecture 8.5 - Storage and File Structure2.md
+  - week 8/Lecture 8.3 - Algorithms and Data Structures3.md
 - Week 5:
   - Week 5/Lecture 5.4 - Relational Database Design4.md
   - Week 5/Lecture 5.1 - Relational Database Design1.md
@@ -38,12 +46,19 @@ nav:
   - Week 5/Lecture 5.5 - Relational Database Design5.md
   - Week 5/Lecture 5.3 - Relational Database Design3.md
   - Week 5/week5.md
+- week 7:
+  - week 7/Lecture 7.5 - Application Design and Development5.md
+  - week 7/Lecture 7.1 - Application Design and Development1.md
+  - week 7/Lecture 7.4 - Application Design and Development4.md
+  - week 7/Lecture 7.2 - Application Design and Development2.md
 - revision:
   - revision/quiz1_1.md
 - gatesmashers:
+  - gatesmashers/Normalization.md
   - gatesmashers/sql.md
   - gatesmashers/checklist.md
   - gatesmashers/notes.md
+  - gatesmashers/Minimalcover.md
 - Week 3:
   - Week 3/Lecture 3.5 - Advanced SQL.md
   - Week 3/livesession.md
