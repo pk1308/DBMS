@@ -50,7 +50,7 @@ By following this process, the table adheres to the rules of the First Normal Fo
 
 ![1721128638205](image/Normalization/1721128638205.png)
 
- list of properties related to functional dependencies in the context of database theory. **Reflexivity**:
+list of properties related to functional dependencies in the context of database theory. **Reflexivity**:
 
 1. - If \( Y \) is a subset of \( X \), then \( X $\rightarrow$ Y \).
    - This means that if \( Y \) is contained within \( X \), then \( X \) functionally determines \( Y \).
@@ -58,22 +58,27 @@ By following this process, the table adheres to the rules of the First Normal Fo
 
    - If \( X $\rightarrow$ Y \), then \( XZ $\rightarrow$ YZ \).
    - This means that if \( X \) functionally determines \( Y \), then adding the same set \( Z \) to both sides preserves the functional dependency.
+
 3. **Transitivity**:
 
    - If \( X $\rightarrow$ Y \) and \( Y $\rightarrow$ Z \), then \( X $\rightarrow$ Z \).
    - This means that if \( X \) functionally determines \( Y \) and \( Y \) functionally determines \( Z \), then \( X \) functionally determines \( Z \).
+
 4. **Union**:
 
    - If \( X $\rightarrow$ Y \) and \( X $\rightarrow$ Z \), then \( X $\rightarrow$ YZ \).
    - This means that if \( X \) functionally determines \( Y \) and \( X \) also functionally determines \( Z \), then \( X \) functionally determines the combination of \( Y \) and \( Z \).
+
 5. **Decomposition**:
 
    - If \( X $\rightarrow$ YZ \), then \( X $\rightarrow$ Y \) and \( X $\rightarrow$ Z \).
    - This means that if \( X \) functionally determines the combination of \( Y \) and \( Z \), then \( X \) functionally determines \( Y \) and \( X \) functionally determines \( Z \) separately.
+
 6. **Pseudotransitivity**:
 
    - If \( X $\rightarrow$ Y \) and \( WY $\rightarrow$ Z \), then \( WX $\rightarrow$ Z \).
    - This means that if \( X \) functionally determines \( Y \) and \( WY \) functionally determines \( Z \), then \( WX \) functionally determines \( Z \).
+
 7. **Composition**:
 
    - If \( X $\rightarrow$ Y \) and \( Z $\rightarrow$ W \), then \( XZ $\rightarrow$ YW \).
@@ -90,6 +95,7 @@ To achieve Second Normal Form, a table must satisfy the following conditions:
 1. **First Normal Form (1NF)**:
 
    - The table must already be in First Normal Form. This means that the table should have no repeating groups or arrays. Each column should contain atomic (indivisible) values, and each record should be unique.
+
 2. **Full Functional Dependency**:
 
    - All non-prime attributes (attributes that are not part of any candidate key) must be fully functionally dependent on the candidate key. This means that each non-prime attribute should depend on the whole candidate key, not just a part of it.
@@ -114,6 +120,7 @@ Consider the following table:
 1. **First Normal Form (1NF)**:
 
    - The table is in 1NF as all values are atomic and each record is unique.
+
 2. **Full Functional Dependency**:
 
    - The non-prime attribute **Location** should be fully functionally dependent on the entire composite key (Customer ID, Store ID). However, in this table, **Location** depends only on **Store ID** and not on the combination of **Customer ID** and **Store ID**. This indicates a partial dependency, which violates the 2NF rule.
@@ -132,6 +139,7 @@ To convert this table to 2NF, we need to remove the partial dependency by creati
    | 1        | Delhi     |
    | 2        | Bangalore |
    | 3        | Mumbai    |
+
 2. **Customer_Store Table**:
 
    - Columns: **Customer ID**, **Store ID**
@@ -158,6 +166,7 @@ From the image, we have the following information:
   - \( E $\rightarrow $A \)
   - \( EC $\rightarrow $D \)
   - \( A $\rightarrow $B \)
+
 - Candidate Key (CK): \( EC \)
 - Prime Attributes: \( E, C \)
 - Non-Prime Attributes: \( A, B, D, F \)
@@ -172,6 +181,7 @@ To be in 2NF, the relation must be in 1NF and all non-prime attributes must be f
    - \( E $\rightarrow $A \) (Partial dependency since \( E \) is part of the candidate key \( EC \))
    - \( EC $\rightarrow $D \) (Full dependency since \( D \) depends on the entire candidate key \( EC \))
    - \( A $\rightarrow $B \) (Not a partial dependency since \( A \) is not part of the candidate key)
+
 2. **Remove Partial Dependencies**:
 
    - Create new relations to remove partial dependencies:
@@ -194,6 +204,7 @@ These relations are now in 2NF because all non-prime attributes are fully functi
 
    - A table must already be in the Second Normal Form (2NF) before it can be considered for 3NF.
    - 2NF requires that the table is in the First Normal Form (1NF) and that all non-key attributes are fully functionally dependent on the primary key.
+
 2. **No Transitive Dependency**
 
    - For a table to be in 3NF, it should not have any transitive dependencies.
@@ -221,9 +232,11 @@ In this table:
 1. **First Normal Form (1NF)**
 
    - The table is already in 1NF because all columns contain atomic values, and each column contains values of a single type.
+
 2. **Second Normal Form (2NF)**
 
    - The table is in 2NF because there are no partial dependencies; all non-key attributes (`State` and `City`) depend on the whole primary key (`Rollno`).
+
 3. **Third Normal Form (3NF)**
 
    - To check for 3NF, we need to ensure there are no transitive dependencies.
@@ -256,9 +269,6 @@ Now, both tables are in 3NF:
 
 By decomposing the original table, we have removed the transitive dependency, thus achieving the Third Normal Form (3NF).
 
-
-
-
 ## concept of Boyce-Codd Normal Form (BCNF) using a table named "Student." Here is a detailed explanation:
 
 ### Table Structure
@@ -272,14 +282,12 @@ The table "Student" has the following columns:
 
 ### Data in the Table
 
-
 | Rollno | Name  | Voteid | Age |
 | ------ | ----- | ------ | --- |
 | 1      | Ravi  | K0123  | 20  |
 | 2      | Varun | M034   | 21  |
 | 3      | Ravi  | K786   | 23  |
 | 4      | Rahul | D286   | 21  |
-
 
 ### Candidate Keys (CK)
 
@@ -314,9 +322,7 @@ Since all the functional dependencies have candidate keys on the left-hand side,
 
 The table "Student" is in Boyce-Codd Normal Form (BCNF) because all the functional dependencies have candidate keys on the left-hand side. This ensures that the table is free from redundancy and update anomalies.
 
-
 ![1721143030609](image/Normalization/1721143030609.png)
-
 
 **Dependency Preserving Decomposition**:
 
@@ -325,19 +331,19 @@ The table "Student" is in Boyce-Codd Normal Form (BCNF) because all the function
 2. **Lossless Decomposition**:
 
    - Both **3NF and BCNF** ensure lossless decomposition. This means that when a relation is decomposed into two or more relations, it is possible to reconstruct the original relation without any loss of information. Lossless decomposition is essential to ensure that no data is lost during the normalization process.
+
 3. **Example**:
 
    - The relation \( R(ABCD) \) is given with the functional dependencies \( \{A \rightarrow B, C \rightarrow D, D \rightarrow A\} \). This example illustrates a scenario where the concepts of dependency preservation and lossless decomposition are applied.
 
 In summary, while both 3NF and BCNF ensure that the decomposition of a relation is lossless, only 3NF guarantees that all functional dependencies are preserved in the decomposed relations. BCNF, being a stricter form of normalization, may sometimes sacrifice dependency preservation to achieve a higher level of normalization.
 
-
-| 1st Normal Form            | 2nd Normal Form                       | 3rd Normal Form                                             | BCNF                     | 4th Normal Form             | 5th Normal Form          |
-| -------------------------- | ------------------------------------- | ----------------------------------------------------------- | ------------------------ | --------------------------- | ------------------------ |
-| * No Multivalued attribute | * In 1st NF +                         | * In 2nd NF +                                               | * In 3rd NF +            | * In BCNF +                 | * In 4th NF +            |
-| * Only Single valued       | * No Partial Dependency               | * No Transitive Dependency                                  | * L.H.S must be CK or SK | * No Multivalued Dependency | * Lossless Decomposition |
-| Rollno                     | * Only Full Dependency                | * No Non-prime should determine non-prime                   | X -> Y                   | X -> -> Y                   |                          |
-| 1 C, C++                   | if AB is the primary key<br />AB -> C | if x is the prime and y and z are no prime<br />X -> Y -> Z |                          |                             |                          |
-| 2 C++, Java                | B -> C not possible                   | PK -> Non-prime                                             |                          |                             |                          |
-|                            | A -> C not possible                  | CK - > Prime                                                |                          |                             |                          |
-|                            |                                       | This condition vilotse<br />Non-prime -> Non- prime         |                          |                             | <br />                   |
+| 1st Normal Form             | 2nd Normal Form                       | 3rd Normal Form                                             | BCNF                      | 4th Normal Form              | 5th Normal Form           |
+| --------------------------- | ------------------------------------- | ----------------------------------------------------------- | ------------------------- | ---------------------------- | ------------------------- |
+| \* No Multivalued attribute | \* In 1st NF +                        | \* In 2nd NF +                                              | \* In 3rd NF +            | \* In BCNF +                 | \* In 4th NF +            |
+| \* Only Single valued       | \* No Partial Dependency              | \* No Transitive Dependency                                 | \* L.H.S must be CK or SK | \* No Multivalued Dependency | \* Lossless Decomposition |
+| Rollno                      | \* Only Full Dependency               | \* No Non-prime should determine non-prime                  | X -> Y                    | X -> -> Y                    |                           |
+| 1 C, C++                    | if AB is the primary key<br />AB -> C | if x is the prime and y and z are no prime<br />X -> Y -> Z |                           |                              |                           |
+| 2 C++, Java                 | B -> C not possible                   | PK -> Non-prime                                             |                           |                              |                           |
+|                             | A -> C not possible                   | CK - > Prime                                                |                           |                              |                           |
+|                             |                                       | This condition vilote<br />Non-prime -> Non- prime          |                           |                              |                           |
