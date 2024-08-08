@@ -992,35 +992,45 @@
 <li>
 <p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span>, then <span class="arithmatex">\( XZ $\rightarrow$ YZ \)</span>.</p>
 </li>
-<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span>, then adding the same set <span class="arithmatex">\( Z \)</span> to both sides preserves the functional dependency.</li>
+<li>
+<p>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span>, then adding the same set <span class="arithmatex">\( Z \)</span> to both sides preserves the functional dependency.</p>
+</li>
 <li>
 <p><strong>Transitivity</strong>:</p>
 </li>
 <li>
 <p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( Y $\rightarrow$ Z \)</span>, then <span class="arithmatex">\( X $\rightarrow$ Z \)</span>.</p>
 </li>
-<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Y \)</span> functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Z \)</span>.</li>
+<li>
+<p>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Y \)</span> functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Z \)</span>.</p>
+</li>
 <li>
 <p><strong>Union</strong>:</p>
 </li>
 <li>
 <p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( X $\rightarrow$ Z \)</span>, then <span class="arithmatex">\( X $\rightarrow$ YZ \)</span>.</p>
 </li>
-<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( X \)</span> also functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines the combination of <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span>.</li>
+<li>
+<p>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( X \)</span> also functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines the combination of <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span>.</p>
+</li>
 <li>
 <p><strong>Decomposition</strong>:</p>
 </li>
 <li>
 <p>If <span class="arithmatex">\( X $\rightarrow$ YZ \)</span>, then <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( X $\rightarrow$ Z \)</span>.</p>
 </li>
-<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines the combination of <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Z \)</span> separately.</li>
+<li>
+<p>This means that if <span class="arithmatex">\( X \)</span> functionally determines the combination of <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Z \)</span> separately.</p>
+</li>
 <li>
 <p><strong>Pseudotransitivity</strong>:</p>
 </li>
 <li>
 <p>If <span class="arithmatex">\( X $\rightarrow$ Y \)</span> and <span class="arithmatex">\( WY $\rightarrow$ Z \)</span>, then <span class="arithmatex">\( WX $\rightarrow$ Z \)</span>.</p>
 </li>
-<li>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( WY \)</span> functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( WX \)</span> functionally determines <span class="arithmatex">\( Z \)</span>.</li>
+<li>
+<p>This means that if <span class="arithmatex">\( X \)</span> functionally determines <span class="arithmatex">\( Y \)</span> and <span class="arithmatex">\( WY \)</span> functionally determines <span class="arithmatex">\( Z \)</span>, then <span class="arithmatex">\( WX \)</span> functionally determines <span class="arithmatex">\( Z \)</span>.</p>
+</li>
 <li>
 <p><strong>Composition</strong>:</p>
 </li>
@@ -1135,16 +1145,17 @@
 <td>3</td>
 <td>Mumbai</td>
 </tr>
-<tr>
-<td>2. <strong>Customer_Store Table</strong>:</td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<ul>
-<li>Columns: <strong>Customer ID</strong>, <strong>Store ID</strong></li>
+<ol>
+<li>
+<p><strong>Customer_Store Table</strong>:</p>
+</li>
+<li>
+<p>Columns: <strong>Customer ID</strong>, <strong>Store ID</strong></p>
+</li>
 <li>This table will store the relationship between customers and stores.</li>
-</ul>
+</ol>
 <table>
 <thead>
 <tr>
@@ -1188,8 +1199,12 @@
 </li>
 <li><span class="arithmatex">\( E $\rightarrow $A \)</span></li>
 <li><span class="arithmatex">\( EC $\rightarrow $D \)</span></li>
-<li><span class="arithmatex">\( A $\rightarrow $B \)</span></li>
-<li>Candidate Key (CK): <span class="arithmatex">\( EC \)</span></li>
+<li>
+<p><span class="arithmatex">\( A $\rightarrow $B \)</span></p>
+</li>
+<li>
+<p>Candidate Key (CK): <span class="arithmatex">\( EC \)</span></p>
+</li>
 <li>Prime Attributes: <span class="arithmatex">\( E, C \)</span></li>
 <li>Non-Prime Attributes: <span class="arithmatex">\( A, B, D, F \)</span></li>
 </ul>
@@ -1204,7 +1219,9 @@
 </li>
 <li><span class="arithmatex">\( E $\rightarrow $A \)</span> (Partial dependency since <span class="arithmatex">\( E \)</span> is part of the candidate key <span class="arithmatex">\( EC \)</span>)</li>
 <li><span class="arithmatex">\( EC $\rightarrow $D \)</span> (Full dependency since <span class="arithmatex">\( D \)</span> depends on the entire candidate key <span class="arithmatex">\( EC \)</span>)</li>
-<li><span class="arithmatex">\( A $\rightarrow $B \)</span> (Not a partial dependency since <span class="arithmatex">\( A \)</span> is not part of the candidate key)</li>
+<li>
+<p><span class="arithmatex">\( A $\rightarrow $B \)</span> (Not a partial dependency since <span class="arithmatex">\( A \)</span> is not part of the candidate key)</p>
+</li>
 <li>
 <p><strong>Remove Partial Dependencies</strong>:</p>
 </li>
@@ -1233,7 +1250,9 @@
 <li>
 <p>A table must already be in the Second Normal Form (2NF) before it can be considered for 3NF.</p>
 </li>
-<li>2NF requires that the table is in the First Normal Form (1NF) and that all non-key attributes are fully functionally dependent on the primary key.</li>
+<li>
+<p>2NF requires that the table is in the First Normal Form (1NF) and that all non-key attributes are fully functionally dependent on the primary key.</p>
+</li>
 <li>
 <p><strong>No Transitive Dependency</strong></p>
 </li>
@@ -1526,10 +1545,10 @@
 <tr>
 <td></td>
 <td></td>
-<td>This condition vilotse<br>Non-prime -&gt; Non- prime</td>
+<td>This condition vilote<br>Non-prime -&gt; Non- prime</td>
 <td></td>
 <td></td>
-<td><br></td>
+<td></td>
 </tr>
 </tbody>
 </table></div></p>
