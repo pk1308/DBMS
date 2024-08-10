@@ -112,6 +112,11 @@
 * [ ] [Lec-90: Strict 2PL, Rigorous 2PL and Conservative 2PLSchedule | 2 Phase Locking in DBMS](https://youtube.com/watch?v=z8Yqn91akV8)
 * [ ] [Lec-91: Basic Timestamp Ordering Protocol with Example in Hindi | Concurrency Control | DBMS](https://youtube.com/watch?v=27NtGV1vNoY)
 * [ ] [Lec-92: How to Solve Question on Timestamp Ordering Protocol | Concurrency Control | DBMS](https://youtube.com/watch?v=h60vaqrXHO8)
+
+---
+
+
+
 * [ ] [Lec-93: Why Indexing is used | Indexing Beginning | DBMS](https://youtube.com/watch?v=E--yzX05_k8)
 * [ ] [Lec-94: Numerical Example on I/O Cost in Indexing | Part-1 | DBMS](https://youtube.com/watch?v=P24LAhp-ap8)
 * [ ] [Lec-95: Numerical Example on I/O Cost in Indexing | Part 2 | DBMS](https://youtube.com/watch?v=s_S_MpLoDEM)
@@ -127,6 +132,8 @@
 * [ ] [Lec-105: Immediate Database Modification in DBMS | Log Based Recovery Methods](https://youtube.com/watch?v=47LvbDGD4cc)
 * [ ] [Lec-106: Deferred Database Modification in DBMS | Log Based Recovery | Imp for UGC NET and KVS](https://youtube.com/watch?v=0YhOYqPeq0g)
 * [ ] [Lec-107: Like Command in SQL with example in Hindi | Learn SQL in Easiest Way| DBMS](https://youtube.com/watch?v=iug2vvLQ9B8)
+
+
 * [ ] [Lec-108: Basic PL-SQL Programming With Execution | Part-1](https://youtube.com/watch?v=2_1IgbDjqoQ)
 * [ ] [Lec-109: Basic PL-SQL Programming(While, For Loop) With Execution | Part-2](https://youtube.com/watch?v=yFA_ZzMynv0)
 * [ ] [Lec-110: Single row and Multi row functions in SQL](https://youtube.com/watch?v=-uVzU8dX_-M)
