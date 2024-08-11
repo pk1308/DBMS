@@ -115,8 +115,6 @@
 
 ---
 
-
-
 * [ ] [Lec-93: Why Indexing is used | Indexing Beginning | DBMS](https://youtube.com/watch?v=E--yzX05_k8)
 * [ ] [Lec-94: Numerical Example on I/O Cost in Indexing | Part-1 | DBMS](https://youtube.com/watch?v=P24LAhp-ap8)
 * [ ] [Lec-95: Numerical Example on I/O Cost in Indexing | Part 2 | DBMS](https://youtube.com/watch?v=s_S_MpLoDEM)
@@ -129,11 +127,14 @@
 * [ ] [Lec-102: How to find Order of B-Tree | Imp Question on B-Tree](https://youtube.com/watch?v=yGSHbjA4w0o)
 * [ ] [Lec-103: Difference b/w B-Tree &amp; B+Tree  in Hindi with examples](https://youtube.com/watch?v=BwUvgG29fPc)
 * [ ] [Lec-104: Order of B+ Tree | Order of Leaf Node &amp; Non Leaf Node in B+Tree](https://youtube.com/watch?v=V-ayKf1CWQE)
+
+---
+
+
+
 * [ ] [Lec-105: Immediate Database Modification in DBMS | Log Based Recovery Methods](https://youtube.com/watch?v=47LvbDGD4cc)
 * [ ] [Lec-106: Deferred Database Modification in DBMS | Log Based Recovery | Imp for UGC NET and KVS](https://youtube.com/watch?v=0YhOYqPeq0g)
 * [ ] [Lec-107: Like Command in SQL with example in Hindi | Learn SQL in Easiest Way| DBMS](https://youtube.com/watch?v=iug2vvLQ9B8)
-
-
 * [ ] [Lec-108: Basic PL-SQL Programming With Execution | Part-1](https://youtube.com/watch?v=2_1IgbDjqoQ)
 * [ ] [Lec-109: Basic PL-SQL Programming(While, For Loop) With Execution | Part-2](https://youtube.com/watch?v=yFA_ZzMynv0)
 * [ ] [Lec-110: Single row and Multi row functions in SQL](https://youtube.com/watch?v=-uVzU8dX_-M)
@@ -142,6 +143,11 @@
 * [ ] [Lec-113: How Aggregate Functions work on NULL Values | SQL | DBMS](https://youtube.com/watch?v=pn9OI3sSKFE)
 * [ ] [Lec-114: What is RAID? RAID 0, RAID 1, RAID 4, RAID 5, RAID 6, Nested RAID 10 Explained](https://youtube.com/watch?v=-6sA9nHlZDc)
 * [ ] [Lec-115: Various objects in Database | Oracle, SQL Server](https://youtube.com/watch?v=dCRMG-qDaHM)
+
+---
+
+
+
 * [ ] [Lec-116: Important Question explanation on ER Model | DBMS](https://youtube.com/watch?v=ibRwG8Pm-vI)
 * [ ] [Lec-117: Very Imp. Questions on DBMS basic concepts and Data Modelling | DBMS](https://youtube.com/watch?v=PJK3OWg5Ji0)
 * [ ] [Lec-118: Question on Inner, Left, Right &amp; Full Outer Joins Explanation | DBMS](https://youtube.com/watch?v=Cu9-mNbXkww)
