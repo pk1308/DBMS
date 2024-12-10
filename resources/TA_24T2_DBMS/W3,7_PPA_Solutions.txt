@@ -1,0 +1,387 @@
+3.1
+
+select t.name
+from teams t join matches m 
+on t.team_id = m.host_team_id or t.team_id = m.guest_team_id
+group by t.name
+having count(m.match_num)>3
+
+3.2
+
+select faculty_fname,faculty_lname
+from members m
+join faculty f
+on m.id=f.id
+where ((select count(*)
+from book_issue b
+where m.member_no=b.member_no)>=1) and faculty_fname!=faculty_lname and department_code='ME'
+
+3.3
+
+select count(b.title) from
+book_catalogue b,book_issue bi,book_copies bc
+where bc.ISBN_no=b.ISBN_no and bi.accession_no = bc.accession_no and doi='2021-08-11'
+
+3.4
+
+select faculty_fname,faculty_lname
+from faculty
+where faculty.id not in
+(select members.id from members natural join book_issue
+where members.id is not null)
+
+3.5
+
+select distinct title
+from book_issue i
+natural join book_copies c
+natural join book_catalogue e
+natural join members
+where member_type='PG'
+except 
+select distinct title
+from book_issue i
+natural join book_copies c
+natural join book_catalogue e
+natural join members
+where member_type='UG'
+
+
+
+
+
+7.1
+
+import psycopg2, os, sys
+
+def prime(n):
+    if n<=1:
+        return False
+    else:
+        for i in range(2,n):
+            if n%i==0:
+                return False
+        return True
+
+conn = None
+try:
+    database = sys.argv[1]
+    user = os.environ.get('PGUSER') 
+    password = os.environ.get('PGPASSWORD') 
+    host = os.environ.get('PGHOST')
+    port = os.environ.get('PGPORT')
+    conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+    cur = conn.cursor() # create a new cursor
+    cur.execute(''' select players.name, teams.name, players.jersey_no
+    from players, teams
+    where players.team_id= teams.team_id
+    order by players.name desc, teams.name desc
+    ''')
+    
+    r=cur.fetchall()
+    for i in r:
+        if(prime(i[2])):
+            print(i[0]+", "+i[1])
+    
+    cur.close() # close the cursor
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+finally:
+    if conn is not None:
+        conn.close() # close the connection
+
+
+7.2
+
+import psycopg2
+import os 
+import sys
+# enc = {'A':1, 'B':2, 'C':3, 'D':4,'E':5, 'F':6, 'G':7, 'H':8, 'I':9, 'J':10,
+#     'K':11, 'L':12, 'M':13, 'N':14, 'O':15, 'P':16, 'Q':17, 'R':18, 'S':19, 'T':20,
+#     'U':21, 'V':22, 'W':23, 'X':24, 'Y':25, 'Z':26 }
+
+# dec = {1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H', 9:'I', 10:'J',
+#     11:'K', 12:'L', 13:'M', 14:'N', 15:'O', 16:'P', 17:'Q', 18:'R', 19:'S', 20:'T',
+#     21:'U', 22:'V', 23:'W', 24:'X', 25:'Y', 26:'Z' }
+
+alp="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+enc, dec = {}, {}
+    
+i = 1
+for char in alp:
+    enc[char] = i
+    dec[i] = char
+    i += 1
+
+        
+
+conn = None
+
+try:
+    database = sys.argv[1]
+
+    user = os.environ.get('PGUSER') 
+    
+    password = os.environ.get('PGPASSWORD') 
+    
+    host = os.environ.get('PGHOST')
+    
+    port = os.environ.get('PGPORT')
+    conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+    cur = conn.cursor()
+    cur.execute('''select team_id
+                from teams 
+                where jersey_home_color<>jersey_away_color
+                order by team_id''')
+    
+    result = cur.fetchall()
+    # print(result)
+    
+    for row in result:
+        id = row[0]
+        out = ''
+        for char in id:
+            if char in alp:
+                pos = (enc[char]+7)%26
+                out+= dec[pos]
+            else:
+                num = (int(char)+ 7) % 10
+                out+=str(num)
+        print(out)        
+
+    
+    cur.close()
+
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+
+finally:
+    if conn is not None:
+        conn.close() 
+		
+		
+import psycopg2
+import os 
+import sys
+# enc = {'A':1, 'B':2, 'C':3, 'D':4,'E':5, 'F':6, 'G':7, 'H':8, 'I':9, 'J':10,
+#     'K':11, 'L':12, 'M':13, 'N':14, 'O':15, 'P':16, 'Q':17, 'R':18, 'S':19, 'T':20,
+#     'U':21, 'V':22, 'W':23, 'X':24, 'Y':25, 'Z':26 }
+
+# dec = {1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H', 9:'I', 10:'J',
+#     11:'K', 12:'L', 13:'M', 14:'N', 15:'O', 16:'P', 17:'Q', 18:'R', 19:'S', 20:'T',
+#     21:'U', 22:'V', 23:'W', 24:'X', 25:'Y', 26:'Z' }
+
+alp="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+enc, dec = {}, {}
+    
+i = 1
+for char in alp:
+    enc[char] = i
+    dec[i] = char
+    i += 1
+
+        
+
+conn = None
+
+try:
+    database = sys.argv[1]
+
+    user = os.environ.get('PGUSER') 
+    
+    password = os.environ.get('PGPASSWORD') 
+    
+    host = os.environ.get('PGHOST')
+    
+    port = os.environ.get('PGPORT')
+    conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+    cur = conn.cursor()
+    cur.execute('''select team_id
+                from teams 
+                where jersey_home_color<>jersey_away_color
+                order by team_id''')
+    
+    result = cur.fetchall()
+    # print(result)
+    
+    for row in result:
+        id = row[0]
+        out = ''
+        for char in id:
+            if char in alp:
+                pos = (enc[char]+7)%26
+                out+= dec[pos]
+            else:
+                num = (int(char)+ 7) % 10
+                out+=str(num)
+        print(out)        
+
+    
+    cur.close()
+
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+
+finally:
+    if conn is not None:
+        conn.close() 
+		
+		
+
+
+
+7.3
+
+import psycopg2, os, sys
+
+f= open('player.txt', 'r')
+n= f.read()
+
+conn = None
+try:
+    database = sys.argv[1]
+    user = os.environ.get('PGUSER') 
+    password = os.environ.get('PGPASSWORD') 
+    host = os.environ.get('PGHOST')
+    port = os.environ.get('PGPORT')
+    conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+    cur = conn.cursor() # create a new cursor
+    cur.execute(''' select jersey_no
+    from players
+    where name=%s
+    ''', (n,))
+    
+    r=cur.fetchall()
+    for i in r:
+        print(i[0])
+
+    
+    cur.close() # close the cursor
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+finally:
+    if conn is not None:
+        conn.close() # close the connection
+
+
+
+
+7.4
+
+import psycopg2   
+import os,sys
+conn = None
+
+f = open('name.txt', 'r')
+name = f.read()
+# print(name)
+f.close()
+
+try:
+    database = sys.argv[1]
+
+    user = os.environ.get('PGUSER') 
+    
+    password = os.environ.get('PGPASSWORD') 
+    
+    host = os.environ.get('PGHOST')
+    
+    port = os.environ.get('PGPORT')
+    conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+    cur = conn.cursor()
+    cur.execute('''select roll_no
+                   from students
+                   where student_fname=%s''',(name,))
+    
+    result = cur.fetchall()
+    
+    for row in result:
+        roll=row[0]
+        print(roll)
+    
+    cur.close()
+
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+
+finally:
+    if conn is not None:
+        conn.close() 
+		
+7.5
+
+import psycopg2, os, sys
+
+f= open('team.txt', 'r')
+n= f.read()
+
+conn = None
+
+database = sys.argv[1]
+user = os.environ.get('PGUSER') 
+password = os.environ.get('PGPASSWORD') 
+host = os.environ.get('PGHOST')
+port = os.environ.get('PGPORT')
+conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+cur = conn.cursor() # create a new cursor
+cur.execute(''' select playground
+from teams
+where team_id=%s
+''', (n,))
+
+r=cur.fetchall()
+for i in r:
+    print(i[0])
+
+
+cur.close() # close the cursor
+conn.close() # close the connection
+
+
+7.6
+
+import psycopg2, os, sys   
+
+conn = None
+f = open('name.txt', 'r')
+fname=f.read()
+f.close()
+
+try:
+    database = sys.argv[1]
+
+    user = os.environ.get('PGUSER') 
+    
+    password = os.environ.get('PGPASSWORD') 
+    
+    host = os.environ.get('PGHOST')
+    
+    port = os.environ.get('PGPORT')
+    conn = psycopg2.connect(database = database, user = user, password = password, host = host, port = port) # connect to the database
+    cur = conn.cursor()
+    cur.execute('''select student_fname, department_name, dob
+                   from students natural join departments
+                   where student_fname=%s''',(fname,))
+    
+    result = cur.fetchall()
+    
+    for row in result:
+        name=row[0]
+        d_name=row[1]
+        dob=str(row[2])
+        year=int(dob[0:4])
+        if year%2==0:
+            print(f"{name},{d_name},Even")
+        else:
+            print(f"{name},{d_name},Odd")    
+    
+    cur.close()
+
+except (Exception, psycopg2.DatabaseError) as error:
+    print(error)
+
+finally:
+    if conn is not None:
+        conn.close() 
