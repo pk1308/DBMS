@@ -3,93 +3,113 @@ nav:
 - Home:
   - cheatsheet.md
   - index.md
-- Week 4:
-  - Week 4/Lecture 4.5 - Entity-Relationship Model3_annotated.md
-  - Week 4/Tutorial 4.3.md
-  - Week 4/week4.md
-  - Week 4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md
-  - Week 4/Lecture 4.1 - Formal Relational Query Languages1_annotated.md
-  - Week 4/Lecture 4.3 - Entity-Relationship Model1_annotated.md
-  - Week 4/Lecture 4.4 - Entity-Relationship Model2_annotated.md
-  - Week 4/Tutorial 4.2.md
-  - Week 4/Tutorial 4.4.md
-  - Week 4/er_model.md
-- Week 1:
-  - Week 1/Lecture 1.1 - Course Overview.md
-  - Week 1/Lecture 1.3 - Why DBMS2.md
-  - Week 1/week1.md
-  - Week 1/textbook.md
-  - Week 1/Lecture 1.4 - Intro to DBMS1.md
-  - Week 1/summary.md
-  - Week 1/Lecture 1.2 - Why DBMS1.md
-  - Week 1/Lecture 1.5 - Intro to DBMS2.md
+- gatesmashers:
+  - gatesmashers/checklist.md
+  - gatesmashers/Minimalcover.md
+  - gatesmashers/Normalization.md
+  - gatesmashers/notes.md
+  - gatesmashers/sql.md
+  - gatesmashers/week9-10-11.md
 - Piyush Wairale:
-  - Piyush Wairale/sql.md
   - Piyush Wairale/candiatekey.md
   - Piyush Wairale/checklist.md
+  - Piyush Wairale/ER_model.md
   - Piyush Wairale/normalization.md
   - Piyush Wairale/Relational_algebra.md
-  - Piyush Wairale/ER_model.md
-- week 8:
-  - week 8/Lecture 8.2 - Algorithms and Data Structures2.md
-  - week 8/Lecture 8.1 - Algorithms and Data Structures1.md
-  - week 8/Lecture 8.4 - Storage and File Structure1.md
-  - week 8/Lecture 8.5 - Storage and File Structure2.md
-  - week 8/Lecture 8.3 - Algorithms and Data Structures3.md
-- Week 5:
-  - Week 5/Lecture 5.4 - Relational Database Design4.md
-  - Week 5/Lecture 5.1 - Relational Database Design1.md
-  - Week 5/Lecture 5.2 - Relational Database Design2.md
-  - Week 5/ex_can.md
-  - Week 5/hw.md
-  - Week 5/closureofartibut.md
-  - Week 5/Lecture 5.5 - Relational Database Design5.md
-  - Week 5/Lecture 5.3 - Relational Database Design3.md
-  - Week 5/week5.md
-- week 7:
-  - week 7/Lecture 7.5 - Application Design and Development5.md
-  - week 7/Lecture 7.1 - Application Design and Development1.md
-  - week 7/Lecture 7.4 - Application Design and Development4.md
-  - week 7/Lecture 7.2 - Application Design and Development2.md
+  - Piyush Wairale/sql.md
 - revision:
   - revision/quiz1_1.md
-- gatesmashers:
-  - gatesmashers/Normalization.md
-  - gatesmashers/sql.md
-  - gatesmashers/checklist.md
-  - gatesmashers/notes.md
-  - gatesmashers/Minimalcover.md
+- Week 1:
+  - Week 1/Lecture 1.1 - Course Overview.md
+  - Week 1/Lecture 1.2 - Why DBMS1.md
+  - Week 1/Lecture 1.3 - Why DBMS2.md
+  - Week 1/Lecture 1.4 - Intro to DBMS1.md
+  - Week 1/Lecture 1.5 - Intro to DBMS2.md
+  - Week 1/summary.md
+  - Week 1/textbook.md
+  - Week 1/week1.md
+- Week 11:
+  - Week 11/Lecture 11.1.md
+  - Week 11/Lecture 11.2.md
+  - Week 11/Lecture 11.3.md
+  - Week 11/Lecture 11.4.md
+  - Week 11/Lecture 11.5.md
+- Week 12:
+  - Week 12/Lecture 12.1.md
+  - Week 12/Lecture 12.2.md
+  - Week 12/Lecture 12.3.md
+  - Week 12/Lecture 12.4.md
+  - Week 12/Lecture 12.5.md
+- Week 2:
+  - Week 2/check_list.md
+  - Week 2/inst_sec.md
+  - Week 2/Lecture 2.1 - Introduction to Relational Model1.md
+  - Week 2/Lecture 2.2 - Introduction to Relational Model2.md
+  - Week 2/Lecture 2.3 - Introduction to SQL1.md
+  - Week 2/Lecture 2.4 - Introduction to SQL2.md
+  - Week 2/Lecture 2.5 - Introduction to SQL3.md
+  - Week 2/live session_sat.md
+  - Week 2/ppa_grpa.md
+  - Week 2/TRC.md
+  - Week 2/tutorial_2.1.md
 - Week 3:
-  - Week 3/Lecture 3.5 - Advanced SQL.md
-  - Week 3/livesession.md
   - Week 3/Lecture 3.1 - SQL Examples.md
   - Week 3/Lecture 3.2 - Intermediate SQL1.md
   - Week 3/Lecture 3.4 - Intermediate SQL3.md
+  - Week 3/Lecture 3.5 - Advanced SQL.md
+  - Week 3/livesession.md
   - Week 3/image/Lecture 3.3 - Intermediate SQL2.md
+- Week 4:
+  - Week 4/er_model.md
+  - Week 4/Lecture 4.1 - Formal Relational Query Languages1_annotated.md
+  - Week 4/Lecture 4.2 - Formal Relational Query Languages2_annotated.md
+  - Week 4/Lecture 4.3 - Entity-Relationship Model1_annotated.md
+  - Week 4/Lecture 4.4 - Entity-Relationship Model2_annotated.md
+  - Week 4/Lecture 4.5 - Entity-Relationship Model3_annotated.md
+  - Week 4/Tutorial 4.2.md
+  - Week 4/Tutorial 4.3.md
+  - Week 4/Tutorial 4.4.md
+  - Week 4/week4.md
+- Week 5:
+  - Week 5/closureofartibut.md
+  - Week 5/ex_can.md
+  - Week 5/hw.md
+  - Week 5/Lecture 5.1 - Relational Database Design1.md
+  - Week 5/Lecture 5.2 - Relational Database Design2.md
+  - Week 5/Lecture 5.3 - Relational Database Design3.md
+  - Week 5/Lecture 5.4 - Relational Database Design4.md
+  - Week 5/Lecture 5.5 - Relational Database Design5.md
+  - Week 5/week5.md
 - week 6:
+  - week 6/Lecture 6.1 - Relational Database Design6.md
+  - week 6/Lecture 6.2 - Relational Database Design7.md
   - week 6/Lecture 6.3 - Relational Database Design8.md
   - week 6/Lecture 6.4 - Relational Database Design9.md
-  - week 6/Lecture 6.2 - Relational Database Design7.md
   - week 6/Lecture 6.5 - Relational Database Design10.md
-  - week 6/Lecture 6.1 - Relational Database Design6.md
+- week 7:
+  - week 7/Lecture 7.1 - Application Design and Development1.md
+  - week 7/Lecture 7.2 - Application Design and Development2.md
+  - week 7/Lecture 7.4 - Application Design and Development4.md
+  - week 7/Lecture 7.5 - Application Design and Development5.md
+- week 8:
+  - week 8/Lecture 8.1 - Algorithms and Data Structures1.md
+  - week 8/Lecture 8.2 - Algorithms and Data Structures2.md
+  - week 8/Lecture 8.3 - Algorithms and Data Structures3.md
+  - week 8/Lecture 8.4 - Storage and File Structure1.md
+  - week 8/Lecture 8.5 - Storage and File Structure2.md
+- week10:
+  - week10/Lecture 10.1.md
+  - week10/Lecture 10.2.md
+  - week10/Lecture 10.3.md
+  - week10/Lecture 10.4.md
+  - week10/Lecture 10.5.md
 - week9:
-  - week9/Lecture 9.2.md
   - week9/Lecture 9.1.md
-  - week9/Lecture 9.5.md
+  - week9/Lecture 9.2.md
   - week9/Lecture 9.3.md
   - week9/Lecture 9.4.md
-- Week 2:
-  - Week 2/Lecture 2.2 - Introduction to Relational Model2.md
-  - Week 2/inst_sec.md
-  - Week 2/tutorial_2.1.md
-  - Week 2/live session_sat.md
-  - Week 2/Lecture 2.1 - Introduction to Relational Model1.md
-  - Week 2/check_list.md
-  - Week 2/Lecture 2.5 - Introduction to SQL3.md
-  - Week 2/TRC.md
-  - Week 2/Lecture 2.4 - Introduction to SQL2.md
-  - Week 2/Lecture 2.3 - Introduction to SQL1.md
-  - Week 2/ppa_grpa.md
+  - week9/Lecture 9.5.md
+  - week9/notes.md
 site_author: PK
 site_description: DESCRIPTION
 repo_name: pk1308/DBMS
